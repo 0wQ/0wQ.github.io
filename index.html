@@ -8,7 +8,7 @@ title: Home
 {{ post.excerpt | markdownify | strip_newlines }}
 <hr>
 {% endfor %}
-<div>
+<h4>
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
       <a href="/"> Newer </a>
@@ -23,4 +23,4 @@ title: Home
   {% else %}
     <span> Older </span>
   {% endif %}
-</div>
+</h4>
