@@ -14,7 +14,7 @@ body {
     background-color: #fff;
     font-size: 13px;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400;
     font-family: -apple-system,BlinkMacSystemFont,PingFang SC,Helvetica Neue,STHeiti,Microsoft Yahei,Tahoma,Simsun,sans-serif;
     flex-direction: column;
     -webkit-text-size-adjust: 100%;
@@ -73,7 +73,7 @@ blockquote,dl,hr,ol,p,pre,table,ul {
 }
 
 .title,code,h1,h2,h3,h4,h5,h6,p,pre {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h1{font-size:1.78rem}
