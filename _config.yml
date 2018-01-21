@@ -9,7 +9,7 @@ excerpt_separator:  <!--more-->
 markdown:           kramdown
 highlighter:        rouge
 encoding:           utf-8
-language:           ja
+language:           zh-cn
 timezone:           Asia/Shanghai
 version:            0.1.4
 beian:              鲁ICP备17026272号-3
