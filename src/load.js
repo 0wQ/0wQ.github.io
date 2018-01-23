@@ -40,9 +40,11 @@ function jqend() {
   setTimeout(function() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
-  if ($('.highlight').length > 0) {
-    getCss('/src/syntax.css')
-  }
+  setTimeout(function() {
+    if ($('.highlight').length > 0) {
+      getCss('/src/syntax.css')
+    }
+  }, 0)
 }
 function valine(path) {
   var url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js'
