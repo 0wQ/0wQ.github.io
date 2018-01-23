@@ -48,4 +48,4 @@ function valine(path) {
     })
   })
 }
-getScript('//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js', function() {jqend()})
+getScript('/src/jquery-3.2.1.min.js', function() {jqend()})
