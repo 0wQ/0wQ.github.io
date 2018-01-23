@@ -295,5 +295,3 @@ h1:before,h2:before,h3:before,h4:before {
 #to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(39,174,96,.3);color:#fff;text-align:center;z-index:10;display:none;border-radius:6px}
 @font-face{font-family:icomoon;src:url('icon-top.woff') format('woff')}
 .icon-top:before{content:'\e900';text-transform:none;font-variant:normal;font-family:icomoon!important;speak:none}
-/* syntax.css */
-@charset 'utf-8';@import '/src/syntax.min.css'
