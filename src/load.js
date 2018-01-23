@@ -1,4 +1,16 @@
 document.addEventListener('touchstart', function() {}, false)
+function getCss(url) {
+  try {
+    document.createStyleSheet(url)
+  } catch(e) {
+    var cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.type = 'text/css';
+    cssLink.href = url;
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(cssLink)
+  }
+}
 function getScript(a, b) {
   var c = document.createElement('script');
   c.src = a;
@@ -16,11 +28,11 @@ function getScript(a, b) {
 }
 function jqend() {
   $.ajaxSetup({cache:true})
-  if ($('#comment').length > 0) {
-    setTimeout(function() {
+  setTimeout(function() {
+    if ($('#comment').length > 0) {
       valine(location.pathname)
-    }, 0)
-  }
+    }
+  }, 0)
   setTimeout(function() {
     !function(o){'use strict';o.fn.toTop=function(t){var i=this,e=o(window),s=o('html, body'),n=o.extend({autohide:true,offset:1200,speed:1100,position:true,right:20,bottom:50},t);i.css({cursor:'pointer'}),n.autohide&&i.css('display','none'),n.position&&i.css({position:'fixed',right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery)
     $('#to-top').toTop()
@@ -28,6 +40,9 @@ function jqend() {
   setTimeout(function() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
+  if ($('.highlight').length > 0) {
+    getCss('/src/syntax.css')
+  }
 }
 function valine(path) {
   var url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js'
