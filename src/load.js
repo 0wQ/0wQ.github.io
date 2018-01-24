@@ -1,6 +1,3 @@
-document.addEventListener('touchstart', function() {}, false)
-getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
-
 function getCss(url) {
   try {
     document.createStyleSheet(url)
@@ -62,3 +59,6 @@ function valine(path) {
     })
   })
 }
+
+document.addEventListener('touchstart', function() {}, false)
+getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
