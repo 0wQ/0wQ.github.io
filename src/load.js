@@ -1,3 +1,6 @@
+document.addEventListener('touchstart', function() {}, false)
+getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
+
 function getCss(url) {
   try {
     document.createStyleSheet(url)
@@ -9,6 +12,7 @@ function getCss(url) {
     head.appendChild(cssLink)
   }
 }
+
 function getScript(a, b) {
   var c = document.createElement('script');
   c.src = a;
@@ -24,6 +28,7 @@ function getScript(a, b) {
   }
   d.appendChild(c)
 }
+
 function jqend() {
   $.ajaxSetup({ cache : true })
   setTimeout(() => {
@@ -44,6 +49,7 @@ function jqend() {
     }
   }, 0)
 }
+
 function valine(path) {
   var url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
       url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
@@ -63,6 +69,3 @@ function valine(path) {
     })
   })
 }
-
-document.addEventListener('touchstart', function() {}, false)
-getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
