@@ -2,17 +2,17 @@ function getCss(url) {
   try {
     document.createStyleSheet(url)
   } catch(e) {
-    const cssLink = document.createElement('link');
+    var cssLink = document.createElement('link');
     cssLink.rel = 'stylesheet';
     cssLink.href = url;
-    const head = document.getElementsByTagName('head')[0];
+    var head = document.getElementsByTagName('head')[0];
     head.appendChild(cssLink)
   }
 }
 function getScript(a, b) {
-  const c = document.createElement('script');
+  var c = document.createElement('script');
   c.src = a;
-  const d = document.getElementsByTagName('head')[0],
+  var d = document.getElementsByTagName('head')[0],
     done = false;
   c.onload = c.onreadystatechange = () => {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
@@ -45,8 +45,8 @@ function jqend() {
   }, 0)
 }
 function valine(path) {
-  const url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
-        url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
+  var url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
+      url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
   getScript(url1, () => {
     getScript(url2, () => {
       new Valine({
