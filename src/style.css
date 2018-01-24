@@ -115,7 +115,7 @@ table {
     text-align: center;
     font-size: .85rem;
     line-height: 1.6;
-    overflow: auto;
+    overflow-x: auto;
     /* word-break: break-all; */
 }
 
