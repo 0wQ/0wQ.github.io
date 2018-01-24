@@ -61,14 +61,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     + `null`
     + `undefined`
 
-    ```javascript
+```javascript
     const foo = 1;
     let bar = foo;
 
     bar = 9;
 
     console.log(foo, bar); // => 1, 9
-    ```
+```
 
   - [1.2](#1.2) <a name='1.2'></a> **复杂类型**: 通过引用的方式存取复杂类型。
 
@@ -76,16 +76,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     + `数组`
     + `函数`
 
-    ```javascript
+```javascript
     const foo = [1, 2];
     const bar = foo;
 
     bar[0] = 9;
 
     console.log(foo[0], bar[0]); // => 9, 9
-    ```
-
-**[⬆ 返回目录](#table-of-contents)**
+```
 
 <a name="references"></a>
 ## 引用
@@ -94,7 +92,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这能确保你无法对引用重新赋值，也不会导致出现 bug 或难以理解。
 
-    ```javascript
+```javascript
     // bad
     var a = 1;
     var b = 2;
@@ -102,13 +100,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // good
     const a = 1;
     const b = 2;
-    ```
+```
 
   - [2.2](#2.2) <a name='2.2'></a> 如果你一定需要可变动的引用，使用 `let` 代替 `var`。
 
   > 为什么？因为  `let` 是块级作用域，而 `var` 是函数作用域。
 
-    ```javascript
+```javascript
     // bad
     var count = 1;
     if (true) {
@@ -120,11 +118,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     if (true) {
       count += 1;
     }
-    ```
+```
 
   - [2.3](#2.3) <a name='2.3'></a> 注意 `let` 和 `const` 都是块级作用域。
 
-    ```javascript
+```javascript
     // const 和 let 只存在于它们被定义的区块内。
     {
       let a = 1;
@@ -132,26 +130,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     }
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="objects"></a>
 ## 对象
 
   - [3.1](#3.1) <a name='3.1'></a> 使用字面值创建对象。
 
-    ```javascript
+```javascript
     // bad
     const item = new Object();
 
     // good
     const item = {};
-    ```
+```
 
   - [3.2](#3.2) <a name='3.2'></a> 如果你的代码在浏览器环境下执行，别使用 [保留字](http://es5.github.io/#x7.6.1) 作为键值。这样的话在 IE8 不会运行。 [更多信息](https://github.com/airbnb/javascript/issues/61)。 但在 ES6 模块和服务器端中使用没有问题。
 
-    ```javascript
+```javascript
     // bad
     const superman = {
       default: { clark: 'kent' },
@@ -163,11 +160,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       defaults: { clark: 'kent' },
       hidden: true,
     };
-    ```
+```
 
   - [3.3](#3.3) <a name='3.3'></a> 使用同义词替换需要使用的保留字。
 
-    ```javascript
+```javascript
     // bad
     const superman = {
       class: 'alien',
@@ -182,14 +179,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const superman = {
       type: 'alien',
     };
-    ```
+```
 
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> 创建有动态属性名的对象时，使用可被计算的属性名称。
 
   > 为什么？因为这样可以让你在一个地方定义所有的对象属性。
 
-    ```javascript
+```javascript
     function getKey(k) {
       return `a key named ${k}`;
     }
@@ -207,12 +204,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       name: 'San Francisco',
       [getKey('enabled')]: true,
     };
-    ```
+```
 
   <a name="es6-object-shorthand"></a>
   - [3.5](#3.5) <a name='3.5'></a> 使用对象方法的简写。
 
-    ```javascript
+```javascript
     // bad
     const atom = {
       value: 1,
@@ -230,14 +227,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         return atom.value + value;
       },
     };
-    ```
+```
 
   <a name="es6-object-concise"></a>
   - [3.6](#3.6) <a name='3.6'></a> 使用对象属性值的简写。
 
   > 为什么？因为这样更短更有描述性。
 
-    ```javascript
+```javascript
     const lukeSkywalker = 'Luke Skywalker';
 
     // bad
@@ -249,13 +246,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const obj = {
       lukeSkywalker,
     };
-    ```
+```
 
   - [3.7](#3.7) <a name='3.7'></a> 在对象属性声明前把简写的属性分组。
 
   > 为什么？因为这样能清楚地看出哪些属性使用了简写。
 
-    ```javascript
+```javascript
     const anakinSkywalker = 'Anakin Skywalker';
     const lukeSkywalker = 'Luke Skywalker';
 
@@ -278,26 +275,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       episodeThree: 3,
       mayTheFourth: 4,
     };
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="arrays"></a>
 ## 数组
 
   - [4.1](#4.1) <a name='4.1'></a> 使用字面值创建数组。
 
-    ```javascript
+```javascript
     // bad
     const items = new Array();
 
     // good
     const items = [];
-    ```
+```
 
   - [4.2](#4.2) <a name='4.2'></a> 向数组添加元素时使用 Arrary#push 替代直接赋值。
 
-    ```javascript
+```javascript
     const someStack = [];
 
 
@@ -306,12 +302,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     someStack.push('abracadabra');
-    ```
+```
 
   <a name="es6-array-spreads"></a>
   - [4.3](#4.3) <a name='4.3'></a> 使用拓展运算符 `...` 复制数组。
 
-    ```javascript
+```javascript
     // bad
     const len = items.length;
     const itemsCopy = [];
@@ -323,15 +319,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const itemsCopy = [...items];
-    ```
+```
   - [4.4](#4.4) <a name='4.4'></a> 使用 Array#from 把一个类数组对象转换成数组。
 
-    ```javascript
+```javascript
     const foo = document.querySelectorAll('.foo');
     const nodes = Array.from(foo);
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="destructuring"></a>
 ## 解构
@@ -340,7 +335,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为解构能减少临时引用属性。
 
-    ```javascript
+```javascript
     // bad
     function getFullName(user) {
       const firstName = user.firstName;
@@ -359,11 +354,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function getFullName({ firstName, lastName }) {
       return `${firstName} ${lastName}`;
     }
-    ```
+```
 
   - [5.2](#5.2) <a name='5.2'></a> 对数组使用解构赋值。
 
-    ```javascript
+```javascript
     const arr = [1, 2, 3, 4];
 
     // bad
@@ -372,12 +367,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const [first, second] = arr;
-    ```
+```
 
   - [5.3](#5.3) <a name='5.3'></a> 需要回传多个值时，使用对象解构，而不是数组解构。
   > 为什么？增加属性或者改变排序不会改变调用时的位置。
 
-    ```javascript
+```javascript
     // bad
     function processInput(input) {
       // then a miracle occurs
@@ -395,28 +390,27 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // 调用时只选择需要的数据
     const { left, right } = processInput(input);
-    ```
+```
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="strings"></a>
 ## Strings
 
   - [6.1](#6.1) <a name='6.1'></a> 字符串使用单引号 `''` 。
 
-    ```javascript
+```javascript
     // bad
     const name = "Capt. Janeway";
 
     // good
     const name = 'Capt. Janeway';
-    ```
+```
 
   - [6.2](#6.2) <a name='6.2'></a> 字符串超过 80 个字节应该使用字符串连接号换行。
   - [6.3](#6.3) <a name='6.3'></a> 注：过度使用字串连接符号可能会对性能造成影响。[jsPerf](http://jsperf.com/ya-string-concat) 和 [讨论](https://github.com/airbnb/javascript/issues/40).
 
-    ```javascript
+```javascript
     // bad
     const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
@@ -430,14 +424,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const errorMessage = 'This is a super long error that was thrown because ' +
       'of Batman. When you stop to think about how Batman had anything to do ' +
       'with this, you would get nowhere fast.';
-    ```
+```
 
   <a name="es6-template-literals"></a>
   - [6.4](#6.4) <a name='6.4'></a> 程序化生成字符串时，使用模板字符串代替字符串连接。
 
   > 为什么？模板字符串更为简洁，更具可读性。
 
-    ```javascript
+```javascript
     // bad
     function sayHi(name) {
       return 'How are you, ' + name + '?';
@@ -452,9 +446,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function sayHi(name) {
       return `How are you, ${name}?`;
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="functions"></a>
 ## 函数
@@ -463,7 +456,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为函数声明是可命名的，所以他们在调用栈中更容易被识别。此外，函数声明会把整个函数提升（hoisted），而函数表达式只会把函数的引用变量名提升。这条规则使得[箭头函数](#arrow-functions)可以取代函数表达式。
 
-    ```javascript
+```javascript
     // bad
     const foo = function () {
     };
@@ -471,21 +464,21 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // good
     function foo() {
     }
-    ```
+```
 
   - [7.2](#7.2) <a name='7.2'></a> 函数表达式:
 
-    ```javascript
+```javascript
     // 立即调用的函数表达式 (IIFE)
     (() => {
       console.log('Welcome to the Internet. Please follow me.');
     })();
-    ```
+```
 
   - [7.3](#7.3) <a name='7.3'></a> 永远不要在一个非函数代码块（`if`、`while` 等）中声明一个函数，把那个函数赋给一个变量。浏览器允许你这么做，但它们的解析表现不一致。
   - [7.4](#7.4) <a name='7.4'></a> **注意:** ECMA-262 把 `block` 定义为一组语句。函数声明不是语句。[阅读 ECMA-262 关于这个问题的说明](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97)。
 
-    ```javascript
+```javascript
     // bad
     if (currentUser) {
       function test() {
@@ -500,11 +493,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         console.log('Yup.');
       };
     }
-    ```
+```
 
   - [7.5](#7.5) <a name='7.5'></a> 永远不要把参数命名为 `arguments`。这将取代原来函数作用域内的 `arguments` 对象。
 
-    ```javascript
+```javascript
     // bad
     function nope(name, options, arguments) {
       // ...stuff...
@@ -514,14 +507,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function yup(name, options, args) {
       // ...stuff...
     }
-    ```
+```
 
   <a name="es6-rest"></a>
   - [7.6](#7.6) <a name='7.6'></a> 不要使用 `arguments`。可以选择 rest 语法 `...` 替代。
 
   > 为什么？使用 `...` 能明确你要传入的参数。另外 rest 参数是一个真正的数组，而 `arguments` 是一个类数组。
 
-    ```javascript
+```javascript
     // bad
     function concatenateAll() {
       const args = Array.prototype.slice.call(arguments);
@@ -532,12 +525,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function concatenateAll(...args) {
       return args.join('');
     }
-    ```
+```
 
   <a name="es6-default-parameters"></a>
   - [7.7](#7.7) <a name='7.7'></a> 直接给函数的参数指定默认值，不要使用一个变化的函数参数。
 
-    ```javascript
+```javascript
     // really bad
     function handleThings(opts) {
       // 不！我们不应该改变函数参数。
@@ -560,13 +553,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function handleThings(opts = {}) {
       // ...
     }
-    ```
+```
 
   - [7.8](#7.8) <a name='7.8'></a> 直接给函数参数赋值时需要避免副作用。
 
   > 为什么？因为这样的写法让人感到很困惑。
 
-  ```javascript
+```javascript
   var b = 1;
   // bad
   function count(a = b++) {
@@ -576,10 +569,9 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   count();  // 2
   count(3); // 3
   count();  // 3
-  ```
+```
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="arrow-functions"></a>
 ## 箭头函数
@@ -590,7 +582,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么不？如果你有一个相当复杂的函数，你或许可以把逻辑部分转移到一个函数声明上。
 
-    ```javascript
+```javascript
     // bad
     [1, 2, 3].map(function (x) {
       return x * x;
@@ -600,7 +592,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     [1, 2, 3].map((x) => {
       return x * x;
     });
-    ```
+```
 
   - [8.2](#8.2) <a name='8.2'></a> 如果一个函数适合用一行写出并且只有一个参数，那就把花括号、圆括号和 `return` 都省略掉。如果不是，那就不要省略。
 
@@ -608,7 +600,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么不？当你打算回传一个对象的时候。
 
-    ```javascript
+```javascript
     // good
     [1, 2, 3].map(x => x * x);
 
@@ -616,9 +608,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     [1, 2, 3].reduce((total, n) => {
       return total + n;
     }, 0);
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="constructors"></a>
 ## 构造器
@@ -627,7 +618,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么? 因为 `class` 语法更为简洁更易读。
 
-    ```javascript
+```javascript
     // bad
     function Queue(contents = []) {
       this._queue = [...contents];
@@ -650,13 +641,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         return value;
       }
     }
-    ```
+```
 
   - [9.2](#9.2) <a name='9.2'></a> 使用 `extends` 继承。
 
   > 为什么？因为 `extends` 是一个内建的原型继承方法并且不会破坏 `instanceof`。
 
-    ```javascript
+```javascript
     // bad
     const inherits = require('inherits');
     function PeekableQueue(contents) {
@@ -673,11 +664,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         return this._queue[0];
       }
     }
-    ```
+```
 
   - [9.3](#9.3) <a name='9.3'></a> 方法可以返回 `this` 来帮助链式调用。
 
-    ```javascript
+```javascript
     // bad
     Jedi.prototype.jump = function() {
       this.jumping = true;
@@ -709,12 +700,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     luke.jump()
       .setHeight(20);
-    ```
+```
 
 
   - [9.4](#9.4) <a name='9.4'></a> 可以写一个自定义的 `toString()` 方法，但要确保它能正常运行并且不会引起副作用。
 
-    ```javascript
+```javascript
     class Jedi {
       constructor(options = {}) {
         this.name = options.name || 'no name';
@@ -728,9 +719,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         return `Jedi - ${this.getName()}`;
       }
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="modules"></a>
 ## 模块
@@ -739,7 +729,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？模块就是未来，让我们开始迈向未来吧。
 
-    ```javascript
+```javascript
     // bad
     const AirbnbStyleGuide = require('./AirbnbStyleGuide');
     module.exports = AirbnbStyleGuide.es6;
@@ -751,25 +741,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // best
     import { es6 } from './AirbnbStyleGuide';
     export default es6;
-    ```
+```
 
   - [10.2](#10.2) <a name='10.2'></a> 不要使用通配符 import。
 
   > 为什么？这样能确保你只有一个默认 export。
 
-    ```javascript
+```javascript
     // bad
     import * as AirbnbStyleGuide from './AirbnbStyleGuide';
 
     // good
     import AirbnbStyleGuide from './AirbnbStyleGuide';
-    ```
+```
 
   - [10.3](#10.3) <a name='10.3'></a>不要从 import 中直接 export。
 
   > 为什么？虽然一行代码简洁明了，但让 import 和 export 各司其职让事情能保持一致。
 
-    ```javascript
+```javascript
     // bad
     // filename es6.js
     export { es6 as default } from './airbnbStyleGuide';
@@ -778,9 +768,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // filename es6.js
     import { es6 } from './AirbnbStyleGuide';
     export default es6;
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="iterators-and-generators"></a>
 ## Iterators and Generators
@@ -789,7 +778,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这加强了我们不变的规则。处理纯函数的回调值更易读，这比它带来的副作用更重要。
 
-    ```javascript
+```javascript
     const numbers = [1, 2, 3, 4, 5];
 
     // bad
@@ -808,20 +797,19 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // best (use the functional force)
     const sum = numbers.reduce((total, num) => total + num, 0);
     sum === 15;
-    ```
+```
 
   - [11.2](#11.2) <a name='11.2'></a> 现在还不要使用 generators。
 
   > 为什么？因为它们现在还没法很好地编译到 ES5。 (译者注：目前(2016/03) Chrome 和 Node.js 的稳定版本都已支持 generators)
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="properties"></a>
 ## 属性
 
   - [12.1](#12.1) <a name='12.1'></a> 使用 `.` 来访问对象的属性。
 
-    ```javascript
+```javascript
     const luke = {
       jedi: true,
       age: 28,
@@ -832,11 +820,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const isJedi = luke.jedi;
-    ```
+```
 
   - [12.2](#12.2) <a name='12.2'></a> 当通过变量访问属性时使用中括号 `[]`。
 
-    ```javascript
+```javascript
     const luke = {
       jedi: true,
       age: 28,
@@ -847,28 +835,27 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     }
 
     const isJedi = getProp('jedi');
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="variables"></a>
 ## 变量
 
   - [13.1](#13.1) <a name='13.1'></a> 一直使用 `const` 来声明变量，如果不这样做就会产生全局变量。我们需要避免全局命名空间的污染。[地球队长](http://www.wikiwand.com/en/Captain_Planet)已经警告过我们了。（译注：全局，global 亦有全球的意思。地球队长的责任是保卫地球环境，所以他警告我们不要造成「全球」污染。）
 
-    ```javascript
+```javascript
     // bad
     superPower = new SuperPower();
 
     // good
     const superPower = new SuperPower();
-    ```
+```
 
   - [13.2](#13.2) <a name='13.2'></a> 使用 `const` 声明每一个变量。
 
     > 为什么？增加新变量将变的更加容易，而且你永远不用再担心调换错 `;` 跟 `,`。
 
-    ```javascript
+```javascript
     // bad
     const items = getItems(),
         goSportsTeam = true,
@@ -884,13 +871,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const items = getItems();
     const goSportsTeam = true;
     const dragonball = 'z';
-    ```
+```
 
   - [13.3](#13.3) <a name='13.3'></a> 将所有的 `const` 和 `let` 分组
 
   > 为什么？当你需要把已赋值变量赋值给未赋值变量时非常有用。
 
-    ```javascript
+```javascript
     // bad
     let i, len, dragonball,
         items = getItems(),
@@ -909,13 +896,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     let dragonball;
     let i;
     let length;
-    ```
+```
 
   - [13.4](#13.4) <a name='13.4'></a> 在你需要的地方给变量赋值，但请把它们放在一个合理的位置。
 
   > 为什么？`let` 和 `const` 是块级作用域而不是函数作用域。
 
-    ```javascript
+```javascript
     // good
     function() {
       test();
@@ -956,16 +943,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
       return true;
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="hoisting"></a>
 ## Hoisting
 
   - [14.1](#14.1) <a name='14.1'></a> `var` 声明会被提升至该作用域的顶部，但它们赋值不会提升。`let` 和 `const` 被赋予了一种称为「[暂时性死区（Temporal Dead Zones, TDZ）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)」的概念。这对于了解为什么 [type of 不再安全](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15)相当重要。
 
-    ```javascript
+```javascript
     // 我们知道这样运行不了
     // （假设 notDefined 不是全局变量）
     function example() {
@@ -994,11 +980,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       console.log(typeof declaredButNotAssigned); // => throws a ReferenceError
       const declaredButNotAssigned = true;
     }
-    ```
+```
 
   - [14.2](#14.2) <a name='14.2'></a> 匿名函数表达式的变量名会被提升，但函数内容并不会。
 
-    ```javascript
+```javascript
     function example() {
       console.log(anonymous); // => undefined
 
@@ -1008,11 +994,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         console.log('anonymous function expression');
       };
     }
-    ```
+```
 
   - [14.3](#14.3) <a name='14.3'></a> 命名的函数表达式的变量名会被提升，但函数名和函数函数内容并不会。
 
-    ```javascript
+```javascript
     function example() {
       console.log(named); // => undefined
 
@@ -1036,11 +1022,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         console.log('named');
       }
     }
-    ```
+```
 
   - [14.4](#14.4) <a name='14.4'></a> 函数声明的名称和函数体都会被提升。
 
-    ```javascript
+```javascript
     function example() {
       superPower(); // => Flying
 
@@ -1048,11 +1034,10 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         console.log('Flying');
       }
     }
-    ```
+```
 
   - 想了解更多信息，参考 [Ben Cherry](http://www.adequatelygood.com/) 的 [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting)。
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="comparison-operators--equality"></a>
 ## 比较运算符和等号
@@ -1067,16 +1052,16 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     + **数字** 如果是 **+0、-0、或 NaN** 被计算为 **false**, 否则为 **true**
     + **字符串** 如果是空字符串 `''` 被计算为 **false**，否则为 **true**
 
-    ```javascript
+```javascript
     if ([0]) {
       // true
       // An array is an object, objects evaluate to true
     }
-    ```
+```
 
   - [15.3](#15.3) <a name='15.3'></a> 使用简写。
 
-    ```javascript
+```javascript
     // bad
     if (name !== '') {
       // ...stuff...
@@ -1096,18 +1081,17 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     if (collection.length) {
       // ...stuff...
     }
-    ```
+```
 
   - [15.4](#15.4) <a name='15.4'></a> 想了解更多信息，参考 Angus Croll 的 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108)。
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="blocks"></a>
 ## 代码块
 
   - [16.1](#16.1) <a name='16.1'></a> 使用大括号包裹所有的多行代码块。
 
-    ```javascript
+```javascript
     // bad
     if (test)
       return false;
@@ -1127,11 +1111,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function() {
       return false;
     }
-    ```
+```
 
   - [16.2](#16.2) <a name='16.2'></a> 如果通过 `if` 和 `else` 使用多行代码块，把 `else` 放在 `if` 代码块关闭括号的同一行。
 
-    ```javascript
+```javascript
     // bad
     if (test) {
       thing1();
@@ -1148,17 +1132,16 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     } else {
       thing3();
     }
-    ```
+```
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="comments"></a>
 ## 注释
 
   - [17.1](#17.1) <a name='17.1'></a> 使用 `/** ... */` 作为多行注释。包含描述、指定所有参数和返回值的类型和值。
 
-    ```javascript
+```javascript
     // bad
     // make() returns a new element
     // based on the passed in tag name
@@ -1186,11 +1169,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
       return element;
     }
-    ```
+```
 
   - [17.2](#17.2) <a name='17.2'></a> 使用 `//` 作为单行注释。在评论对象上面另起一行使用单行注释。在注释前插入空行。
 
-    ```javascript
+```javascript
     // bad
     const active = true;  // is current tab
 
@@ -1216,40 +1199,39 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
       return type;
     }
-    ```
+```
 
   - [17.3](#17.3) <a name='17.3'></a> 给注释增加 `FIXME` 或 `TODO` 的前缀可以帮助其他开发者快速了解这是一个需要复查的问题，或是给需要实现的功能提供一个解决方式。这将有别于常见的注释，因为它们是可操作的。使用 `FIXME -- need to figure this out` 或者 `TODO -- need to implement`。
 
   - [17.4](#17.4) <a name='17.4'></a> 使用 `// FIXME`: 标注问题。
 
-    ```javascript
+```javascript
     class Calculator {
       constructor() {
         // FIXME: shouldn't use a global here
         total = 0;
       }
     }
-    ```
+```
 
   - [17.5](#17.5) <a name='17.5'></a> 使用 `// TODO`: 标注问题的解决方式。
 
-    ```javascript
+```javascript
     class Calculator {
       constructor() {
         // TODO: total should be configurable by an options param
         this.total = 0;
       }
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="whitespace"></a>
 ## 空白
 
   - [18.1](#18.1) <a name='18.1'></a> 使用 2 个空格作为缩进。
 
-    ```javascript
+```javascript
     // bad
     function() {
     ∙∙∙∙const name;
@@ -1264,11 +1246,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function() {
     ∙∙const name;
     }
-    ```
+```
 
   - [18.2](#18.2) <a name='18.2'></a> 在花括号前放一个空格。
 
-    ```javascript
+```javascript
     // bad
     function test(){
       console.log('test');
@@ -1290,11 +1272,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       age: '1 year',
       breed: 'Bernese Mountain Dog',
     });
-    ```
+```
 
   - [18.3](#18.3) <a name='18.3'></a> 在控制语句（`if`、`while` 等）的小括号前放一个空格。在函数调用及声明中，不在函数的参数列表前加空格。
 
-    ```javascript
+```javascript
     // bad
     if(isJedi) {
       fight ();
@@ -1314,45 +1296,45 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function fight() {
       console.log('Swooosh!');
     }
-    ```
+```
 
   - [18.4](#18.4) <a name='18.4'></a> 使用空格把运算符隔开。
 
-    ```javascript
+```javascript
     // bad
     const x=y+5;
 
     // good
     const x = y + 5;
-    ```
+```
 
   - [18.5](#18.5) <a name='18.5'></a> 在文件末尾插入一个空行。
 
-    ```javascript
+```javascript
     // bad
     (function(global) {
       // ...stuff...
     })(this);
-    ```
+```
 
-    ```javascript
+```javascript
     // bad
     (function(global) {
       // ...stuff...
     })(this);↵
     ↵
-    ```
+```
 
-    ```javascript
+```javascript
     // good
     (function(global) {
       // ...stuff...
     })(this);↵
-    ```
+```
 
   - [18.5](#18.5) <a name='18.5'></a> 在使用长方法链时进行缩进。使用前面的点 `.` 强调这是方法调用而不是新语句。
 
-    ```javascript
+```javascript
     // bad
     $('#items').find('.selected').highlight().end().find('.open').updateCount();
 
@@ -1387,11 +1369,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       .append('svg:g')
         .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
         .call(tron.led);
-    ```
+```
 
   - [18.6](#18.6) <a name='18.6'></a> 在块末和新语句前插入空行。
 
-    ```javascript
+```javascript
     // bad
     if (foo) {
       return bar;
@@ -1424,17 +1406,16 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     };
 
     return obj;
-    ```
+```
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="commas"></a>
 ## 逗号
 
   - [19.1](#19.1) <a name='19.1'></a> 行首逗号：**不需要**。
 
-    ```javascript
+```javascript
     // bad
     const story = [
         once
@@ -1464,13 +1445,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       birthYear: 1815,
       superPower: 'computers',
     };
-    ```
+```
 
   - [19.2](#19.2) <a name='19.2'></a> 增加结尾的逗号: **需要**。
 
   > 为什么? 这会让 git diffs 更干净。另外，像 babel 这样的转译器会移除结尾多余的逗号，也就是说你不必担心老旧浏览器的[尾逗号问题](es5/README.md#commas)。
 
-    ```javascript
+```javascript
     // bad - git diff without trailing comma
     const hero = {
          firstName: 'Florence',
@@ -1507,16 +1488,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       'Batman',
       'Superman',
     ];
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="semicolons"></a>
 ## 分号
 
   - [20.1](#20.1) <a name='20.1'></a> **使用分号**
 
-    ```javascript
+```javascript
     // bad
     (function() {
       const name = 'Skywalker'
@@ -1534,11 +1514,10 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       const name = 'Skywalker';
       return name;
     })();
-    ```
+```
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="type-casting--coercion"></a>
 ## 类型转换
@@ -1546,7 +1525,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - [21.1](#21.1) <a name='21.1'></a> 在语句开始时执行类型转换。
   - [21.2](#21.2) <a name='21.2'></a> 字符串：
 
-    ```javascript
+```javascript
     //  => this.reviewScore = 9;
 
     // bad
@@ -1554,11 +1533,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const totalScore = String(this.reviewScore);
-    ```
+```
 
   - [21.3](#21.3) <a name='21.3'></a> 对数字使用 `parseInt` 转换，并带上类型转换的基数。
 
-    ```javascript
+```javascript
     const inputValue = '4';
 
     // bad
@@ -1578,30 +1557,30 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const val = parseInt(inputValue, 10);
-    ```
+```
 
   - [21.4](#21.4) <a name='21.4'></a> 如果因为某些原因 parseInt 成为你所做的事的瓶颈而需要使用位操作解决[性能问题](http://jsperf.com/coercion-vs-casting/3)时，留个注释说清楚原因和你的目的。
 
-    ```javascript
+```javascript
     // good
     /**
      * 使用 parseInt 导致我的程序变慢，
      * 改成使用位操作转换数字快多了。
      */
     const val = inputValue >> 0;
-    ```
+```
 
   - [21.5](#21.5) <a name='21.5'></a> **注:** 小心使用位操作运算符。数字会被当成 [64 位值](http://es5.github.io/#x4.3.19)，但是位操作运算符总是返回 32 位的整数（[参考](http://es5.github.io/#x11.7)）。位操作处理大于 32 位的整数值时还会导致意料之外的行为。[关于这个问题的讨论](https://github.com/airbnb/javascript/issues/109)。最大的 32 位整数是 2,147,483,647：
 
-    ```javascript
+```javascript
     2147483647 >> 0 //=> 2147483647
     2147483648 >> 0 //=> -2147483648
     2147483649 >> 0 //=> -2147483647
-    ```
+```
 
   - [21.6](#21.6) <a name='21.6'></a> 布尔:
 
-    ```javascript
+```javascript
     const age = 0;
 
     // bad
@@ -1612,16 +1591,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     const hasAge = !!age;
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="naming-conventions"></a>
 ## 命名规则
 
   - [22.1](#22.1) <a name='22.1'></a> 避免单字母命名。命名应具备描述性。
 
-    ```javascript
+```javascript
     // bad
     function q() {
       // ...stuff...
@@ -1631,11 +1609,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     function query() {
       // ..stuff..
     }
-    ```
+```
 
   - [22.2](#22.2) <a name='22.2'></a> 使用驼峰式命名对象、函数和实例。
 
-    ```javascript
+```javascript
     // bad
     const OBJEcttsssss = {};
     const this_is_my_object = {};
@@ -1644,11 +1622,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // good
     const thisIsMyObject = {};
     function thisIsMyFunction() {}
-    ```
+```
 
   - [22.3](#22.3) <a name='22.3'></a> 使用帕斯卡式命名构造函数或类。
 
-    ```javascript
+```javascript
     // bad
     function user(options) {
       this.name = options.name;
@@ -1668,11 +1646,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const good = new User({
       name: 'yup',
     });
-    ```
+```
 
   - [22.4](#22.4) <a name='22.4'></a> 不要使用下划线 `_` 结尾或开头来命名属性和方法。
 
-    ```javascript
+```javascript
     // bad
     this.__firstName__ = 'Panda';
     this.firstName_ = 'Panda';
@@ -1680,11 +1658,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     this.firstName = 'Panda';
-    ```
+```
 
   - [22.5](#22.5) <a name='22.5'></a> 别保存 `this` 的引用。使用箭头函数或 Function#bind。
 
-    ```javascript
+```javascript
     // bad
     function foo() {
       const self = this;
@@ -1707,11 +1685,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         console.log(this);
       };
     }
-    ```
+```
 
   - [22.6](#22.6) <a name='22.6'></a> 如果你的文件只输出一个类，那你的文件名必须和类名完全保持一致。
 
-    ```javascript
+```javascript
     // file contents
     class CheckBox {
       // ...
@@ -1727,30 +1705,29 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     import CheckBox from './CheckBox';
-    ```
+```
 
   - [22.7](#22.7) <a name='22.7'></a> 当你导出默认的函数时使用驼峰式命名。你的文件名必须和函数名完全保持一致。
 
-    ```javascript
+```javascript
     function makeStyleGuide() {
     }
 
     export default makeStyleGuide;
-    ```
+```
 
   - [22.8](#22.8) <a name='22.8'></a> 当你导出单例、函数库、空对象时使用帕斯卡式命名。
 
-    ```javascript
+```javascript
     const AirbnbStyleGuide = {
       es6: {
       }
     };
 
     export default AirbnbStyleGuide;
-    ```
+```
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="accessors"></a>
 ## 存取器
@@ -1758,7 +1735,7 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - [23.1](#23.1) <a name='23.1'></a> 属性的存取函数不是必须的。
   - [23.2](#23.2) <a name='23.2'></a> 如果你需要存取函数时使用 `getVal()` 和 `setVal('hello')`。
 
-    ```javascript
+```javascript
     // bad
     dragon.age();
 
@@ -1770,11 +1747,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     dragon.setAge(25);
-    ```
+```
 
   - [23.3](#23.3) <a name='23.3'></a> 如果属性是布尔值，使用 `isVal()` 或 `hasVal()`。
 
-    ```javascript
+```javascript
     // bad
     if (!dragon.age()) {
       return false;
@@ -1784,11 +1761,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     if (!dragon.hasAge()) {
       return false;
     }
-    ```
+```
 
   - [23.4](#23.4) <a name='23.4'></a> 创建 `get()` 和 `set()` 函数是可以的，但要保持一致。
 
-    ```javascript
+```javascript
     class Jedi {
       constructor(options = {}) {
         const lightsaber = options.lightsaber || 'blue';
@@ -1803,16 +1780,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         return this[key];
       }
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="events"></a>
 ## 事件
 
   - [24.1](#24.1) <a name='24.1'></a> 当给事件附加数据时（无论是 DOM 事件还是私有事件），传入一个哈希而不是原始值。这样可以让后面的贡献者增加更多数据到事件数据而无需找出并更新事件的每一个处理器。例如，不好的写法：
 
-    ```javascript
+```javascript
     // bad
     $(this).trigger('listingUpdated', listing.id);
 
@@ -1821,11 +1797,11 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     $(this).on('listingUpdated', function(e, listingId) {
       // do something with listingId
     });
-    ```
+```
 
     更好的写法：
 
-    ```javascript
+```javascript
     // good
     $(this).trigger('listingUpdated', { listingId : listing.id });
 
@@ -1834,26 +1810,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     $(this).on('listingUpdated', function(e, data) {
       // do something with data.listingId
     });
-    ```
+```
 
-  **[⬆ 返回目录](#table-of-contents)**
-
+  
 
 ## jQuery
 
   - [25.1](#25.1) <a name='25.1'></a> 使用 `$` 作为存储 jQuery 对象的变量名前缀。
 
-    ```javascript
+```javascript
     // bad
     const sidebar = $('.sidebar');
 
     // good
     const $sidebar = $('.sidebar');
-    ```
+```
 
   - [25.2](#25.2) <a name='25.2'></a> 缓存 jQuery 查询。
 
-    ```javascript
+```javascript
     // bad
     function setSidebar() {
       $('.sidebar').hide();
@@ -1876,12 +1851,12 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
         'background-color': 'pink'
       });
     }
-    ```
+```
 
   - [25.3](#25.3) <a name='25.3'></a> 对 DOM 查询使用层叠 `$('.sidebar ul')` 或 父元素 > 子元素 `$('.sidebar > ul')`。 [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
   - [25.4](#25.4) <a name='25.4'></a> 对有作用域的 jQuery 对象查询使用 `find`。
 
-    ```javascript
+```javascript
     // bad
     $('ul', '.sidebar').hide();
 
@@ -1896,16 +1871,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     // good
     $sidebar.find('ul').hide();
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="ecmascript-5-compatibility"></a>
 ## ECMAScript 5 兼容性
 
   - [26.1](#26.1) <a name='26.1'></a> 参考 [Kangax](https://twitter.com/kangax/) 的 ES5 [兼容性](http://kangax.github.com/es5-compat-table/)。
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="ecmascript-6-styles"></a>
 ## ECMAScript 6 规范
@@ -1926,20 +1899,18 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 1. [迭代器和生成器](#iterators-and-generators)
 1. [模块](#modules)
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="testing"></a>
 ## 测试
 
   - [28.1](#28.1) <a name='28.1'></a> **Yup.**
 
-    ```javascript
+```javascript
     function() {
       return true;
     }
-    ```
+```
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="performance"></a>
 ## 性能
@@ -1954,7 +1925,6 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - [Are Javascript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
   - 等等...
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="resources"></a>
 ## 相关资源（英文）
@@ -2035,7 +2005,6 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - [JavaScript Jabber](http://devchat.tv/js-jabber/)
 
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="in-the-wild"></a>
 ## 使用情况
@@ -2128,7 +2097,6 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
   - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
 
-**[⬆ 返回目录](#table-of-contents)**
 
 <a name="translation"></a>
 ## 翻译
@@ -2191,7 +2159,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ 返回目录](#table-of-contents)**
 
 ## 修订
 
