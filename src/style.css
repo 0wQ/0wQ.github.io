@@ -171,6 +171,7 @@ pre {
     overflow: auto;
     padding: 0.93rem;
     border-radius: 3px;
+    overflow-x: auto;
     white-space: pre;
 }
 
@@ -180,7 +181,10 @@ pre,pre code {
 
 pre code {
     padding: 0;
-    white-space: nowrap;
+}
+
+pre > code {
+    white-space: pre;
 }
 
 ol,ul {
