@@ -5,7 +5,7 @@ title: Home
 
 {% for post in paginator.posts %}
 <h3><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h3>
-{{ post.excerpt | markdownify | strip_newlines }}
+{{ post.excerpt | markdownify }}
 <hr>
 {% endfor %}
 <h5>
