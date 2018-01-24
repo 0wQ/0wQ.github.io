@@ -98,12 +98,6 @@ h3,h4 {
     color: #333;
 }
 
-p,ol,ul {
-    font-size: .98rem;
-    line-height: 1.6;
-    /* word-wrap: break-word; */
-}
-
 b,strong {
     color: #555;
 }
@@ -149,14 +143,6 @@ a:active,a:hover {
     transition: color .3s;
 }
 
-ol,ul {
-    padding-left: 35px;
-}
-
-ol ol,ul ol {
-    list-style-type: lower-roman;
-}
-
 code {
     margin: 0 1px;
     border-radius: 3px;
@@ -188,6 +174,20 @@ pre,pre code {
 
 pre code {
     padding: 0;
+}
+
+ol,ul {
+    padding-left: 35px;
+}
+
+ol ol,ul ol {
+    list-style-type: lower-roman;
+}
+
+p,ol,ul {
+    font-size: .98rem;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 blockquote {
