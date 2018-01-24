@@ -263,14 +263,14 @@ mark {
     color: #ff9800;
 }
 
-h1:before,h2:before,h3:before,h4:before {
+/* h1:before,h2:before,h3:before,h4:before {
     content: '# ';
     color: #07b57a;
     font-weight: 300;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+} */
 
 .title {
     margin: 0 0 20px !important;
