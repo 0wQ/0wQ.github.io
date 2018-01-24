@@ -14,9 +14,9 @@ function getCss(url) {
 }
 
 function getScript(a, b) {
-  const c = document.createElement('script');
+  let c = document.createElement('script');
   c.src = a;
-  const d = document.getElementsByTagName('head')[0],
+  let d = document.getElementsByTagName('head')[0],
      done = false;
   c.onload = c.onreadystatechange = () => {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
