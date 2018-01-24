@@ -85,33 +85,33 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这能确保你无法对引用重新赋值，也不会导致出现 bug 或难以理解。
 
-    ```javascript
-    // bad
-    var a = 1;
-    var b = 2;
+  ```javascript
+  // bad
+  var a = 1;
+  var b = 2;
 
-    // good
-    const a = 1;
-    const b = 2;
-    ```
+  // good
+  const a = 1;
+  const b = 2;
+  ```
 
   - [2.2](#2.2) <a name='2.2'></a> 如果你一定需要可变动的引用，使用 `let` 代替 `var`。
 
   > 为什么？因为  `let` 是块级作用域，而 `var` 是函数作用域。
 
-    ```javascript
-    // bad
-    var count = 1;
-    if (true) {
-      count += 1;
-    }
+  ```javascript
+  // bad
+  var count = 1;
+  if (true) {
+    count += 1;
+  }
 
-    // good, use the let.
-    let count = 1;
-    if (true) {
-      count += 1;
-    }
-    ```
+  // good, use the let.
+  let count = 1;
+  if (true) {
+    count += 1;
+  }
+  ```
 
   - [2.3](#2.3) <a name='2.3'></a> 注意 `let` 和 `const` 都是块级作用域。
 
@@ -178,25 +178,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为这样可以让你在一个地方定义所有的对象属性。
 
-    ```javascript
-    function getKey(k) {
-      return `a key named ${k}`;
-    }
+  ```javascript
+  function getKey(k) {
+    return `a key named ${k}`;
+  }
 
-    // bad
-    const obj = {
-      id: 5,
-      name: 'San Francisco',
-    };
-    obj[getKey('enabled')] = true;
+  // bad
+  const obj = {
+    id: 5,
+    name: 'San Francisco',
+  };
+  obj[getKey('enabled')] = true;
 
-    // good
-    const obj = {
-      id: 5,
-      name: 'San Francisco',
-      [getKey('enabled')]: true,
-    };
-    ```
+  // good
+  const obj = {
+    id: 5,
+    name: 'San Francisco',
+    [getKey('enabled')]: true,
+  };
+  ```
 
   <a name="es6-object-shorthand"></a>
   - [3.5](#3.5) <a name='3.5'></a> 使用对象方法的简写。
@@ -226,48 +226,48 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为这样更短更有描述性。
 
-    ```javascript
-    const lukeSkywalker = 'Luke Skywalker';
+  ```javascript
+  const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
-    const obj = {
-      lukeSkywalker: lukeSkywalker,
-    };
+  // bad
+  const obj = {
+    lukeSkywalker: lukeSkywalker,
+  };
 
-    // good
-    const obj = {
-      lukeSkywalker,
-    };
-    ```
+  // good
+  const obj = {
+    lukeSkywalker,
+  };
+  ```
 
   - [3.7](#3.7) <a name='3.7'></a> 在对象属性声明前把简写的属性分组。
 
   > 为什么？因为这样能清楚地看出哪些属性使用了简写。
 
-    ```javascript
-    const anakinSkywalker = 'Anakin Skywalker';
-    const lukeSkywalker = 'Luke Skywalker';
+  ```javascript
+  const anakinSkywalker = 'Anakin Skywalker';
+  const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
-    const obj = {
-      episodeOne: 1,
-      twoJedisWalkIntoACantina: 2,
-      lukeSkywalker,
-      episodeThree: 3,
-      mayTheFourth: 4,
-      anakinSkywalker,
-    };
+  // bad
+  const obj = {
+    episodeOne: 1,
+    twoJedisWalkIntoACantina: 2,
+    lukeSkywalker,
+    episodeThree: 3,
+    mayTheFourth: 4,
+    anakinSkywalker,
+  };
 
-    // good
-    const obj = {
-      lukeSkywalker,
-      anakinSkywalker,
-      episodeOne: 1,
-      twoJedisWalkIntoACantina: 2,
-      episodeThree: 3,
-      mayTheFourth: 4,
-    };
-    ```
+  // good
+  const obj = {
+    lukeSkywalker,
+    anakinSkywalker,
+    episodeOne: 1,
+    twoJedisWalkIntoACantina: 2,
+    episodeThree: 3,
+    mayTheFourth: 4,
+  };
+  ```
 
 <a name="arrays"></a>
 ## 数组
@@ -325,26 +325,26 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为解构能减少临时引用属性。
 
-    ```javascript
-    // bad
-    function getFullName(user) {
-      const firstName = user.firstName;
-      const lastName = user.lastName;
+  ```javascript
+  // bad
+  function getFullName(user) {
+    const firstName = user.firstName;
+    const lastName = user.lastName;
 
-      return `${firstName} ${lastName}`;
-    }
+    return `${firstName} ${lastName}`;
+  }
 
-    // good
-    function getFullName(obj) {
-      const { firstName, lastName } = obj;
-      return `${firstName} ${lastName}`;
-    }
+  // good
+  function getFullName(obj) {
+    const { firstName, lastName } = obj;
+    return `${firstName} ${lastName}`;
+  }
 
-    // best
-    function getFullName({ firstName, lastName }) {
-      return `${firstName} ${lastName}`;
-    }
-    ```
+  // best
+  function getFullName({ firstName, lastName }) {
+    return `${firstName} ${lastName}`;
+  }
+  ```
 
   - [5.2](#5.2) <a name='5.2'></a> 对数组使用解构赋值。
 
@@ -420,22 +420,22 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？模板字符串更为简洁，更具可读性。
 
-    ```javascript
-    // bad
-    function sayHi(name) {
-      return 'How are you, ' + name + '?';
-    }
+  ```javascript
+  // bad
+  function sayHi(name) {
+    return 'How are you, ' + name + '?';
+  }
 
-    // bad
-    function sayHi(name) {
-      return ['How are you, ', name, '?'].join();
-    }
+  // bad
+  function sayHi(name) {
+    return ['How are you, ', name, '?'].join();
+  }
 
-    // good
-    function sayHi(name) {
-      return `How are you, ${name}?`;
-    }
-    ```
+  // good
+  function sayHi(name) {
+    return `How are you, ${name}?`;
+  }
+  ```
 
 <a name="functions"></a>
 ## 函数
@@ -444,15 +444,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为函数声明是可命名的，所以他们在调用栈中更容易被识别。此外，函数声明会把整个函数提升（hoisted），而函数表达式只会把函数的引用变量名提升。这条规则使得[箭头函数](#arrow-functions)可以取代函数表达式。
 
-    ```javascript
-    // bad
-    const foo = function () {
-    };
+  ```javascript
+  // bad
+  const foo = function () {
+  };
 
-    // good
-    function foo() {
-    }
-    ```
+  // good
+  function foo() {
+  }
+  ```
 
   - [7.2](#7.2) <a name='7.2'></a> 函数表达式:
 
@@ -502,18 +502,18 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？使用 `...` 能明确你要传入的参数。另外 rest 参数是一个真正的数组，而 `arguments` 是一个类数组。
 
-    ```javascript
-    // bad
-    function concatenateAll() {
-      const args = Array.prototype.slice.call(arguments);
-      return args.join('');
-    }
+  ```javascript
+  // bad
+  function concatenateAll() {
+    const args = Array.prototype.slice.call(arguments);
+    return args.join('');
+  }
 
-    // good
-    function concatenateAll(...args) {
-      return args.join('');
-    }
-    ```
+  // good
+  function concatenateAll(...args) {
+    return args.join('');
+  }
+  ```
 
   <a name="es6-default-parameters"></a>
   - [7.7](#7.7) <a name='7.7'></a> 直接给函数的参数指定默认值，不要使用一个变化的函数参数。
@@ -569,17 +569,17 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么不？如果你有一个相当复杂的函数，你或许可以把逻辑部分转移到一个函数声明上。
 
-    ```javascript
-    // bad
-    [1, 2, 3].map(function (x) {
-      return x * x;
-    });
+  ```javascript
+  // bad
+  [1, 2, 3].map(function (x) {
+    return x * x;
+  });
 
-    // good
-    [1, 2, 3].map((x) => {
-      return x * x;
+  // good
+  [1, 2, 3].map((x) => {
+    return x * x;
     });
-    ```
+  ```
 
   - [8.2](#8.2) <a name='8.2'></a> 如果一个函数适合用一行写出并且只有一个参数，那就把花括号、圆括号和 `return` 都省略掉。如果不是，那就不要省略。
 
@@ -587,15 +587,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么不？当你打算回传一个对象的时候。
 
-    ```javascript
-    // good
-    [1, 2, 3].map(x => x * x);
+  ```javascript
+  // good
+  [1, 2, 3].map(x => x * x);
 
-    // good
-    [1, 2, 3].reduce((total, n) => {
-      return total + n;
-    }, 0);
-    ```
+  // good
+  [1, 2, 3].reduce((total, n) => {
+    return total + n;
+  }, 0);
+  ```
 
 <a name="constructors"></a>
 ## 构造器
@@ -604,53 +604,52 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么? 因为 `class` 语法更为简洁更易读。
 
-    ```javascript
-    // bad
-    function Queue(contents = []) {
+  ```javascript
+  // bad
+  function Queue(contents = []) {
+    this._queue = [...contents];
+  }
+  Queue.prototype.pop = function() {
+    const value = this._queue[0];
+    this._queue.splice(0, 1);
+    return value;
+  }
+
+  // good
+  class Queue {
+    constructor(contents = []) {
       this._queue = [...contents];
     }
-    Queue.prototype.pop = function() {
+    pop() {
       const value = this._queue[0];
       this._queue.splice(0, 1);
       return value;
     }
-
-
-    // good
-    class Queue {
-      constructor(contents = []) {
-        this._queue = [...contents];
-      }
-      pop() {
-        const value = this._queue[0];
-        this._queue.splice(0, 1);
-        return value;
-      }
-    }
-    ```
+  }
+  ```
 
   - [9.2](#9.2) <a name='9.2'></a> 使用 `extends` 继承。
 
   > 为什么？因为 `extends` 是一个内建的原型继承方法并且不会破坏 `instanceof`。
 
-    ```javascript
-    // bad
+  ```javascript
+  // bad
     const inherits = require('inherits');
     function PeekableQueue(contents) {
-      Queue.apply(this, contents);
-    }
-    inherits(PeekableQueue, Queue);
-    PeekableQueue.prototype.peek = function() {
+    Queue.apply(this, contents);
+  }
+  inherits(PeekableQueue, Queue);
+  PeekableQueue.prototype.peek = function() {
+    return this._queue[0];
+  }
+
+  // good
+  class PeekableQueue extends Queue {
+    peek() {
       return this._queue[0];
     }
-
-    // good
-    class PeekableQueue extends Queue {
-      peek() {
-        return this._queue[0];
-      }
-    }
-    ```
+  }
+  ```
 
   - [9.3](#9.3) <a name='9.3'></a> 方法可以返回 `this` 来帮助链式调用。
 
@@ -714,46 +713,46 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？模块就是未来，让我们开始迈向未来吧。
 
-    ```javascript
-    // bad
-    const AirbnbStyleGuide = require('./AirbnbStyleGuide');
-    module.exports = AirbnbStyleGuide.es6;
+  ```javascript
+  // bad
+  const AirbnbStyleGuide = require('./AirbnbStyleGuide');
+  module.exports = AirbnbStyleGuide.es6;
 
-    // ok
-    import AirbnbStyleGuide from './AirbnbStyleGuide';
-    export default AirbnbStyleGuide.es6;
+  // ok
+  import AirbnbStyleGuide from './AirbnbStyleGuide';
+  export default AirbnbStyleGuide.es6;
 
-    // best
-    import { es6 } from './AirbnbStyleGuide';
-    export default es6;
-    ```
+  // best
+  import { es6 } from './AirbnbStyleGuide';
+  export default es6;
+  ```
 
   - [10.2](#10.2) <a name='10.2'></a> 不要使用通配符 import。
 
   > 为什么？这样能确保你只有一个默认 export。
 
-    ```javascript
-    // bad
-    import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+  ```javascript
+  // bad
+  import * as AirbnbStyleGuide from './AirbnbStyleGuide';
 
-    // good
-    import AirbnbStyleGuide from './AirbnbStyleGuide';
-    ```
+  // good
+  import AirbnbStyleGuide from './AirbnbStyleGuide';
+  ```
 
   - [10.3](#10.3) <a name='10.3'></a>不要从 import 中直接 export。
 
   > 为什么？虽然一行代码简洁明了，但让 import 和 export 各司其职让事情能保持一致。
 
-    ```javascript
-    // bad
-    // filename es6.js
-    export { es6 as default } from './airbnbStyleGuide';
+  ```javascript
+  // bad
+  // filename es6.js
+  export { es6 as default } from './airbnbStyleGuide';
 
-    // good
-    // filename es6.js
-    import { es6 } from './AirbnbStyleGuide';
-    export default es6;
-    ```
+  // good
+  // filename es6.js
+  import { es6 } from './AirbnbStyleGuide';
+  export default es6;
+  ```
 
 <a name="iterators-and-generators"></a>
 ## Iterators and Generators
@@ -762,26 +761,26 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这加强了我们不变的规则。处理纯函数的回调值更易读，这比它带来的副作用更重要。
 
-    ```javascript
-    const numbers = [1, 2, 3, 4, 5];
+  ```javascript
+  const numbers = [1, 2, 3, 4, 5];
 
-    // bad
-    let sum = 0;
-    for (let num of numbers) {
-      sum += num;
-    }
+  // bad
+  let sum = 0;
+  for (let num of numbers) {
+    sum += num;
+  }
 
-    sum === 15;
+  sum === 15;
 
-    // good
-    let sum = 0;
-    numbers.forEach((num) => sum += num);
-    sum === 15;
+  // good
+  let sum = 0;
+  numbers.forEach((num) => sum += num);
+  sum === 15;
 
-    // best (use the functional force)
-    const sum = numbers.reduce((total, num) => total + num, 0);
-    sum === 15;
-    ```
+  // best (use the functional force)
+  const sum = numbers.reduce((total, num) => total + num, 0);
+  sum === 15;
+  ```
 
   - [11.2](#11.2) <a name='11.2'></a> 现在还不要使用 generators。
 
@@ -859,73 +858,73 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？当你需要把已赋值变量赋值给未赋值变量时非常有用。
 
-    ```javascript
-    // bad
-    let i, len, dragonball,
-        items = getItems(),
-        goSportsTeam = true;
+  ```javascript
+  // bad
+  let i, len, dragonball,
+      items = getItems(),
+      goSportsTeam = true;
 
-    // bad
-    let i;
-    const items = getItems();
-    let dragonball;
-    const goSportsTeam = true;
-    let len;
+  // bad
+  let i;
+  const items = getItems();
+  let dragonball;
+  const goSportsTeam = true;
+  let len;
 
-    // good
-    const goSportsTeam = true;
-    const items = getItems();
-    let dragonball;
-    let i;
-    let length;
-    ```
+  // good
+  const goSportsTeam = true;
+  const items = getItems();
+  let dragonball;
+  let i;
+  let length;
+  ```
 
   - [13.4](#13.4) <a name='13.4'></a> 在你需要的地方给变量赋值，但请把它们放在一个合理的位置。
 
   > 为什么？`let` 和 `const` 是块级作用域而不是函数作用域。
 
-    ```javascript
-    // good
-    function() {
-      test();
-      console.log('doing stuff..');
+  ```javascript
+  // good
+  function() {
+    test();
+    console.log('doing stuff..');
 
-      //..other stuff..
+    //..other stuff..
 
-      const name = getName();
+    const name = getName();
 
-      if (name === 'test') {
-        return false;
-      }
-
-      return name;
+    if (name === 'test') {
+      return false;
     }
 
-    // bad - unnecessary function call
-    function(hasName) {
-      const name = getName();
+    return name;
+  }
 
-      if (!hasName) {
-        return false;
-      }
+  // bad - unnecessary function call
+  function(hasName) {
+    const name = getName();
 
-      this.setFirstName(name);
-
-      return true;
+    if (!hasName) {
+      return false;
     }
 
-    // good
-    function(hasName) {
-      if (!hasName) {
-        return false;
-      }
+    this.setFirstName(name);
 
-      const name = getName();
-      this.setFirstName(name);
+    return true;
+  }
 
-      return true;
+  // good
+  function(hasName) {
+    if (!hasName) {
+      return false;
     }
-    ```
+
+    const name = getName();
+    this.setFirstName(name);
+
+    return true;
+  }
+  ```
 
 <a name="hoisting"></a>
 ## Hoisting
@@ -1427,44 +1426,44 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么? 这会让 git diffs 更干净。另外，像 babel 这样的转译器会移除结尾多余的逗号，也就是说你不必担心老旧浏览器的[尾逗号问题](es5/README.md#commas)。
 
-    ```javascript
-    // bad - git diff without trailing comma
-    const hero = {
-         firstName: 'Florence',
-    -    lastName: 'Nightingale'
-    +    lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb graph', 'modern nursing']
-    }
+  ```javascript
+  // bad - git diff without trailing comma
+  const hero = {
+       firstName: 'Florence',
+  -    lastName: 'Nightingale'
+  +    lastName: 'Nightingale',
+  +    inventorOf: ['coxcomb graph', 'modern nursing']
+  }
 
-    // good - git diff with trailing comma
-    const hero = {
-         firstName: 'Florence',
-         lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb chart', 'modern nursing'],
-    }
+  // good - git diff with trailing comma
+  const hero = {
+       firstName: 'Florence',
+       lastName: 'Nightingale',
+  +    inventorOf: ['coxcomb chart', 'modern nursing'],
+  }
 
-    // bad
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully'
-    };
+  // bad
+  const hero = {
+    firstName: 'Dana',
+    lastName: 'Scully'
+  };
 
-    const heroes = [
-      'Batman',
-      'Superman'
-    ];
+  const heroes = [
+    'Batman',
+    'Superman'
+  ];
 
-    // good
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully',
-    };
+  // good
+  const hero = {
+    firstName: 'Dana',
+    lastName: 'Scully',
+  };
 
-    const heroes = [
-      'Batman',
-      'Superman',
-    ];
-    ```
+  const heroes = [
+    'Batman',
+    'Superman',
+  ];
+  ```
 
 <a name="semicolons"></a>
 ## 分号
