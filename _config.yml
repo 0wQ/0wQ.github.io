@@ -3,7 +3,7 @@ permalink:          pretty
 author:             Mizore
 title:              "Mizore's blog"
 permalink:          /:title.html
-paginate:           5
+paginate:           7
 paginate_path:      /page:num
 excerpt_separator:  <!--more-->
 markdown:           kramdown
@@ -11,5 +11,5 @@ highlighter:        rouge
 encoding:           utf-8
 language:           zh-cn
 timezone:           Asia/Shanghai
-version:            0.1.8.1
+version:            0.1.8.2
 beian:              鲁ICP备17026272号-3
