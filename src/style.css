@@ -176,9 +176,10 @@ pre {
     -webkit-overflow-scrolling: touch;
     background-color: #f2f2f2;
     line-height: 1.5;
-    overflow: auto;
+    overflow: auto !important;
     padding: 0.93rem;
     border-radius: 3px;
+    white-space: pre !important;
 }
 
 pre,pre code {
