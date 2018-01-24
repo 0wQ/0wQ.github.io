@@ -5,19 +5,19 @@ function getCss(url) {
   try {
     document.createStyleSheet(url)
   } catch(e) {
-    var cssLink = document.createElement('link');
+    const cssLink = document.createElement('link');
     cssLink.rel = 'stylesheet';
     cssLink.href = url;
-    var head = document.getElementsByTagName('head')[0];
+    const head = document.getElementsByTagName('head')[0];
     head.appendChild(cssLink)
   }
 }
 
 function getScript(a, b) {
-  var c = document.createElement('script');
+  const c = document.createElement('script');
   c.src = a;
-  var d = document.getElementsByTagName('head')[0],
-    done = false;
+  const d = document.getElementsByTagName('head')[0],
+     done = false;
   c.onload = c.onreadystatechange = () => {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
       done = true;
@@ -29,8 +29,28 @@ function getScript(a, b) {
   d.appendChild(c)
 }
 
+function valine(path) {
+  const url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
+        url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
+  getScript(url1, () => {
+    getScript(url2, () => {
+      new Valine({
+        el: '#comment',
+        appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
+        appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
+        verify: true,
+        avatar: 'retro',
+        pageSize: 5,
+        path: path,
+        lang: 'en',
+        placeholder: 'Just so so...',
+      })
+    })
+  })
+}
+
 function jqend() {
-  $.ajaxSetup({ cache : true })
+  $.ajaxSetup({cache:true})
   setTimeout(() => {
     if ($('#comment').length) {
       valine(location.pathname)
@@ -48,24 +68,4 @@ function jqend() {
       getCss('/src/syntax.css')
     }
   }, 0)
-}
-
-function valine(path) {
-  var url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
-      url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
-  getScript(url1, () => {
-    getScript(url2, () => {
-      new Valine({
-        el: '#comment',
-        appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
-        appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
-        verify: true,
-        avatar: 'retro',
-        pageSize: 5,
-        path: path,
-        lang: 'en',
-        placeholder: 'Just so so...',
-      })
-    })
-  })
 }
