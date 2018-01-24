@@ -1,3 +1,9 @@
+---
+layout: post
+title: Airbnb JS Style Guide
+excerpt: A mostly reasonable approach to JavaScript.
+---
+
 # Airbnb JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
