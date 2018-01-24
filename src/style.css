@@ -115,7 +115,8 @@ table {
     text-align: center;
     font-size: .85rem;
     line-height: 1.6;
-    word-break: break-all;
+    overflow: auto;
+    /* word-break: break-all; */
 }
 
 table td,table th {
