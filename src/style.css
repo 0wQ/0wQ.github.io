@@ -76,6 +76,12 @@ blockquote,dl,hr,ol,p,pre,table,ul {
     font-weight: 300;
 }
 
+p,ol,ul {
+    font-size: .98rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
 h1{font-size:1.78rem}
 h2{font-size:1.6rem}
 h3{font-size:1.4rem}
@@ -162,10 +168,11 @@ pre {
     -webkit-overflow-scrolling: touch;
     background-color: #f2f2f2;
     line-height: 1.5;
-    overflow: auto !important;
+    overflow: auto;
     padding: 0.93rem;
     border-radius: 3px;
-    white-space: pre !important;
+    white-space: pre;
+    word-wrap: normal !important;
 }
 
 pre,pre code {
@@ -182,12 +189,6 @@ ol,ul {
 
 ol ol,ul ol {
     list-style-type: lower-roman;
-}
-
-p,ol,ul {
-    font-size: .98rem;
-    line-height: 1.6;
-    word-wrap: break-word;
 }
 
 blockquote {
