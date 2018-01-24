@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Airbnb JavaScript Style Guide
-excerpt: "Airbnb JavaScript Style Guide.\nA mostly reasonable approach to JavaScript."
+excerpt: A mostly reasonable approach to JavaScript.
 ---
 
 # Airbnb JavaScript Style Guide() {
