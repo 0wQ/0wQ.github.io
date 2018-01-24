@@ -1,18 +1,6 @@
 document.addEventListener('touchstart', function() {}, false)
 getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
 
-function getCss(url) {
-  try {
-    document.createStyleSheet(url)
-  } catch(e) {
-    const cssLink = document.createElement('link');
-    cssLink.rel = 'stylesheet';
-    cssLink.href = url;
-    const head = document.getElementsByTagName('head')[0];
-    head.appendChild(cssLink)
-  }
-}
-
 function getScript(a, b) {
   let c = document.createElement('script');
   c.src = a;
@@ -27,6 +15,18 @@ function getScript(a, b) {
     }
   }
   d.appendChild(c)
+}
+
+function getCss(url) {
+  try {
+    document.createStyleSheet(url)
+  } catch(e) {
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = url;
+    const head = document.getElementsByTagName('head')[0];
+    head.appendChild(cssLink)
+  }
 }
 
 function valine(path) {
