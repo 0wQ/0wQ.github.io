@@ -5,7 +5,6 @@ function getCss(url) {
   } catch(e) {
     var cssLink = document.createElement('link');
     cssLink.rel = 'stylesheet';
-    cssLink.type = 'text/css';
     cssLink.href = url;
     var head = document.getElementsByTagName('head')[0];
     head.appendChild(cssLink)
@@ -29,7 +28,7 @@ function getScript(a, b) {
 function jqend() {
   $.ajaxSetup({cache:true})
   setTimeout(function() {
-    if ($('#comment').length > 0) {
+    if ($('#comment').length) {
       valine(location.pathname)
     }
   }, 0)
@@ -41,7 +40,7 @@ function jqend() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
   setTimeout(function() {
-    if ($('.highlight').length > 0) {
+    if ($('.highlight').length) {
       getCss('/src/syntax.css')
     }
   }, 0)

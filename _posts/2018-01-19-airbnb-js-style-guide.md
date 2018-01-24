@@ -42,6 +42,13 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   1. [ECMAScript 6 编码规范](#ecmascript-6-styles)
   1. [测试](#testing)
   1. [性能](#performance)
+  1. [相关资源](#resources)
+  1. [使用情况](#in-the-wild)
+  1. [其他翻译](#translation)
+  1. [JavaScript 编码规范说明](#the-javascript-style-guide-guide)
+  1. [讨论 JavaScript](#chat-with-us-about-javascript)
+  1. [贡献者](#contributors)
+  1. [许可协议](#license)
 
 <a name="types"></a>
 ## 类型
@@ -78,6 +85,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="references"></a>
 ## 引用
 
@@ -85,33 +94,33 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这能确保你无法对引用重新赋值，也不会导致出现 bug 或难以理解。
 
-  ```javascript
-  // bad
-  var a = 1;
-  var b = 2;
+    ```javascript
+    // bad
+    var a = 1;
+    var b = 2;
 
-  // good
-  const a = 1;
-  const b = 2;
-  ```
+    // good
+    const a = 1;
+    const b = 2;
+    ```
 
   - [2.2](#2.2) <a name='2.2'></a> 如果你一定需要可变动的引用，使用 `let` 代替 `var`。
 
   > 为什么？因为  `let` 是块级作用域，而 `var` 是函数作用域。
 
-  ```javascript
-  // bad
-  var count = 1;
-  if (true) {
-    count += 1;
-  }
+    ```javascript
+    // bad
+    var count = 1;
+    if (true) {
+      count += 1;
+    }
 
-  // good, use the let.
-  let count = 1;
-  if (true) {
-    count += 1;
-  }
-  ```
+    // good, use the let.
+    let count = 1;
+    if (true) {
+      count += 1;
+    }
+    ```
 
   - [2.3](#2.3) <a name='2.3'></a> 注意 `let` 和 `const` 都是块级作用域。
 
@@ -124,6 +133,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
     ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="objects"></a>
 ## 对象
@@ -178,25 +189,25 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为这样可以让你在一个地方定义所有的对象属性。
 
-  ```javascript
-  function getKey(k) {
-    return `a key named ${k}`;
-  }
+    ```javascript
+    function getKey(k) {
+      return `a key named ${k}`;
+    }
 
-  // bad
-  const obj = {
-    id: 5,
-    name: 'San Francisco',
-  };
-  obj[getKey('enabled')] = true;
+    // bad
+    const obj = {
+      id: 5,
+      name: 'San Francisco',
+    };
+    obj[getKey('enabled')] = true;
 
-  // good
-  const obj = {
-    id: 5,
-    name: 'San Francisco',
-    [getKey('enabled')]: true,
-  };
-  ```
+    // good
+    const obj = {
+      id: 5,
+      name: 'San Francisco',
+      [getKey('enabled')]: true,
+    };
+    ```
 
   <a name="es6-object-shorthand"></a>
   - [3.5](#3.5) <a name='3.5'></a> 使用对象方法的简写。
@@ -226,48 +237,50 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为这样更短更有描述性。
 
-  ```javascript
-  const lukeSkywalker = 'Luke Skywalker';
+    ```javascript
+    const lukeSkywalker = 'Luke Skywalker';
 
-  // bad
-  const obj = {
-    lukeSkywalker: lukeSkywalker,
-  };
+    // bad
+    const obj = {
+      lukeSkywalker: lukeSkywalker,
+    };
 
-  // good
-  const obj = {
-    lukeSkywalker,
-  };
-  ```
+    // good
+    const obj = {
+      lukeSkywalker,
+    };
+    ```
 
   - [3.7](#3.7) <a name='3.7'></a> 在对象属性声明前把简写的属性分组。
 
   > 为什么？因为这样能清楚地看出哪些属性使用了简写。
 
-  ```javascript
-  const anakinSkywalker = 'Anakin Skywalker';
-  const lukeSkywalker = 'Luke Skywalker';
+    ```javascript
+    const anakinSkywalker = 'Anakin Skywalker';
+    const lukeSkywalker = 'Luke Skywalker';
 
-  // bad
-  const obj = {
-    episodeOne: 1,
-    twoJedisWalkIntoACantina: 2,
-    lukeSkywalker,
-    episodeThree: 3,
-    mayTheFourth: 4,
-    anakinSkywalker,
-  };
+    // bad
+    const obj = {
+      episodeOne: 1,
+      twoJedisWalkIntoACantina: 2,
+      lukeSkywalker,
+      episodeThree: 3,
+      mayTheFourth: 4,
+      anakinSkywalker,
+    };
 
-  // good
-  const obj = {
-    lukeSkywalker,
-    anakinSkywalker,
-    episodeOne: 1,
-    twoJedisWalkIntoACantina: 2,
-    episodeThree: 3,
-    mayTheFourth: 4,
-  };
-  ```
+    // good
+    const obj = {
+      lukeSkywalker,
+      anakinSkywalker,
+      episodeOne: 1,
+      twoJedisWalkIntoACantina: 2,
+      episodeThree: 3,
+      mayTheFourth: 4,
+    };
+    ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="arrays"></a>
 ## 数组
@@ -318,6 +331,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     const nodes = Array.from(foo);
     ```
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="destructuring"></a>
 ## 解构
 
@@ -325,26 +340,26 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为解构能减少临时引用属性。
 
-  ```javascript
-  // bad
-  function getFullName(user) {
-    const firstName = user.firstName;
-    const lastName = user.lastName;
+    ```javascript
+    // bad
+    function getFullName(user) {
+      const firstName = user.firstName;
+      const lastName = user.lastName;
 
-    return `${firstName} ${lastName}`;
-  }
+      return `${firstName} ${lastName}`;
+    }
 
-  // good
-  function getFullName(obj) {
-    const { firstName, lastName } = obj;
-    return `${firstName} ${lastName}`;
-  }
+    // good
+    function getFullName(obj) {
+      const { firstName, lastName } = obj;
+      return `${firstName} ${lastName}`;
+    }
 
-  // best
-  function getFullName({ firstName, lastName }) {
-    return `${firstName} ${lastName}`;
-  }
-  ```
+    // best
+    function getFullName({ firstName, lastName }) {
+      return `${firstName} ${lastName}`;
+    }
+    ```
 
   - [5.2](#5.2) <a name='5.2'></a> 对数组使用解构赋值。
 
@@ -383,6 +398,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     ```
 
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="strings"></a>
 ## Strings
 
@@ -420,22 +437,24 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？模板字符串更为简洁，更具可读性。
 
-  ```javascript
-  // bad
-  function sayHi(name) {
-    return 'How are you, ' + name + '?';
-  }
+    ```javascript
+    // bad
+    function sayHi(name) {
+      return 'How are you, ' + name + '?';
+    }
 
-  // bad
-  function sayHi(name) {
-    return ['How are you, ', name, '?'].join();
-  }
+    // bad
+    function sayHi(name) {
+      return ['How are you, ', name, '?'].join();
+    }
 
-  // good
-  function sayHi(name) {
-    return `How are you, ${name}?`;
-  }
-  ```
+    // good
+    function sayHi(name) {
+      return `How are you, ${name}?`;
+    }
+    ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="functions"></a>
 ## 函数
@@ -444,15 +463,15 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？因为函数声明是可命名的，所以他们在调用栈中更容易被识别。此外，函数声明会把整个函数提升（hoisted），而函数表达式只会把函数的引用变量名提升。这条规则使得[箭头函数](#arrow-functions)可以取代函数表达式。
 
-  ```javascript
-  // bad
-  const foo = function () {
-  };
+    ```javascript
+    // bad
+    const foo = function () {
+    };
 
-  // good
-  function foo() {
-  }
-  ```
+    // good
+    function foo() {
+    }
+    ```
 
   - [7.2](#7.2) <a name='7.2'></a> 函数表达式:
 
@@ -502,18 +521,18 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？使用 `...` 能明确你要传入的参数。另外 rest 参数是一个真正的数组，而 `arguments` 是一个类数组。
 
-  ```javascript
-  // bad
-  function concatenateAll() {
-    const args = Array.prototype.slice.call(arguments);
-    return args.join('');
-  }
+    ```javascript
+    // bad
+    function concatenateAll() {
+      const args = Array.prototype.slice.call(arguments);
+      return args.join('');
+    }
 
-  // good
-  function concatenateAll(...args) {
-    return args.join('');
-  }
-  ```
+    // good
+    function concatenateAll(...args) {
+      return args.join('');
+    }
+    ```
 
   <a name="es6-default-parameters"></a>
   - [7.7](#7.7) <a name='7.7'></a> 直接给函数的参数指定默认值，不要使用一个变化的函数参数。
@@ -560,26 +579,28 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   ```
 
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="arrow-functions"></a>
 ## 箭头函数
 
   - [8.1](#8.1) <a name='8.1'></a> 当你必须使用函数表达式（或传递一个匿名函数）时，使用箭头函数符号。
 
-  > 为什么?因为箭头函数创造了新的一个 `this` 执行环境（译注：参考 [Arrow functions - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 和 [ES6 arrow functions, syntax and lexical scoping](http://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/)），通常情况下都能满足你的需求，而且这样的写法更为简洁。
+  > 为什么?因为箭头函数创造了新的一个 `this` 执行环境（译注：参考 [Arrow functions - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 和 [ES6 arrow functions, syntax and lexical scoping](http://toddmotto.com/es6-arrow-functions-syntaxes-and-lexical-scoping/)），通常情况下都能满足你的需求，而且这样的写法更为简洁。
 
   > 为什么不？如果你有一个相当复杂的函数，你或许可以把逻辑部分转移到一个函数声明上。
 
-  ```javascript
-  // bad
-  [1, 2, 3].map(function (x) {
-    return x * x;
-  });
-
-  // good
-  [1, 2, 3].map((x) => {
-    return x * x;
+    ```javascript
+    // bad
+    [1, 2, 3].map(function (x) {
+      return x * x;
     });
-  ```
+
+    // good
+    [1, 2, 3].map((x) => {
+      return x * x;
+    });
+    ```
 
   - [8.2](#8.2) <a name='8.2'></a> 如果一个函数适合用一行写出并且只有一个参数，那就把花括号、圆括号和 `return` 都省略掉。如果不是，那就不要省略。
 
@@ -587,15 +608,17 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么不？当你打算回传一个对象的时候。
 
-  ```javascript
-  // good
-  [1, 2, 3].map(x => x * x);
+    ```javascript
+    // good
+    [1, 2, 3].map(x => x * x);
 
-  // good
-  [1, 2, 3].reduce((total, n) => {
-    return total + n;
-  }, 0);
-  ```
+    // good
+    [1, 2, 3].reduce((total, n) => {
+      return total + n;
+    }, 0);
+    ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="constructors"></a>
 ## 构造器
@@ -604,52 +627,53 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么? 因为 `class` 语法更为简洁更易读。
 
-  ```javascript
-  // bad
-  function Queue(contents = []) {
-    this._queue = [...contents];
-  }
-  Queue.prototype.pop = function() {
-    const value = this._queue[0];
-    this._queue.splice(0, 1);
-    return value;
-  }
-
-  // good
-  class Queue {
-    constructor(contents = []) {
+    ```javascript
+    // bad
+    function Queue(contents = []) {
       this._queue = [...contents];
     }
-    pop() {
+    Queue.prototype.pop = function() {
       const value = this._queue[0];
       this._queue.splice(0, 1);
       return value;
     }
-  }
-  ```
+
+
+    // good
+    class Queue {
+      constructor(contents = []) {
+        this._queue = [...contents];
+      }
+      pop() {
+        const value = this._queue[0];
+        this._queue.splice(0, 1);
+        return value;
+      }
+    }
+    ```
 
   - [9.2](#9.2) <a name='9.2'></a> 使用 `extends` 继承。
 
   > 为什么？因为 `extends` 是一个内建的原型继承方法并且不会破坏 `instanceof`。
 
-  ```javascript
-  // bad
+    ```javascript
+    // bad
     const inherits = require('inherits');
     function PeekableQueue(contents) {
-    Queue.apply(this, contents);
-  }
-  inherits(PeekableQueue, Queue);
-  PeekableQueue.prototype.peek = function() {
-    return this._queue[0];
-  }
-
-  // good
-  class PeekableQueue extends Queue {
-    peek() {
+      Queue.apply(this, contents);
+    }
+    inherits(PeekableQueue, Queue);
+    PeekableQueue.prototype.peek = function() {
       return this._queue[0];
     }
-  }
-  ```
+
+    // good
+    class PeekableQueue extends Queue {
+      peek() {
+        return this._queue[0];
+      }
+    }
+    ```
 
   - [9.3](#9.3) <a name='9.3'></a> 方法可以返回 `this` 来帮助链式调用。
 
@@ -706,6 +730,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     }
     ```
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="modules"></a>
 ## 模块
 
@@ -713,46 +739,48 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？模块就是未来，让我们开始迈向未来吧。
 
-  ```javascript
-  // bad
-  const AirbnbStyleGuide = require('./AirbnbStyleGuide');
-  module.exports = AirbnbStyleGuide.es6;
+    ```javascript
+    // bad
+    const AirbnbStyleGuide = require('./AirbnbStyleGuide');
+    module.exports = AirbnbStyleGuide.es6;
 
-  // ok
-  import AirbnbStyleGuide from './AirbnbStyleGuide';
-  export default AirbnbStyleGuide.es6;
+    // ok
+    import AirbnbStyleGuide from './AirbnbStyleGuide';
+    export default AirbnbStyleGuide.es6;
 
-  // best
-  import { es6 } from './AirbnbStyleGuide';
-  export default es6;
-  ```
+    // best
+    import { es6 } from './AirbnbStyleGuide';
+    export default es6;
+    ```
 
   - [10.2](#10.2) <a name='10.2'></a> 不要使用通配符 import。
 
   > 为什么？这样能确保你只有一个默认 export。
 
-  ```javascript
-  // bad
-  import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+    ```javascript
+    // bad
+    import * as AirbnbStyleGuide from './AirbnbStyleGuide';
 
-  // good
-  import AirbnbStyleGuide from './AirbnbStyleGuide';
-  ```
+    // good
+    import AirbnbStyleGuide from './AirbnbStyleGuide';
+    ```
 
   - [10.3](#10.3) <a name='10.3'></a>不要从 import 中直接 export。
 
   > 为什么？虽然一行代码简洁明了，但让 import 和 export 各司其职让事情能保持一致。
 
-  ```javascript
-  // bad
-  // filename es6.js
-  export { es6 as default } from './airbnbStyleGuide';
+    ```javascript
+    // bad
+    // filename es6.js
+    export { es6 as default } from './airbnbStyleGuide';
 
-  // good
-  // filename es6.js
-  import { es6 } from './AirbnbStyleGuide';
-  export default es6;
-  ```
+    // good
+    // filename es6.js
+    import { es6 } from './AirbnbStyleGuide';
+    export default es6;
+    ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="iterators-and-generators"></a>
 ## Iterators and Generators
@@ -761,30 +789,32 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？这加强了我们不变的规则。处理纯函数的回调值更易读，这比它带来的副作用更重要。
 
-  ```javascript
-  const numbers = [1, 2, 3, 4, 5];
+    ```javascript
+    const numbers = [1, 2, 3, 4, 5];
 
-  // bad
-  let sum = 0;
-  for (let num of numbers) {
-    sum += num;
-  }
+    // bad
+    let sum = 0;
+    for (let num of numbers) {
+      sum += num;
+    }
 
-  sum === 15;
+    sum === 15;
 
-  // good
-  let sum = 0;
-  numbers.forEach((num) => sum += num);
-  sum === 15;
+    // good
+    let sum = 0;
+    numbers.forEach((num) => sum += num);
+    sum === 15;
 
-  // best (use the functional force)
-  const sum = numbers.reduce((total, num) => total + num, 0);
-  sum === 15;
-  ```
+    // best (use the functional force)
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    sum === 15;
+    ```
 
   - [11.2](#11.2) <a name='11.2'></a> 现在还不要使用 generators。
 
   > 为什么？因为它们现在还没法很好地编译到 ES5。 (译者注：目前(2016/03) Chrome 和 Node.js 的稳定版本都已支持 generators)
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="properties"></a>
 ## 属性
@@ -818,6 +848,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
     const isJedi = getProp('jedi');
     ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="variables"></a>
 ## 变量
@@ -858,73 +890,75 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么？当你需要把已赋值变量赋值给未赋值变量时非常有用。
 
-  ```javascript
-  // bad
-  let i, len, dragonball,
-      items = getItems(),
-      goSportsTeam = true;
+    ```javascript
+    // bad
+    let i, len, dragonball,
+        items = getItems(),
+        goSportsTeam = true;
 
-  // bad
-  let i;
-  const items = getItems();
-  let dragonball;
-  const goSportsTeam = true;
-  let len;
+    // bad
+    let i;
+    const items = getItems();
+    let dragonball;
+    const goSportsTeam = true;
+    let len;
 
-  // good
-  const goSportsTeam = true;
-  const items = getItems();
-  let dragonball;
-  let i;
-  let length;
-  ```
+    // good
+    const goSportsTeam = true;
+    const items = getItems();
+    let dragonball;
+    let i;
+    let length;
+    ```
 
   - [13.4](#13.4) <a name='13.4'></a> 在你需要的地方给变量赋值，但请把它们放在一个合理的位置。
 
   > 为什么？`let` 和 `const` 是块级作用域而不是函数作用域。
 
-  ```javascript
-  // good
-  function() {
-    test();
-    console.log('doing stuff..');
+    ```javascript
+    // good
+    function() {
+      test();
+      console.log('doing stuff..');
 
-    //..other stuff..
+      //..other stuff..
 
-    const name = getName();
+      const name = getName();
 
-    if (name === 'test') {
-      return false;
+      if (name === 'test') {
+        return false;
+      }
+
+      return name;
     }
 
-    return name;
-  }
+    // bad - unnecessary function call
+    function(hasName) {
+      const name = getName();
 
-  // bad - unnecessary function call
-  function(hasName) {
-    const name = getName();
+      if (!hasName) {
+        return false;
+      }
 
-    if (!hasName) {
-      return false;
+      this.setFirstName(name);
+
+      return true;
     }
 
-    this.setFirstName(name);
+    // good
+    function(hasName) {
+      if (!hasName) {
+        return false;
+      }
 
-    return true;
-  }
+      const name = getName();
+      this.setFirstName(name);
 
-  // good
-  function(hasName) {
-    if (!hasName) {
-      return false;
+      return true;
     }
+    ```
 
-    const name = getName();
-    this.setFirstName(name);
-
-    return true;
-  }
-  ```
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="hoisting"></a>
 ## Hoisting
@@ -1018,6 +1052,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   - 想了解更多信息，参考 [Ben Cherry](http://www.adequatelygood.com/) 的 [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting)。
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="comparison-operators--equality"></a>
 ## 比较运算符和等号
 
@@ -1063,6 +1099,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     ```
 
   - [15.4](#15.4) <a name='15.4'></a> 想了解更多信息，参考 Angus Croll 的 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108)。
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="blocks"></a>
 ## 代码块
@@ -1112,6 +1150,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     }
     ```
 
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="comments"></a>
 ## 注释
@@ -1201,6 +1241,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       }
     }
     ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="whitespace"></a>
 ## 空白
@@ -1385,6 +1427,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     ```
 
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="commas"></a>
 ## 逗号
 
@@ -1426,44 +1470,46 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 
   > 为什么? 这会让 git diffs 更干净。另外，像 babel 这样的转译器会移除结尾多余的逗号，也就是说你不必担心老旧浏览器的[尾逗号问题](es5/README.md#commas)。
 
-  ```javascript
-  // bad - git diff without trailing comma
-  const hero = {
-       firstName: 'Florence',
-  -    lastName: 'Nightingale'
-  +    lastName: 'Nightingale',
-  +    inventorOf: ['coxcomb graph', 'modern nursing']
-  }
+    ```javascript
+    // bad - git diff without trailing comma
+    const hero = {
+         firstName: 'Florence',
+    -    lastName: 'Nightingale'
+    +    lastName: 'Nightingale',
+    +    inventorOf: ['coxcomb graph', 'modern nursing']
+    }
 
-  // good - git diff with trailing comma
-  const hero = {
-       firstName: 'Florence',
-       lastName: 'Nightingale',
-  +    inventorOf: ['coxcomb chart', 'modern nursing'],
-  }
+    // good - git diff with trailing comma
+    const hero = {
+         firstName: 'Florence',
+         lastName: 'Nightingale',
+    +    inventorOf: ['coxcomb chart', 'modern nursing'],
+    }
 
-  // bad
-  const hero = {
-    firstName: 'Dana',
-    lastName: 'Scully'
-  };
+    // bad
+    const hero = {
+      firstName: 'Dana',
+      lastName: 'Scully'
+    };
 
-  const heroes = [
-    'Batman',
-    'Superman'
-  ];
+    const heroes = [
+      'Batman',
+      'Superman'
+    ];
 
-  // good
-  const hero = {
-    firstName: 'Dana',
-    lastName: 'Scully',
-  };
+    // good
+    const hero = {
+      firstName: 'Dana',
+      lastName: 'Scully',
+    };
 
-  const heroes = [
-    'Batman',
-    'Superman',
-  ];
-  ```
+    const heroes = [
+      'Batman',
+      'Superman',
+    ];
+    ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="semicolons"></a>
 ## 分号
@@ -1491,6 +1537,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     ```
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="type-casting--coercion"></a>
 ## 类型转换
@@ -1565,6 +1613,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     // good
     const hasAge = !!age;
     ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="naming-conventions"></a>
 ## 命名规则
@@ -1699,6 +1749,9 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     export default AirbnbStyleGuide;
     ```
 
+
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="accessors"></a>
 ## 存取器
 
@@ -1752,6 +1805,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     }
     ```
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="events"></a>
 ## 事件
 
@@ -1780,6 +1835,9 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       // do something with data.listingId
     });
     ```
+
+  **[⬆ 返回目录](#table-of-contents)**
+
 
 ## jQuery
 
@@ -1840,10 +1898,14 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
     $sidebar.find('ul').hide();
     ```
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="ecmascript-5-compatibility"></a>
 ## ECMAScript 5 兼容性
 
   - [26.1](#26.1) <a name='26.1'></a> 参考 [Kangax](https://twitter.com/kangax/) 的 ES5 [兼容性](http://kangax.github.com/es5-compat-table/)。
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="ecmascript-6-styles"></a>
 ## ECMAScript 6 规范
@@ -1864,6 +1926,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
 1. [迭代器和生成器](#iterators-and-generators)
 1. [模块](#modules)
 
+**[⬆ 返回目录](#table-of-contents)**
+
 <a name="testing"></a>
 ## 测试
 
@@ -1874,6 +1938,8 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
       return true;
     }
     ```
+
+**[⬆ 返回目录](#table-of-contents)**
 
 <a name="performance"></a>
 ## 性能
@@ -1888,5 +1954,247 @@ ES5 的编码规范请查看[版本一](https://github.com/sivan/javascript-styl
   - [Are Javascript functions like `map()`, `reduce()`, and `filter()` optimized for traversing arrays?](https://www.quora.com/JavaScript-programming-language-Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta)
   - 等等...
 
-# };
+**[⬆ 返回目录](#table-of-contents)**
 
+<a name="resources"></a>
+## 相关资源（英文）
+
+**了解 ES6**
+
+  - [ECMA 2015 (ES6) 规范草案](https://people.mozilla.org/~jorendorff/es6-draft.html)
+  - [ExploringJS](http://exploringjs.com/)
+  - [ES6 兼容性表](https://kangax.github.io/compat-table/es6/)
+  - [ES6 特性全面概况](http://es6-features.org/)
+
+**看看这个**
+
+  - [Annotated ECMAScript 5.1](http://es5.github.com/)
+
+**工具**
+
+  - 代码风格检查器（Lint）
+    + [ESlint](http://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
+    + [JSHint](http://www.jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/jshintrc)
+    + [JSCS](https://github.com/jscs-dev/node-jscs) - [Airbnb Style Preset](https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json)
+
+**其他风格指南**
+
+  - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
+  - [jQuery Core Style Guidelines](http://docs.jquery.com/JQuery_Core_Style_Guidelines)
+  - [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwldrn/idiomatic.js/)
+
+**其他风格**
+
+  - [Naming this in nested functions](https://gist.github.com/4135065) - Christian Johansen
+  - [Conditional Callbacks](https://github.com/airbnb/javascript/issues/52) - Ross Allen
+  - [Popular JavaScript Coding Conventions on Github](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
+  - [Multiple var statements in JavaScript, not superfluous](http://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
+
+**拓展阅读**
+
+  - [Understanding JavaScript Closures](http://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
+  - [Basic JavaScript for the impatient programmer](http://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
+  - [You Might Not Need jQuery](http://youmightnotneedjquery.com/) - Zack Bloom & Adam Schwartz
+  - [ES6 Features](https://github.com/lukehoban/es6features) - Luke Hoban
+  - [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
+
+**书籍**
+
+  - [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
+  - [JavaScript Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
+  - [Pro JavaScript Design Patterns](http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X)  - Ross Harmes and Dustin Diaz
+  - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
+  - [Maintainable JavaScript](http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
+  - [JavaScript Web Applications](http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
+  - [Pro JavaScript Techniques](http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
+  - [Smashing Node.js: JavaScript Everywhere](http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
+  - [Secrets of the JavaScript Ninja](http://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X) - John Resig and Bear Bibeault
+  - [Human JavaScript](http://humanjavascript.com/) - Henrik Joreteg
+  - [Superhero.js](http://superherojs.com/) - Kim Joar Bekkelund, Mads Mobæk, & Olav Bjorkoy
+  - [JSBooks](http://jsbooks.revolunet.com/) - Julien Bouquillon
+  - [Third Party JavaScript](http://manning.com/vinegar/) - Ben Vinegar and Anton Kovalyov
+  - [Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript](http://amzn.com/0321812182) - David Herman
+  - [Eloquent JavaScript](http://eloquentjavascript.net/) - Marijn Haverbeke
+
+**博客**
+
+  - [DailyJS](http://dailyjs.com/)
+  - [JavaScript Weekly](http://javascriptweekly.com/)
+  - [JavaScript, JavaScript...](http://javascriptweblog.wordpress.com/)
+  - [Bocoup Weblog](http://weblog.bocoup.com/)
+  - [Adequately Good](http://www.adequatelygood.com/)
+  - [NCZOnline](http://www.nczonline.net/)
+  - [Perfection Kills](http://perfectionkills.com/)
+  - [Ben Alman](http://benalman.com/)
+  - [Dmitry Baranovskiy](http://dmitry.baranovskiy.com/)
+  - [Dustin Diaz](http://dustindiaz.com/)
+  - [nettuts](http://net.tutsplus.com/?s=javascript)
+
+**播客**
+
+  - [JavaScript Jabber](http://devchat.tv/js-jabber/)
+
+
+**[⬆ 返回目录](#table-of-contents)**
+
+<a name="in-the-wild"></a>
+## 使用情况
+
+  下列组织应用这份风格指南。
+
+  - **3blades**: [3Blades/javascript](https://github.com/3blades/javascript)
+  - **4Catalyzer**: [4Catalyzer/javascript](https://github.com/4Catalyzer/javascript)
+  - **Aan Zee**: [AanZee/javascript](https://github.com/AanZee/javascript)
+  - **Adult Swim**: [adult-swim/javascript](https://github.com/adult-swim/javascript)
+  - **Airbnb**: [airbnb/javascript](https://github.com/airbnb/javascript)
+  - **AltSchool**: [AltSchool/javascript](https://github.com/AltSchool/javascript)
+  - **Apartmint**: [apartmint/javascript](https://github.com/apartmint/javascript)
+  - **Ascribe**: [ascribe/javascript](https://github.com/ascribe/javascript)
+  - **Avalara**: [avalara/javascript](https://github.com/avalara/javascript)
+  - **Avant**: [avantcredit/javascript](https://github.com/avantcredit/javascript)
+  - **Axept**: [axept/javascript](https://github.com/axept/javascript)
+  - **BashPros**: [BashPros/javascript](https://github.com/BashPros/javascript)
+  - **Billabong**: [billabong/javascript](https://github.com/billabong/javascript)
+  - **Bisk**: [bisk/javascript](https://github.com/Bisk/javascript/)
+  - **Bonhomme**: [bonhommeparis/javascript](https://github.com/bonhommeparis/javascript)
+  - **Brainshark**: [brainshark/javascript](https://github.com/brainshark/javascript)
+  - **CaseNine**: [CaseNine/javascript](https://github.com/CaseNine/javascript)
+  - **Chartboost**: [ChartBoost/javascript-style-guide](https://github.com/ChartBoost/javascript-style-guide)
+  - **ComparaOnline**: [comparaonline/javascript](https://github.com/comparaonline/javascript-style-guide)
+  - **Compass Learning**: [compasslearning/javascript-style-guide](https://github.com/compasslearning/javascript-style-guide)
+  - **DailyMotion**: [dailymotion/javascript](https://github.com/dailymotion/javascript)
+  - **DoSomething**: [DoSomething/eslint-config](https://github.com/DoSomething/eslint-config)
+  - **Digitpaint** [digitpaint/javascript](https://github.com/digitpaint/javascript)
+  - **Ecosia**: [ecosia/javascript](https://github.com/ecosia/javascript)
+  - **Evernote**: [evernote/javascript-style-guide](https://github.com/evernote/javascript-style-guide)
+  - **Evolution Gaming**: [evolution-gaming/javascript](https://github.com/evolution-gaming/javascript)
+  - **EvozonJs**: [evozonjs/javascript](https://github.com/evozonjs/javascript)
+  - **ExactTarget**: [ExactTarget/javascript](https://github.com/ExactTarget/javascript)
+  - **Expensify** [Expensify/Style-Guide](https://github.com/Expensify/Style-Guide/blob/master/javascript.md)
+  - **Flexberry**: [Flexberry/javascript-style-guide](https://github.com/Flexberry/javascript-style-guide)
+  - **Gawker Media**: [gawkermedia/javascript](https://github.com/gawkermedia/javascript)
+  - **General Electric**: [GeneralElectric/javascript](https://github.com/GeneralElectric/javascript)
+  - **Generation Tux**: [GenerationTux/javascript](https://github.com/generationtux/styleguide)
+  - **GoodData**: [gooddata/gdc-js-style](https://github.com/gooddata/gdc-js-style)
+  - **Grooveshark**: [grooveshark/javascript](https://github.com/grooveshark/javascript)
+  - **Honey**: [honeyscience/javascript](https://github.com/honeyscience/javascript)
+  - **How About We**: [howaboutwe/javascript](https://github.com/howaboutwe/javascript-style-guide)
+  - **Huballin**: [huballin/javascript](https://github.com/huballin/javascript)
+  - **HubSpot**: [HubSpot/javascript](https://github.com/HubSpot/javascript)
+  - **Hyper**: [hyperoslo/javascript-playbook](https://github.com/hyperoslo/javascript-playbook/blob/master/style.md)
+  - **InterCity Group**: [intercitygroup/javascript-style-guide](https://github.com/intercitygroup/javascript-style-guide)
+  - **Jam3**: [Jam3/Javascript-Code-Conventions](https://github.com/Jam3/Javascript-Code-Conventions)
+  - **JeopardyBot**: [kesne/jeopardy-bot](https://github.com/kesne/jeopardy-bot/blob/master/STYLEGUIDE.md)
+  - **JSSolutions**: [JSSolutions/javascript](https://github.com/JSSolutions/javascript)
+  - **KickorStick**: [kickorstick/javascript](https://github.com/kickorstick/javascript)
+  - **Kinetica Solutions**: [kinetica/javascript](https://github.com/kinetica/Javascript-style-guide)
+  - **Lonely Planet**: [lonelyplanet/javascript](https://github.com/lonelyplanet/javascript)
+  - **M2GEN**: [M2GEN/javascript](https://github.com/M2GEN/javascript)
+  - **Mighty Spring**: [mightyspring/javascript](https://github.com/mightyspring/javascript)
+  - **MinnPost**: [MinnPost/javascript](https://github.com/MinnPost/javascript)
+  - **MitocGroup**: [MitocGroup/javascript](https://github.com/MitocGroup/javascript)
+  - **ModCloth**: [modcloth/javascript](https://github.com/modcloth/javascript)
+  - **Money Advice Service**: [moneyadviceservice/javascript](https://github.com/moneyadviceservice/javascript)
+  - **Muber**: [muber/javascript](https://github.com/muber/javascript)
+  - **National Geographic**: [natgeo/javascript](https://github.com/natgeo/javascript)
+  - **Nimbl3**: [nimbl3/javascript](https://github.com/nimbl3/javascript)
+  - **Nulogy**: [nulogy/javascript](https://github.com/nulogy/javascript)
+  - **Orange Hill Development**: [orangehill/javascript](https://github.com/orangehill/javascript)
+  - **Orion Health**: [orionhealth/javascript](https://github.com/orionhealth/javascript)
+  - **OutBoxSoft**: [OutBoxSoft/javascript](https://github.com/OutBoxSoft/javascript)
+  - **Peerby**: [Peerby/javascript](https://github.com/Peerby/javascript)
+  - **Razorfish**: [razorfish/javascript-style-guide](https://github.com/razorfish/javascript-style-guide)
+  - **reddit**: [reddit/styleguide/javascript](https://github.com/reddit/styleguide/tree/master/javascript)
+  - **React**: [facebook.github.io/react/contributing/how-to-contribute.html#style-guide](https://facebook.github.io/react/contributing/how-to-contribute.html#style-guide)
+  - **REI**: [reidev/js-style-guide](https://github.com/rei/code-style-guides/blob/master/docs/javascript.md)
+  - **Ripple**: [ripple/javascript-style-guide](https://github.com/ripple/javascript-style-guide)
+  - **SeekingAlpha**: [seekingalpha/javascript-style-guide](https://github.com/seekingalpha/javascript-style-guide)
+  - **Shutterfly**: [shutterfly/javascript](https://github.com/shutterfly/javascript)
+  - **Sourcetoad**: [sourcetoad/javascript](https://github.com/sourcetoad/javascript)
+  - **Springload**: [springload/javascript](https://github.com/springload/javascript)
+  - **StratoDem Analytics**: [stratodem/javascript](https://github.com/stratodem/javascript)
+  - **SteelKiwi Development**: [steelkiwi/javascript](https://github.com/steelkiwi/javascript)
+  - **StudentSphere**: [studentsphere/javascript](https://github.com/studentsphere/guide-javascript)
+  - **SwoopApp**: [swoopapp/javascript](https://github.com/swoopapp/javascript)
+  - **SysGarage**: [sysgarage/javascript-style-guide](https://github.com/sysgarage/javascript-style-guide)
+  - **Syzygy Warsaw**: [syzygypl/javascript](https://github.com/syzygypl/javascript)
+  - **Target**: [target/javascript](https://github.com/target/javascript)
+  - **TheLadders**: [TheLadders/javascript](https://github.com/TheLadders/javascript)
+  - **The Nerdery**: [thenerdery/javascript-standards](https://github.com/thenerdery/javascript-standards)
+  - **T4R Technology**: [T4R-Technology/javascript](https://github.com/T4R-Technology/javascript)
+  - **VoxFeed**: [VoxFeed/javascript-style-guide](https://github.com/VoxFeed/javascript-style-guide)
+  - **WeBox Studio**: [weboxstudio/javascript](https://github.com/weboxstudio/javascript)
+  - **Weggo**: [Weggo/javascript](https://github.com/Weggo/javascript)
+  - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
+  - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
+
+**[⬆ 返回目录](#table-of-contents)**
+
+<a name="translation"></a>
+## 翻译
+
+  这份风格指南也有其他语言的译本：
+
+  - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brazilian Portuguese**: [armoucar/javascript-style-guide](https://github.com/armoucar/javascript-style-guide)
+  - ![bg](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bulgaria.png) **Bulgarian**: [borislavvv/javascript](https://github.com/borislavvv/javascript)
+  - ![ca](https://raw.githubusercontent.com/fpmweb/javascript-style-guide/master/img/catala.png) **Catalan**: [fpmweb/javascript-style-guide](https://github.com/fpmweb/javascript-style-guide)
+  - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Chinese(Traditional)**: [jigsawye/javascript](https://github.com/jigsawye/javascript)
+  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese(Simplified)**: [yuche/javascript](https://github.com/yuche/javascript)
+  - ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **French**: [nmussy/javascript-style-guide](https://github.com/nmussy/javascript-style-guide)
+  - ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **German**: [timofurrer/javascript-style-guide](https://github.com/timofurrer/javascript-style-guide)
+  - ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**: [sinkswim/javascript-style-guide](https://github.com/sinkswim/javascript-style-guide)
+  - ![jp](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/javacript-style-guide](https://github.com/mitsuruog/javacript-style-guide)
+  - ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [tipjs/javascript-style-guide](https://github.com/tipjs/javascript-style-guide)
+  - ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **Polish**: [mjurczyk/javascript](https://github.com/mjurczyk/javascript)
+  - ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**: [uprock/javascript](https://github.com/uprock/javascript)
+  - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Spanish**: [paolocarrasco/javascript-style-guide](https://github.com/paolocarrasco/javascript-style-guide)
+  - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Thai**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide)
+
+<a name="the-javascript-style-guide-guide"></a>
+## JavaScript 编码规范说明
+
+  - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
+
+<a name="chat-with-us-about-javascript"></a>
+## 讨论 JavaScript
+
+  - 欢迎到 [gitter](https://gitter.im/airbnb/javascript) 与我们聊天（英文）。
+
+## 贡献者
+
+  - [查看原始项目贡献者](https://github.com/airbnb/javascript/graphs/contributors)
+  - [查看简中翻译贡献者](https://github.com/yuche/javascript/graphs/contributors)
+
+
+## 许可协议
+
+(The MIT License)
+
+Copyright (c) 2014 Airbnb
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**[⬆ 返回目录](#table-of-contents)**
+
+## 修订
+
+我们鼓励您派生本指南和更改规则以适应您的团队需求。您可以在下方列出对本风格指南的修改，以便定期更新本指南而无需处理合并冲突。
+
+# };
