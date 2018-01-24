@@ -111,22 +111,19 @@ b,strong {
 table {
     max-width: 100%;
     border-collapse: collapse;
-    color: #525252;
     text-align: center;
-    font-size: .85rem;
+    font-size: .8rem;
     line-height: 1.6;
-    overflow-x: scroll;
     /* word-break: break-all; */
 }
 
 table td,table th {
     padding: 3px 1.5px;
     border: 1px solid #ddd;
-    color: #666;
 }
 
 table thead th {
-    width: 45px;
+    width: 42px;
     background-color: #fafafa;
 }
 
