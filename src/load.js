@@ -31,7 +31,7 @@ function getCss(url) {
 
 function valine(path) {
   const url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
-        url2 = '//cdn.jsdelivr.net/npm/valine/dist/ValinePure.min.js';
+        url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
   getScript(url1, () => {
     getScript(url2, () => {
       new Valine({
