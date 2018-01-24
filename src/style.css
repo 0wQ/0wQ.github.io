@@ -181,9 +181,9 @@ pre code {
     padding: 0;
 }
 
-/* ol,ul {
-    padding-left: 18px;
-} */
+ol,ul {
+    padding-left: 40px;
+}
 
 ol ol,ul ol {
     list-style-type: lower-roman;
