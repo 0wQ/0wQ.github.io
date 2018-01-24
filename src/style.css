@@ -180,6 +180,7 @@ pre,pre code {
 
 pre code {
     padding: 0;
+    white-space: nowrap;
 }
 
 ol,ul {
