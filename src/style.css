@@ -175,6 +175,7 @@ pre {
 
 pre,pre code {
     font-size: .87rem;
+    white-space: nowrap;
 }
 
 pre code {
