@@ -27,7 +27,9 @@ function getScript(a, b) {
 function jqend() {
   $.ajaxSetup({ cache : true })
   setTimeout(() => {
-    if ($('#comment').length) valine(location.pathname)
+    if ($('#comment').length) {
+      valine(location.pathname)
+    }
   }, 0)
   setTimeout(() => {
     !function(o){'use strict';o.fn.toTop=function(t){var i=this,e=o(window),s=o('html, body'),n=o.extend({autohide:true,offset:1200,speed:1100,position:true,right:20,bottom:50},t);i.css({cursor:'pointer'}),n.autohide&&i.css('display','none'),n.position&&i.css({position:'fixed',right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery)
@@ -37,7 +39,9 @@ function jqend() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
   setTimeout(() => {
-    if ($('.highlight').length) getCss('/src/syntax.css')
+    if ($('.highlight').length) {
+      getCss('/src/syntax.css')
+    }
   }, 0)
 }
 function valine(path) {
