@@ -127,6 +127,15 @@ table thead th {
     background-color: #fafafa;
 }
 
+table tr {
+    transition: all .8s;
+}
+
+table tr:hover {
+    background-color: #eee;
+    transition: all .2s;
+}
+
 img {
     display: inline;
     max-width: 100%;
@@ -139,12 +148,12 @@ a {
     color: #07b57a;
     vertical-align: baseline;
     text-decoration: none;
-    transition: color .5s;
+    transition: color .8s;
 }
 
-a:active,a:hover {
+a:hover {
     color: #035338;
-    transition: color .3s;
+    transition: color .2s;
 }
 
 code {
@@ -270,6 +279,10 @@ mark {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.post a {
+    color: #333;
 }
 
 .title {
