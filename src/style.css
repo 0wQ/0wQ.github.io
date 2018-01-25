@@ -32,13 +32,13 @@ body {
 }
 
 .content {
-    padding: 3rem 0 15px;
+    padding: 4rem 0 15px;
     flex: 1;
 }
 
 header {
     width: 100%;
-    box-shadow: 0 0 5px rgba(50, 50, 93, .25);
+    box-shadow: 0 0 7px rgba(50, 50, 93, .25);
     position: fixed;
     background: #fff;
     z-index: 20;
