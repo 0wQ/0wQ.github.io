@@ -13,5 +13,5 @@ highlighter:        rouge
 encoding:           utf-8
 language:           zh-cn
 timezone:           Asia/Shanghai
-version:            0.1.8.4
+version:            0.2.1
 beian:              鲁ICP备17026272号-3
