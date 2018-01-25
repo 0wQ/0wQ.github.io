@@ -40,7 +40,7 @@ header {
     width: 100%;
     color: #222;
     border-bottom: 1.5px solid #eee;
-    box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 4px #666;
 }
 
 header .left {
@@ -57,7 +57,7 @@ header .right {
     line-height: 3rem;
 }
 
-header > a {
+header span a {
     color: #222;
 }
 
