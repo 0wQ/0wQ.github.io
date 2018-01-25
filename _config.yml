@@ -3,6 +3,7 @@ language:           zh-cn
 timezone:           Asia/Shanghai
 version:            0.2.1
 beian:              鲁ICP备17026272号-3
+url:                "https://blog.mizore.cn"
 pygments:           true
 permalink:          pretty
 author:             Mizore
