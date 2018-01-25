@@ -98,11 +98,11 @@ h1,h2,h3,h4,h5,h6 {
 
 h1,h2 {
     margin: .4em 0 .3em;
-    color: #222;
+    color: #333;
 }
 
 h3,h4 {
-    color: #333;
+    color: #444;
 }
 
 b,strong {
