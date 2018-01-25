@@ -45,18 +45,18 @@ header {
 header .left {
     padding: 0 10px;
     float: left;
-    font-size: 1.6rem;
-    line-height: 3.2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
 
 header .right {
     padding: 0 10px;
     float: right;
-    font-size: 1.1rem;
-    line-height: 3.2rem;
+    font-size: 1rem;
+    line-height: 3rem;
 }
 
-header a,header a:hover,header a:active{
+header a {
     color: #222;
 }
 
