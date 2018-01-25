@@ -3,19 +3,19 @@
 {% include head.html %}
 <body ontouchstart>
 <header>
-    <span class="left"><a href="/">{{ site.title }}</a></span>
-    <span class="right"><a href="/about.html">About</a></span>
+  <span class="left"><a href="/">{{ site.title }}</a></span>
+  <span class="right"><a href="/about.html">About</a></span>
 </header>
 <div class="content">
 {{ content }}
 
 {% if page.comment == true %}
-    {% include comment.html %}
+  {% include comment.html %}
 {% endif %}
 </div>
 <footer>
-    <div>Powered by <a href="https://jekyllcn.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com" target="_blank">Github Pages</a></div>
-    <div>© 2018 <a href="/">{{ site.title }}</a> · <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">{{ site.beian }}</a></div>
+  <div>Powered by <a href="https://jekyllcn.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com" target="_blank">Github Pages</a></div>
+  <div>© 2018 <a href="/">{{ site.title }}</a> · <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">{{ site.beian }}</a></div>
 </footer>
 <div id="to-top"><span class="icon-top"></span></div>
 <script src="/src/load.js?v={{ site.version }}" async></script>
