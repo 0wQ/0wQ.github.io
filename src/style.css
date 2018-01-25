@@ -56,7 +56,7 @@ header .right {
     line-height: 3rem;
 }
 
-header a {
+header > a {
     color: #222;
 }
 
