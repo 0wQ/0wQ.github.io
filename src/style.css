@@ -38,7 +38,7 @@ body {
 
 header {
     width: 100%;
-    box-shadow: 0 0 6px #ccc;
+    box-shadow: 0 0 8px rgba(50, 50, 93, .25);
     position: fixed;
     background: #fff;
     z-index: 20;
@@ -115,6 +115,7 @@ table {
     text-align: center;
     font-size: .85rem;
     line-height: 1.6;
+    box-shadow: 0 8px 15px rgba(50, 50, 93, .1);
 }
 
 table td,table th {
@@ -281,9 +282,9 @@ mark {
     user-select: none;
 }
 
-.post a {
+/* .post a {
     color: #555;
-}
+} */
 
 .title {
     margin: 0 0 20px !important;
