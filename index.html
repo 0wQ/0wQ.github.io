@@ -8,20 +8,23 @@ title: Home
 {{ post.excerpt | markdownify }}
 <hr>
 {% endfor %}
-<h5>
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a href="/"><< Newer</a>
+
+{% if paginator.total_pages > 1 %}
+  <h5>
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <a href="/"><< Newer</a>
+      {% else %}
+        <a href="/page{{ paginator.previous_page_path }}/"><< Newer</a>
+      {% endif %}
     {% else %}
-      <a href="/page{{ paginator.previous_page }}/"><< Newer</a>
+      <span><< Newer</span>
     {% endif %}
-  {% else %}
-    <span><< Newer</span>
-  {% endif %}
-  &nbsp;|&nbsp;
-  {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}/">Older >></a>
-  {% else %}
-    <span>Older >></span>
-  {% endif %}
-</h5>
+    &nbsp;|&nbsp;
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page_path }}/">Older >></a>
+    {% else %}
+      <span>Older >></span>
+    {% endif %}
+  </h5>
+{% endif %}
