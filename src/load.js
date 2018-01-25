@@ -2,8 +2,8 @@ document.addEventListener('touchstart', function() {}, false)
 getScript('/src/headroom.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
-      tolerance: 10,
-      offset: 100,
+      tolerance: 20,
+      offset: 200,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
