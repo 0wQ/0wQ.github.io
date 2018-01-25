@@ -173,12 +173,14 @@ code,pre,samp {
 }
 
 pre {
+    margin-bottom: 1.5em;
     -webkit-overflow-scrolling: touch;
     background-color: #f2f2f2;
     line-height: 1.5;
     overflow: auto;
     padding: 0.93rem;
     border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(50, 50, 93, .1);
     white-space: pre;
     word-wrap: normal !important;
 }
