@@ -1,5 +1,5 @@
 document.addEventListener('touchstart', function() {}, false)
-getScript('/test/src/headroom.min.js', () => {
+getScript('/src/headroom.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 10,
@@ -11,7 +11,7 @@ getScript('/test/src/headroom.min.js', () => {
       }
     }).init()
 })
-getScript('/test/src/jquery-3.2.1.min.js', () => {jqend()})
+getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
 
 function getScript(a, b) {
   let c = document.createElement('script');
@@ -77,7 +77,7 @@ function jqend() {
   }, 0)
   setTimeout(() => {
     if ($('.highlight').length) {
-      getCss('/test/src/syntax.css')
+      getCss('/src/syntax.css')
     }
   }, 0)
 }
