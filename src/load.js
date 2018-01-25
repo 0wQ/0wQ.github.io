@@ -3,7 +3,7 @@ getScript('/src/headroom.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 20,
-      offset: 200,
+      offset: 100,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
