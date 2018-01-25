@@ -1,5 +1,17 @@
 document.addEventListener('touchstart', function() {}, false)
-getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
+getScript('/test/src/headroom.min.js', () => {
+    const elem = document.querySelector('header');
+    new Headroom(elem, {
+      tolerance: 10,
+      offset: 100,
+      classes: {
+        initial: 'animated',
+        pinned: 'slideDown',
+        unpinned: 'slideUp'
+      }
+    }).init()
+})
+getScript('/test/src/jquery-3.2.1.min.js', () => {jqend()})
 
 function getScript(a, b) {
   let c = document.createElement('script');
@@ -50,7 +62,7 @@ function valine(path) {
 }
 
 function jqend() {
-  $.ajaxSetup({cache:true})
+  $.ajaxSetup({cache:true});
   setTimeout(() => {
     if ($('#comment').length) {
       valine(location.pathname)
@@ -65,7 +77,7 @@ function jqend() {
   }, 0)
   setTimeout(() => {
     if ($('.highlight').length) {
-      getCss('/src/syntax.css')
+      getCss('/test/src/syntax.css')
     }
   }, 0)
 }

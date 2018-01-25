@@ -32,33 +32,33 @@ body {
 }
 
 .content {
-    padding: 15px 0;
+    padding: 55px 0 15px;
     flex: 1;
 }
 
 header {
     width: 100%;
-    color: #222;
-    border-bottom: 1.5px solid #eee;
-    box-shadow: 0 0 4px #666;
+    box-shadow: 0 0 6px #ccc;
+    position: fixed;
+    background: #fff;
+    z-index: 20;
 }
 
 header .left {
     padding: 0 10px;
     float: left;
     font-size: 1.5rem;
-    line-height: 3rem;
 }
 
 header .right {
     padding: 0 10px;
     float: right;
     font-size: 1rem;
-    line-height: 3rem;
 }
 
-header span a {
-    color: #222;
+header * {
+    color: #222 !important;
+    line-height: 3rem;
 }
 
 footer {
@@ -115,7 +115,6 @@ table {
     text-align: center;
     font-size: .85rem;
     line-height: 1.6;
-    /* word-break: break-all; */
 }
 
 table td,table th {
@@ -133,7 +132,7 @@ table tr {
 }
 
 table tr:hover {
-    background-color: #eee;
+    background-color: #f0f0f0;
     transition: all .2s;
 }
 
@@ -300,6 +299,53 @@ mark {
 
 #comment {
     padding: 45px 0 0;
+}
+
+/* Headroom */
+.animated {
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animated.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
 }
 
 /* top icon */
