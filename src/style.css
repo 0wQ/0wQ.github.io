@@ -5,13 +5,13 @@ html,body {
     width: 100%;
     width: 100vw;
     height: 100%;
+    background-color: #fff;
 }
 
 body {
     display: flex;
     min-height: 100%;
     color: #525252;
-    background-color: #fff;
     font-size: 13px;
     line-height: 1.6;
     font-weight: 300;
@@ -175,7 +175,6 @@ code,pre,samp {
 pre {
     margin-bottom: 1.5em;
     -webkit-overflow-scrolling: touch;
-    background-color: #f5f5f5;
     line-height: 1.5;
     overflow: auto;
     padding: 0.93rem;
@@ -187,6 +186,7 @@ pre {
 
 pre,pre code {
     font-size: .87rem;
+    background-color: #f5f5f5;
 }
 
 pre code {
