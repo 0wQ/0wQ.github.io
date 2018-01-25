@@ -38,8 +38,9 @@ body {
 
 header {
     width: 100%;
-    border-bottom: 1.5px solid #eee;
     color: #222;
+    border-bottom: 1.5px solid #eee;
+    box-shadow: 0 0 1px #000;
 }
 
 header .left {
