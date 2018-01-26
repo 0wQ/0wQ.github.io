@@ -75,8 +75,8 @@ blockquote,dl,hr,ol,p,pre,table,ul {
   margin: .2em 0 1em;
 }
 
-.title,table,code,h1,h2,h3,h4,h5,h6,p,pre {
-  font-weight: 400;
+h1,h2,h3,h4,h5,h6,.title,.post {
+  font-weight: 300;
 }
 
 p,ol,ul {
