@@ -112,12 +112,15 @@ b,strong {
 }
 
 table {
-  max-width: 100%;
   border-collapse: collapse;
   text-align: center;
   font-size: .85rem;
   line-height: 1.7;
   box-shadow: 0 8px 15px rgba(50, 50, 93, .1);
+}
+
+table,table tr,table thead {
+  max-width: 100%;
 }
 
 table td,table th {
