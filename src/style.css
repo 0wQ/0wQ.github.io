@@ -166,7 +166,7 @@ code {
   margin: 0 1px;
   border-radius: 3px;
   word-wrap: break-word;
-  background-color: #efefef;
+  background-color: #eee;
   font-size: 86%;
   padding: .2em .3em .1em;
 }
@@ -192,7 +192,7 @@ pre {
 
 pre,pre code {
   font-size: .87rem;
-  background-color: #f5f5f5;
+  background-color: #eee;
   white-space: pre;
   word-wrap: normal !important;
 }
