@@ -2,11 +2,11 @@
 <html lang="{{ site.language }}">
 <head>
   <meta charset="utf-8">
-{%- if page.title == 'Home' -%}
-  <title>{{ site.title }}</title>
-{%- else -%}
-  <title>{{ page.title }} | {{ site.title }}</title>
-{%- endif -%}
+  {%- if page.title == 'Home' -%}
+    <title>{{ site.title }}</title>
+  {%- else -%}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {%- endif -%}
   <meta name="renderer" content="webkit">
   <meta name="google" value="notranslate">
   <meta name="theme-color" content="#ea6f5a">
