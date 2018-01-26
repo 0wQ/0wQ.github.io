@@ -77,7 +77,7 @@ blockquote,dl,hr,ol,p,pre,table,ul {
 }
 
 h1,h2,h3,h4,h5,h6,header *,.title,.post {
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 p,ol,ul {
@@ -168,7 +168,7 @@ h3.post {
 }
 
 .post,.post * {
-  color: #525252 !important;
+  color: #555 !important;
 }
 
 code {
