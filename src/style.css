@@ -11,7 +11,7 @@ html,body {
 body {
   display: flex;
   min-height: 100%;
-  color: #888;
+  color: #767676;
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
@@ -61,7 +61,7 @@ header .right {
 }
 
 header * {
-  color: #555 !important;
+  color: #484848 !important;
   line-height: 3rem;
 }
 
@@ -164,11 +164,11 @@ a:hover {
 }
 
 h3.post {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
 }
 
 .post,.post * {
-  color: #555 !important;
+  color: #484848 !important;
 }
 
 code {
