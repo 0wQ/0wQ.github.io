@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="public">
   <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-{% if page.copy == 'false' %}
+{% unles page.copy %}
   <style>*-webkit-user-select:none;user-select:none</style>
-{% endif %}
+{% endunles %}
 </head>
 <body ontouchstart>
 <header>
@@ -26,7 +26,7 @@
 </header>
 <div class="content">
 {{ content }}
-{% if page.comment == 'true' %}
+{% if page.comment %}
   {{ '<div id=comment></div>' }}
 {% endif %}
 </div>
