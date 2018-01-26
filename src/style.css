@@ -117,7 +117,6 @@ table {
   font-size: .85rem;
   line-height: 1.7;
   box-shadow: 0 8px 15px rgba(50, 50, 93, .1);
-  word-wrap: break-word;
 }
 
 table,table tr,table thead {
@@ -163,10 +162,14 @@ a:hover {
   transition: color .2s;
 }
 
-code,table code {
+code {
   margin: 0 1px;
   border-radius: 3px;
   word-wrap: break-word;
+}
+
+table code {
+  word-break: break-all;
 }
 
 code,samp {
