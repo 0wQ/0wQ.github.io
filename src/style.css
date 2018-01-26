@@ -152,14 +152,14 @@ img {
 }
 
 a {
-  color: rgba(255, 80, 105, .5);
+  color: rgba(255, 60, 105, .6);
   vertical-align: baseline;
   text-decoration: none;
   transition: color .5s;
 }
 
 a:hover {
-  color: rgba(255, 80, 105, 1);
+  color: rgba(255, 60, 105, 1);
   transition: color .2s;
 }
 
@@ -375,6 +375,6 @@ header,footer,.post,.title,#comment {
 }
 
 /* top icon */
-#to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(39,174,96,.3);color:#fff;text-align:center;z-index:10;display:none;border-radius:6px}
+#to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(39,174,96,.3);color:rgba(0,0,0,0);text-align:center;z-index:10;display:none;border-radius:6px}
 @font-face{font-family:icomoon;src:url('icon-top.woff') format('woff')}
 .icon-top:before{content:'\e900';text-transform:none;font-variant:normal;font-family:icomoon!important;speak:none}
