@@ -2,11 +2,11 @@
 <html lang="{{ site.language }}">
 <head>
   <meta charset="utf-8">
-{%- if page.title == 'Home' -%}
+{% if page.title == 'Home' %}
   <title>{{ site.title }}</title>
-{%- else -%}
+{% else %}
   <title>{{ page.title }} | {{ site.title }}</title>
-{%- endif -%}
+{% endif %}
   <meta name="renderer" content="webkit">
   <meta name="google" value="notranslate">
   <meta name="theme-color" content="#ea6f5a">
@@ -15,11 +15,11 @@
   <meta http-equiv="Cache-Control" content="public">
   <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-{%- if page.copy == 'false' -%}
-{%- raw -% }
+{% if page.copy == 'false' %}
+{% raw % }
   <style>*{-webkit-user-select:none;user-select:none}</style>
-{%- endraw -% }
-{%- endif -%}
+{% endraw % }
+{% endif %}
 </head>
 <body ontouchstart>
 <header>
@@ -28,9 +28,9 @@
 </header>
 <div class="content">
 {{ content }}
-{%- if page.comment == 'true' -%}
+{% if page.comment == 'true' %}
 <div id="comment"></div>
-{%- endif -%}
+{% endif %}
 </div>
 <footer>
   <div>Powered by <a href="https://jekyllcn.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com" target="_blank">Github Pages</a></div>
