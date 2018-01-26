@@ -152,14 +152,14 @@ img {
 }
 
 a {
-  color: rgba(255, 50, 105, .6);
+  color: rgba(39,174,96,.5);
   vertical-align: baseline;
   text-decoration: none;
   transition: color .5s;
 }
 
 a:hover {
-  color: rgba(255, 50, 105, 1);
+  color: rgba(39,174,96,.9);
   transition: color .2s;
 }
 
