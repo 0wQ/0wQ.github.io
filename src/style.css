@@ -11,7 +11,7 @@ html,body {
 body {
   display: flex;
   min-height: 100%;
-  color: #525252;
+  color: #666;
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
