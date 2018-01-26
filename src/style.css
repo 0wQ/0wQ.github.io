@@ -61,7 +61,7 @@ header .right {
 }
 
 header * {
-  color: #555 !important;
+  color: #666 !important;
   line-height: 3rem;
 }
 
@@ -101,11 +101,11 @@ h1,h2,h3,h4,h5,h6 {
 
 h1,h2 {
   margin: .4em 0 .3em;
-  color: #333;
+  color: #444;
 }
 
 h3,h4 {
-  color: #444;
+  color: #555;
 }
 
 b,strong {
