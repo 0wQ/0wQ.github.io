@@ -21,5 +21,8 @@ highlighter:       rouge
 plugins:
   - jekyll-sitemap
 defaults:
-  copy:            true
-  comment:         false
+  -
+    values:
+      layout:      post
+      copy:        true
+      comment:     false
