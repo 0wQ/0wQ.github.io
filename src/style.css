@@ -1,10 +1,5 @@
 /* theme css */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-user-select: none;
-  user-select: none;
-}
+*{margin:0;padding:0}
 
 html,body {
   width: 100%;
@@ -291,6 +286,11 @@ mark {
 
 #comment {
   padding: 45px 0 0;
+}
+
+header,footer,.post,.title,#comment {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Headroom */

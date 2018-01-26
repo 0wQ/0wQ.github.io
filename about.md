@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+copy: false
 permalink: /about.html
 comment: true
 ---
