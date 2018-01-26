@@ -67,7 +67,6 @@ footer {
   padding: 8px 10px 10px;
   border-top: 1.3px solid #eee;
   text-align: right;
-  color: #757575;
   font-size: .88rem;
 }
 
@@ -299,6 +298,10 @@ mark {
 
 #comment {
   padding: 45px 0 0;
+}
+
+footer * {
+  color: #888;
 }
 
 header,footer,.post,.title,#comment {
