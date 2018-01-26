@@ -2,7 +2,7 @@
 layout: post
 title: Netease music
 comment: true
-excerpt: "我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主，使用 [APlayer](https://github.com/MoePlayer/APlayer)，[Meting](https://github.com/metowolf/Meting)，[MetingJS](https://github.com/metowolf/MetingJS) 搭建。"
+excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主，使用 APlayer，Meting，MetingJS 搭建。
 ---
 
 <div class="aplayer"

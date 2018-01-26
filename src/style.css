@@ -64,7 +64,7 @@ header * {
 }
 
 .post,.post * {
-  color: #333;
+  color: #333 !important;
 }
 
 footer {
