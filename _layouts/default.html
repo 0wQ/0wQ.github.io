@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="public">
   <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-{% unles page.copy %}
+{% unless page.copy %}
   <style>*-webkit-user-select:none;user-select:none</style>
-{% endunles %}
+{% endunless %}
 </head>
 <body ontouchstart>
 <header>
