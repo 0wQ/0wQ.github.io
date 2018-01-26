@@ -5,7 +5,7 @@ copy: false
 ---
 
 {%- for post in paginator.posts -%}
-  <h2 class="post"><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h2>
+  <h3 class="post"><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h3>
   {{ post.excerpt | markdownify }}
 {%- endfor -%}
 
