@@ -152,7 +152,7 @@ img {
 }
 
 a {
-  color: rgba(39,174,96,.5);
+  color: rgba(39,174,96,.7);
   vertical-align: baseline;
   text-decoration: none;
   transition: color .5s;
