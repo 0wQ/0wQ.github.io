@@ -61,7 +61,7 @@ header .right {
 }
 
 header * {
-  color: #353535 !important;
+  color: #555 !important;
   line-height: 3rem;
 }
 
@@ -168,7 +168,7 @@ h3.post {
 }
 
 .post,.post * {
-  color: #484848 !important;
+  color: #525252 !important;
 }
 
 code {
