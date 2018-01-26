@@ -14,7 +14,7 @@ body {
   color: #525252;
   font-size: 13px;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   font-family: -apple-system,Helvetica Neue,Helvetica,Nimbus Sans L,Arial,Liberation Sans,PingFang SC,Hiragino Sans GB,Source Han Sans CN,Source Han Sans SC,Microsoft YaHei,Wenquanyi Micro Hei,WenQuanYi Zen Hei,ST Heiti,SimHei,WenQuanYi Zen Hei Sharp,sans-serif;
   flex-direction: column;
   -webkit-text-size-adjust: 100%;
@@ -76,7 +76,7 @@ blockquote,dl,hr,ol,p,pre,table,ul {
 }
 
 .title,table,code,h1,h2,h3,h4,h5,h6,p,pre {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p,ol,ul {
