@@ -63,6 +63,10 @@ header * {
   line-height: 3rem;
 }
 
+.post,.post * {
+  color: #333;
+}
+
 footer {
   padding: 8px 10px 10px;
   border-top: 1.3px solid #eee;
