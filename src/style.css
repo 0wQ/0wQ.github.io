@@ -300,8 +300,12 @@ mark {
   padding: 45px 0 0;
 }
 
-footer * {
+footer {
   color: #888;
+}
+
+footer a,footer a:hover {
+  color: #666;
 }
 
 header,footer,.post,.title,#comment {
