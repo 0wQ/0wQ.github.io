@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 {% if page.copy == 'false' %}
-  {{ "<style>*\{-webkit-user-select:none;user-select:none\}</style>" }}
+  <style>*-webkit-user-select:none;user-select:none</style>
 {% endif %}
 </head>
 <body ontouchstart>
@@ -27,7 +27,7 @@
 <div class="content">
 {{ content }}
 {% if page.comment == 'true' %}
-  {{ '<div id="comment"></div>' }}
+  {{ '<div id=comment></div>' }}
 {% endif %}
 </div>
 <footer>
