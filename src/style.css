@@ -154,7 +154,7 @@ a {
   color: #07b57a;
   vertical-align: baseline;
   text-decoration: none;
-  transition: color .8s;
+  transition: color .5s;
 }
 
 a:hover {
