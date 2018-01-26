@@ -162,6 +162,10 @@ a:hover {
   transition: color .2s;
 }
 
+h3.post {
+  font-size: 1.5rem;
+}
+
 .post,.post * {
   color: #333 !important;
 }
