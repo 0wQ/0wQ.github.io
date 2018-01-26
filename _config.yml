@@ -1,20 +1,22 @@
-encoding:           utf-8
-language:           zh-cn
-timezone:           Asia/Shanghai
-version:            0.2.7
-beian:              鲁ICP备17026272号-3
-url:                "https://blog.mizore.cn"
-pygments:           true
-permalink:          pretty
-author:             Mizore
-title:              "Mizore's blog"
-permalink:          /:title.html
-paginate:           10
-paginate_path:      /page:num/
-excerpt_separator:  <!--more-->
-markdown:           kramdown
+encoding:          utf-8
+language:          zh-cn
+timezone:          Asia/Shanghai
+version:
+  css:             0.2.9
+  js:              0.2.10
+beian:             鲁ICP备17026272号-3
+url:               "https://blog.mizore.cn"
+pygments:          true
+permalink:         pretty
+author:            Mizore
+title:             "Mizore's blog"
+permalink:         /:title.html
+paginate:          10
+paginate_path:     /page:num/
+excerpt_separator: <!--more-->
+markdown:          kramdown
 kramdown:
-  input:            GFM
-highlighter:        rouge
+  input:           GFM
+highlighter:       rouge
 plugins:
   - jekyll-sitemap
