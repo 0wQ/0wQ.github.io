@@ -63,10 +63,6 @@ header * {
   line-height: 3rem;
 }
 
-.post {
-  color: #333 !important;
-}
-
 footer {
   padding: 8px 10px 10px;
   border-top: 1.3px solid #eee;
@@ -164,6 +160,10 @@ a {
 a:hover {
   color: #035338;
   transition: color .2s;
+}
+
+.post,.post * {
+  color: #333 !important;
 }
 
 code {
