@@ -5,7 +5,7 @@ getScript('/src/headroom.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 20,
-      offset: 150,
+      offset: 250,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
