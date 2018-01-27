@@ -51,18 +51,18 @@ header {
 header .left {
   padding: 0 10px;
   float: left;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 header .right {
   padding: 0 10px;
   float: right;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 header * {
   color: #525252 !important;
-  line-height: 3.2rem;
+  line-height: 3.4rem;
 }
 
 footer {
