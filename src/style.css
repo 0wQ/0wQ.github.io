@@ -44,7 +44,7 @@ header {
   -moz-box-shadow: 0 0 7px rgba(50, 50, 93, .25);
   box-shadow: 0 0 7px rgba(50, 50, 93, .25); */
   position: fixed;
-  background: rgba(255, 255, 255, .6);
+  background: rgba(255, 255, 255, .8);
   z-index: 20;
 }
 
