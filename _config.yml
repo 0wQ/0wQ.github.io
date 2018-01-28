@@ -2,7 +2,7 @@ encoding:          utf-8
 language:          en
 timezone:          Asia/Shanghai
 version:
-  css:             0.2.26
+  css:             0.2.27
   js:              0.2.12
 beian:             鲁ICP备17026272号-3
 url:               "https://blog.mizore.cn"
@@ -11,7 +11,7 @@ permalink:         pretty
 author:            Mizore
 title:             "Mizore's blog"
 permalink:         /:title.html
-paginate:          10
+paginate:          5
 paginate_path:     /page:num/
 excerpt_separator: <!--more-->
 markdown:          kramdown
