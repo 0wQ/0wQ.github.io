@@ -83,7 +83,7 @@ blockquote,dl,hr,ol,p,pre,table,ul {
 }
 
 h1,h2,h3,h4,h5,h6,header *,.title,.post {
-  font-weight: 300;
+  font-weight: Light;
 }
 
 p,ol,ul {

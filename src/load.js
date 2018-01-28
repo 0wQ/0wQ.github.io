@@ -4,8 +4,8 @@ setTimeout(() => {
 getScript('/src/headroom.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
-      tolerance: 20,
-      offset: 250,
+      tolerance: 30,
+      offset: 200,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
@@ -13,13 +13,13 @@ getScript('/src/headroom.min.js', () => {
       }
     }).init()
 })
-getScript('/src/jquery-3.2.1.min.js', () => {jqend()})
+getScript('/src/jquery-3.3.1.min.js', () => {jqend()})
 
 function getScript(a, b) {
   let c = document.createElement('script');
   c.src = a;
   let d = document.getElementsByTagName('head')[0],
-     done = false;
+   done = false;
   c.onload = c.onreadystatechange = () => {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
       done = true;
@@ -69,7 +69,7 @@ function jqend() {
     if ($('#comment').length) valine(location.pathname)
   }, 0)
   setTimeout(() => {
-    !function(o){'use strict';o.fn.toTop=function(t){var i=this,e=o(window),s=o('html, body'),n=o.extend({autohide:true,offset:1200,speed:1100,position:true,right:20,bottom:50},t);i.css({cursor:'pointer'}),n.autohide&&i.css('display','none'),n.position&&i.css({position:'fixed',right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery)
+    !function(o){'use strict';o.fn.toTop=function(t){var i=this,e=o(window),s=o('html, body'),n=o.extend({autohide:true,offset:1300,speed:1100,position:true,right:20,bottom:50},t);i.css({cursor:'pointer'}),n.autohide&&i.css('display','none'),n.position&&i.css({position:'fixed',right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery)
     $('#to-top').toTop()
   }, 0)
   setTimeout(() => {
