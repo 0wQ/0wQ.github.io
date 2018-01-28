@@ -5,8 +5,13 @@ copy: false
 ---
 
 {%- for post in paginator.posts -%}
-  <h3 class="post"><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h3>
+  <div class="post">
+  <h3><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h3>
   <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
+  {%- if paginator.posts.last != post -%}
+    <hr>
+  {%- endif -%}
+  </div>
 {%- endfor -%}
 
 {%- if paginator.total_pages > 1 -%}
