@@ -11,7 +11,7 @@ permalink:         pretty
 author:            Mizore
 title:             "Mizore's blog"
 permalink:         /:title.html
-paginate:          5
+paginate:          10
 paginate_path:     /page:num/
 excerpt_separator: <!--more-->
 markdown:          kramdown
