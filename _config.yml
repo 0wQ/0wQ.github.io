@@ -3,7 +3,7 @@ language:          zh-CN
 timezone:          Asia/Shanghai
 version:
   css:             0.2.32
-  js:              0.2.12
+  js:              0.2.13
 beian:             鲁ICP备17026272号-3
 url:               "https://blog.mizore.cn"
 pygments:          true
