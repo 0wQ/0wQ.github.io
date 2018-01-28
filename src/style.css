@@ -300,6 +300,19 @@ mark {
   padding: 45px 0 0;
 }
 
+.pagination {
+  font-size: 1rem;
+}
+
+.pagination span {
+  color: #888;
+}
+
+.pagination a,.pagination a:hover {
+  color: #222;
+}
+
+
 footer {
   color: #888;
 }

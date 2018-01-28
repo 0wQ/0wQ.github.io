@@ -19,7 +19,7 @@ copy: false
 {%- endfor -%}
 
 {%- if paginator.total_pages > 1 -%}
-  <h5>
+  <div class="pagination">
     {%- if paginator.previous_page -%}
       {%- if paginator.page == 2 -%}
         <a href="/"><< Newer</a>
@@ -35,5 +35,5 @@ copy: false
     {%- else -%}
       <span>Older >></span>
     {%- endif -%}
-  </h5>
+  </div>
 {%- endif -%}
