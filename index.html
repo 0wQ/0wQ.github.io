@@ -22,18 +22,18 @@ copy: false
   <div class="pagination">
     {%- if paginator.previous_page -%}
       {%- if paginator.page == 2 -%}
-        <a href="/"><< Newer</a>
+        <a href="/">&lt;&lt; Newer</a>
       {%- else -%}
-        <a href="{{ paginator.previous_page_path }}"><< Newer</a>
+        <a href="{{ paginator.previous_page_path }}">&lt;&lt; Newer</a>
       {%- endif -%}
     {%- else -%}
-      <span><< Newer</span>
+      <span>&lt;&lt; Newer</span>
     {%- endif -%}
     &nbsp;|&nbsp;
     {%- if paginator.next_page -%}
-      <a href="{{ paginator.next_page_path }}">Older >></a>
+      <a href="{{ paginator.next_page_path }}">Older &gt;&gt;</a>
     {%- else -%}
-      <span>Older >></span>
+      <span>Older &gt;&gt;</span>
     {%- endif -%}
   </div>
 {%- endif -%}
