@@ -41,14 +41,14 @@ body {
 
 header {
   width: 100%;
-  -webkit-box-shadow: 0 0 7px rgba(50, 50, 93, .25);
-  -moz-box-shadow: 0 0 7px rgba(50, 50, 93, .25);
-  box-shadow: 0 0 7px rgba(50, 50, 93, .25);
   position: fixed;
-  background: rgba(255, 255, 255, .8);
   z-index: 20;
+  background: rgba(255,255,255,.8);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  -webkit-box-shadow: 0 0 7px rgba(50,50,93,.25);
+  -moz-box-shadow: 0 0 7px rgba(50,50,93,.25);
+  box-shadow: 0 0 7px rgba(50,50,93,.25);
 }
 
 header .left {
@@ -83,7 +83,7 @@ blockquote,dl,hr,ol,p,pre,table,ul {
   margin: .2em 0 1em;
 }
 
-h1,h2,h3,h4,h5,h6,header *,.title,.post {
+h1,h2,h3,h4,h5,h6,header *,.title,.post h3 {
   font-weight: 300;
 }
 
@@ -159,14 +159,14 @@ img {
 }
 
 a {
-  color: rgba(39, 174, 96, .65);
+  color: rgba(39,174,96,.65);
   vertical-align: baseline;
   text-decoration: none;
   transition: color .5s;
 }
 
 a:hover {
-  color: rgba(39, 174, 96, 1);
+  color: rgba(39,174,96,1);
   transition: color .2s;
 }
 
