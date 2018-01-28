@@ -68,7 +68,7 @@ header * {
   line-height: 3rem;
 }
 
-.post h3 {
+.post h3 * {
   color: #444 !important;
 }
 
