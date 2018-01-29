@@ -4,7 +4,7 @@ setTimeout(() => {
 getScript('/src/headroom_0.9.4.min.js', () => {
     const elem = document.querySelector('header');
     new Headroom(elem, {
-      tolerance: 30,
+      tolerance: 20,
       offset: 200,
       classes: {
         initial: 'animated',
