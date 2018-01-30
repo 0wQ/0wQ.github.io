@@ -42,21 +42,14 @@ function getCss(url) {
 }
 
 function valine(path) {
-  var url1 = '/src/av.min.js?v=3.5.0',
-      url2 = '/src/valine.min.js?v=1.1.9_beta3+3.5.0';
-  getScript(url1, function() {
-    getScript(url2, function() {
-      new Valine({
-        el: '#comment',
-        appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
-        appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
-        verify: true,
-        avatar: 'identicon',
-        pageSize: 5,
-        path: path,
-        lang: 'en',
-        placeholder: 'Just so so...'
-      })
+  getScript('/src/valine.min.js?v=1.1.9_beta3+3.5.0', function() {
+    new Valine({
+      el: '#comment',
+      appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
+      appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
+      verify: true,
+      avatar: 'identicon',
+      pageSize: 5
     })
   })
 }
