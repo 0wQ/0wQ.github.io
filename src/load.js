@@ -49,8 +49,9 @@ function valine(path) {
         appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
         appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
         verify: true,
-        avatar: 'identicon',
-        pageSize: 5
+        avatar: 'retro',
+        pageSize: 5,
+        placeholder: '输入你的评论内容...'
       })
     })
   })
