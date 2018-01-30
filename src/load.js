@@ -42,14 +42,16 @@ function getCss(url) {
 }
 
 function valine(path) {
-  getScript('/src/valine.min.js?v=1.1.9_beta3+3.5.0', function() {
-    new Valine({
-      el: '#comment',
-      appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
-      appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
-      verify: true,
-      avatar: 'identicon',
-      pageSize: 5
+  getScript('/src/av.min.js?v=3.5.0', function() {
+    getScript('/src/valine.min.js?v=1.1.9_beta3', function() {
+      new Valine({
+        el: '#comment',
+        appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
+        appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
+        verify: true,
+        avatar: 'identicon',
+        pageSize: 5
+      })
     })
   })
 }
