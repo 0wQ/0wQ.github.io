@@ -1,25 +1,25 @@
 <!Doctype html>
-<html lang="{{ site.language }}">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>
-  {%- if page.title == 'Home' -%}
-    {{ site.title }}
-  {%- else -%}
-    {{ page.title }} | {{ site.title }}
-  {%- endif -%}
-  </title>
-  <meta name="renderer" content="webkit">
-  <meta name="google" value="notranslate">
-  <meta name="theme-color" content="#ea6f5a">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-  <meta http-equiv="Cache-Control" content="public">
-  <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<meta charset="UTF-8">
+<title>
+{%- if page.title == 'Home' -%}
+  {{ site.title }}
+{%- else -%}
+  {{ page.title }} | {{ site.title }}
+{%- endif -%}
+</title>
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="theme-color" content="#ea6f5a">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta http-equiv="Cache-Control" content="public">
+<link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 {%- unless page.copy -%}
 {% raw %}
-  <style>body{-webkit-user-select:none;user-select:none}</style>
+<style>body{-webkit-user-select:none;user-select:none}</style>
 {% endraw %}
 {%- endunless -%}
 </head>
@@ -31,7 +31,7 @@
 <div class="content">
 {{ content }}
 {%- if page.comment -%}
-  <div id=comment></div>
+<div id=comment></div>
 {%- endif -%}
 </div>
 <footer>

@@ -1,8 +1,6 @@
-setTimeout(() => {
-  document.addEventListener('touchstart', function() {}, false)
-}, 0)
-getScript('/src/headroom_0.9.4.min.js', () => {
-    const elem = document.querySelector('header');
+document.addEventListener('touchstart', function() {}, false);
+getScript('/src/headroom.min.js?v=0.9.4', function() {
+    var elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 20,
       offset: 200,
@@ -13,14 +11,14 @@ getScript('/src/headroom_0.9.4.min.js', () => {
       }
     }).init()
 })
-getScript('/src/jquery_3.3.1.min.js', () => {jqend()})
+getScript('/src/jquery.min.js?v=3.3.0', function() {jqend()})
 
 function getScript(a, b) {
-  let c = document.createElement('script');
+  var c = document.createElement('script');
   c.src = a;
-  let d = document.getElementsByTagName('head')[0],
+  var d = document.getElementsByTagName('head')[0],
    done = false;
-  c.onload = c.onreadystatechange = () => {
+  c.onload = c.onreadystatechange = function() {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
       done = true;
       b();
@@ -35,19 +33,19 @@ function getCss(url) {
   try {
     document.createStyleSheet(url)
   } catch(e) {
-    const cssLink = document.createElement('link');
-    cssLink.rel = 'stylesheet';
+    var cssLink  = document.createElement('link');
+    cssLink.rel  = 'stylesheet';
     cssLink.href = url;
-    const head = document.getElementsByTagName('head')[0];
+    var head = document.getElementsByTagName('head')[0];
     head.appendChild(cssLink)
   }
 }
 
 function valine(path) {
-  const url1 = '//cdn1.lncld.net/static/js/3.0.4/av-min.js',
-        url2 = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
-  getScript(url1, () => {
-    getScript(url2, () => {
+  var url1 = '/src/av.min.js?v=3.5.0',
+      url2 = '/src/valine.min.js?v=1.1.9-beta3';
+  getScript(url1, function() {
+    getScript(url2, function() {
       new Valine({
         el: '#comment',
         appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
@@ -57,7 +55,7 @@ function valine(path) {
         pageSize: 5,
         path: path,
         lang: 'en',
-        placeholder: 'Just so so...',
+        placeholder: 'Just so so...'
       })
     })
   })
@@ -65,17 +63,17 @@ function valine(path) {
 
 function jqend() {
   $.ajaxSetup({cache:true});
-  setTimeout(() => {
+  setTimeout(function() {
     if ($('#comment').length) valine(location.pathname)
   }, 0)
-  setTimeout(() => {
+  setTimeout(function() {
     !function(o){'use strict';o.fn.toTop=function(t){var i=this,e=o(window),s=o('html, body'),n=o.extend({autohide:true,offset:1300,speed:1100,position:true,right:20,bottom:50},t);i.css({cursor:'pointer'}),n.autohide&&i.css('display','none'),n.position&&i.css({position:'fixed',right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery)
     $('#to-top').toTop()
   }, 0)
-  setTimeout(() => {
+  setTimeout(function() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
-  setTimeout(() => {
-    if ($('.highlight').length) getCss('/src/syntax.css')
+  setTimeout(function() {
+    if ($('.highlight').length) getCss('/src/syntax.css?v=0.1')
   }, 0)
 }
