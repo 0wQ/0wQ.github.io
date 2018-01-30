@@ -15,8 +15,7 @@ body {
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
-  font-family: -apple-system,Helvetica Neue,Helvetica,Nimbus Sans L,Arial,Liberation Sans,PingFang SC,Hiragino Sans GB,Source Han Sans CN,Source Han Sans SC,Microsoft YaHei,Wenquanyi Micro Hei,WenQuanYi Zen Hei,ST Heiti,SimHei,WenQuanYi Zen Hei Sharp,sans-serif;
-  /* font-family: '-apple-system','Open Sans','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif; */
+  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
   flex-direction: column;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -128,7 +127,7 @@ table {
   text-align: center;
   font-size: .85rem;
   line-height: 1.7;
-  box-shadow: 0 8px 15px rgba(50, 50, 93, .1);
+  box-shadow: 0 8px 15px rgba(50,50,93,.1);
 }
 
 table,table tr,table thead {
@@ -197,7 +196,7 @@ pre {
   overflow: auto;
   padding: 0.93rem;
   border-radius: 3px;
-  box-shadow: 0 5px 10px rgba(50, 50, 93, .1);
+  box-shadow: 0 5px 10px rgba(50,50,93,.1);
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 }
