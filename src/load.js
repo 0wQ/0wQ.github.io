@@ -12,10 +12,6 @@ getScript('/src/headroom.min.js?v=0.9.4', function() {
     }).init()
 })
 getScript('/src/jquery.min.js?v=3.3.0', function() {jqend()})
-getScript('//cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js', function() {
-  $youziku.load('h3', '14774ae6ecce47cfb5e1a1af642815e6', 'Source-Han-Light');
-  $youziku.draw()
-})
 
 function getScript(a, b) {
   var c = document.createElement('script');
