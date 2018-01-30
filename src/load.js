@@ -43,7 +43,7 @@ function getCss(url) {
 
 function valine(path) {
   var url1 = '/src/av.min.js?v=3.5.0',
-      url2 = '/src/valine.min.js?v=1.1.9-beta3';
+      url2 = '/src/valine.min.js?v=1.1.9_beta3+3.5.0';
   getScript(url1, function() {
     getScript(url2, function() {
       new Valine({
