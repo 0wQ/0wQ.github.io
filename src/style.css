@@ -1,4 +1,7 @@
 /* theme css */
+
+@import ('https://fonts.cat.net/css?family=Open+Sans:400,300');
+
 *{margin:0;padding:0}
 
 html,body {
@@ -16,22 +19,34 @@ body {
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
-  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+  font-family: 'Open Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-rendering: optimizelegibility;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  text-rendering: geometricPrecision;
+  /* text-rendering: optimizelegibility; */
   -webkit-overflow-scrolling: touch;
   -ms-overflow-scrolling: touch;
-  overflow-scrolling: touch;
   overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
+
+::-moz-selection {
+  background: #D6EDFF;
+}
+
+::selection {
+  background: #D6EDFF;
+}
+
 
 /* ::-webkit-scrollbar */ {
   display: none;
@@ -95,16 +110,24 @@ h1,h2,h3,h4,h5,h6,header,.title {
   font-weight: 300 !important;
 }
 
-p,ol,ul {
+p,ol,ul,dl {
   font-size: .98rem;
   line-height: 1.6;
   word-wrap: break-word;
+  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  text-rendering: geometricPrecision;
 }
 
-h1{font-size:1.78rem}
-h2{font-size:1.6rem}
-h3{font-size:1.4rem}
-h4{font-size:1.2rem}
+h1 {
+  font-size: 1.78rem;
+  letter-spacing: -2px;
+  text-indent: -3px;
+}
+h2{font-size:1.6rem;letter-spacing:-1px}
+h3{font-size:1.4rem;letter-spacing:-0.6px}
+h4{font-size:1.2rem;}
 h5{font-size:1rem}
 h6{font-size:.8rem}
 
@@ -112,6 +135,11 @@ h1,h2,h3,h4,h5,h6 {
   margin: .2em 0 .2em;
   line-height: 1.6;
   word-wrap: break-word;
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-family: "Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif;
+  text-rendering: geometricPrecision;
 }
 
 h1,h2 {
@@ -175,15 +203,11 @@ a {
   color: rgba(39,174,96,.65);
   vertical-align: baseline;
   text-decoration: none;
-  -webkit-transition: color .5s;
-  -o-transition: color .5s;
-  transition: color .5s;
+  transition: color .5s ease;
 }
 
 a:hover {
   color: rgba(39,174,96,1);
-  -webkit-transition: color .2s;
-  -o-transition: color .2s;
   transition: color .2s;
 }
 
@@ -194,6 +218,9 @@ code {
   background-color: #eee;
   font-size: 86%;
   padding: .2em .3em .1em;
+  -webkit-font-feature-settings: "liga" 0;
+  -moz-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
 }
 
 table code {
