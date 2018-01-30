@@ -9,6 +9,8 @@ html,body {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100%;
   color: #777;
@@ -16,7 +18,10 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
@@ -35,6 +40,8 @@ body {
 
 .content {
   padding: 4.1rem 0 15px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
@@ -46,7 +53,6 @@ header {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   -webkit-box-shadow: 0 0 10px rgba(50,50,93,.25);
-  -moz-box-shadow: 0 0 10px rgba(50,50,93,.25);
   box-shadow: 0 0 7px rgba(50,50,93,.25);
 }
 
@@ -127,7 +133,8 @@ table {
   text-align: center;
   font-size: .85rem;
   line-height: 1.7;
-  box-shadow: 0 8px 15px rgba(50,50,93,.1);
+  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1);
+          box-shadow: 0 8px 15px rgba(50,50,93,.1);
 }
 
 table,table tr,table thead {
@@ -145,11 +152,15 @@ table thead th {
 }
 
 table tr {
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
   transition: all .8s;
 }
 
 table tr:hover {
   background-color: #f5f5f5;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
   transition: all .2s;
 }
 
@@ -165,11 +176,15 @@ a {
   color: rgba(39,174,96,.65);
   vertical-align: baseline;
   text-decoration: none;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
   transition: color .5s;
 }
 
 a:hover {
   color: rgba(39,174,96,1);
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
   transition: color .2s;
 }
 
@@ -196,7 +211,8 @@ pre {
   overflow: auto;
   padding: 0.93rem;
   border-radius: 3px;
-  box-shadow: 0 5px 10px rgba(50,50,93,.1);
+  -webkit-box-shadow: 0 5px 10px rgba(50,50,93,.1);
+          box-shadow: 0 5px 10px rgba(50,50,93,.1);
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 }
@@ -242,7 +258,8 @@ blockquote p {
 
 hr {
   overflow: visible;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 1px;
   border: 0 none;
   background-color: #eee;
@@ -327,7 +344,9 @@ footer a,footer a:hover {
 
 header,footer,.post,.title,#comment {
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 
 /* Headroom */
@@ -351,11 +370,13 @@ header,footer,.post,.title,#comment {
 
 @keyframes slideDown {
   0% {
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -376,11 +397,13 @@ header,footer,.post,.title,#comment {
 
 @keyframes slideUp {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 
   100% {
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 
