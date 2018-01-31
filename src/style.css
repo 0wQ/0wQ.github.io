@@ -8,20 +8,25 @@ html,body {
 }
 
 body {
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100%;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
-  letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+body {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-feature-settings: 'kern' 1;
@@ -31,17 +36,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-scrolling: touch;
-  overflow-scrolling: touch;
+  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+}
+
+.aplayer {
+  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif !important;
 }
 
 ::-moz-selection {
-  background: #D6EDFF;
+  background: #d6edff;
 }
 
 ::selection {
-  background: #D6EDFF;
+  background: #d6edff;
 }
 
 /* ::-webkit-scrollbar */ {
@@ -232,8 +239,8 @@ pre {
   overflow: auto;
   padding: 0.93rem;
   border-radius: 3px;
-  -webkit-box-shadow: 0 5px 10px rgba(50,50,93,.1);
-          box-shadow: 0 5px 10px rgba(50,50,93,.1);
+  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1);
+          box-shadow: 0 8px 15px rgba(50,50,93,.1);
 }
 
 pre,pre code {
