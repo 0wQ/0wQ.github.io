@@ -279,11 +279,11 @@ blockquote p {
 }
 
 hr {
+  height: 1px;
+  border-bottom: 1px dashed #eee;
   overflow: visible;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  height: 1px;
-  border-bottom: 1px dashed #eee;
 }
 
 small {
@@ -369,7 +369,7 @@ header,footer,.post,.title,#comment {
        user-select: none;
 }
 
-table,pre,#comment,.aplayer {
+table,pre,.aplayer {
   -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
           box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
 }
