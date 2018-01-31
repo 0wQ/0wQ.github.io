@@ -40,8 +40,6 @@ body {
 }
 
 .aplayer {
-  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
-          box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
   font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif !important;
 }
 
@@ -163,8 +161,6 @@ table {
   font-size: .85rem;
   line-height: 1.7;
   letter-spacing: -0.3px;
-  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1);
-          box-shadow: 0 8px 15px rgba(50,50,93,.1);
 }
 
 table,table tr,table thead {
@@ -241,8 +237,6 @@ pre {
   overflow: auto;
   padding: 0.93rem;
   border-radius: 3px;
-  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1);
-          box-shadow: 0 8px 15px rgba(50,50,93,.1);
 }
 
 pre,pre code {
@@ -375,6 +369,11 @@ header,footer,.post,.title,#comment {
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
+}
+
+table,pre,.comment,.aplayer {
+  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
+          box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
 }
 
 /* Headroom */
