@@ -65,6 +65,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 20;
+  letter-spacing: .3px;
   background: rgba(255,255,255,.8);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
@@ -91,6 +92,7 @@ header * {
 
 .post h3 * {
   color: #444 !important;
+  letter-spacing: .1px !important;
 }
 
 .post p {
