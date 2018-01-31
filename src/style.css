@@ -1,6 +1,6 @@
 /* theme css */
 
-@import ('https://fonts.cat.net/css?family=Merriweather:300,400,700,700italic,300italic|Open+Sans:300,400,700');
+@import ('https://fonts.cat.net/css?family=Merriweather:300,400,700,700italic,300italic');
 
 *{margin:0;padding:0}
 
@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   /* font-family: 'Open Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif; */
-  font-family: "Merriweather","Open Sans","Microsoft Yahei","Microsoft Jhenghei","Meiryo",sans-serif;
+  font-family: "Merriweather",-apple-system,"Microsoft Yahei","Microsoft Jhenghei","Meiryo",sans-serif;
   letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
