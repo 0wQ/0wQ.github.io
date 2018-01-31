@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: 'Noto Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
-  /* font-family: "Lato","Microsoft Jhenghei","Microsoft Yahei","Meiryo",sans-serif; */
+  /* font-family: 'Lato','Microsoft Jhenghei','Microsoft Yahei','Meiryo',sans-serif; */
   letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -64,7 +64,7 @@ header {
   width: 100%;
   position: fixed;
   z-index: 20;
-  letter-spacing: .3px;
+  letter-spacing: .2px;
   background: rgba(255,255,255,.7);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -91,7 +91,6 @@ header * {
 
 .post h3 * {
   color: #525252 !important;
-  letter-spacing: 0 !important;
 }
 
 .post p {
@@ -103,15 +102,14 @@ footer {
   border-top: 1.3px solid #eee;
   text-align: right;
   font-size: .87rem;
-  letter-spacing: -0.1px;
 }
 
 blockquote,dl,hr,ol,p,pre,table,ul {
   margin: .2em 0 1em;
 }
 
-h1,h2,h3,h4,h5,h6,header,.title {
-  font-weight: 400 !important;
+h1,h2,h3,h4,h5,h6,p,header,footer {
+  font-weight: 400;
 }
 
 p,ol,ul,dl {
@@ -203,7 +201,7 @@ a {
   color: rgba(39,174,96,.65);
   vertical-align: baseline;
   text-decoration: none;
-  transition: color .5s ease;
+  transition: color .5s;
 }
 
 a:hover {
@@ -218,9 +216,9 @@ code {
   background-color: #eee;
   font-size: 86%;
   padding: .2em .3em .1em;
-  -webkit-font-feature-settings: "liga" 0;
-  -moz-font-feature-settings: "liga" 0;
-  font-feature-settings: "liga" 0;
+  -webkit-font-feature-settings: 'liga' 0;
+  -moz-font-feature-settings: 'liga' 0;
+  font-feature-settings: 'liga' 0;
 }
 
 table code {
