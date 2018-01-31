@@ -2,7 +2,7 @@ encoding:          utf-8
 language:          zh-CN
 timezone:          Asia/Shanghai
 version:
-  css:             0.3.6
+  css:             0.3.7
   js:              0.3.1
 beian:             鲁ICP备17026272号-3
 url:               "https://blog.mizore.cn"
