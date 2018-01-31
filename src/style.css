@@ -1,6 +1,6 @@
 /* theme css */
 
-@import ('https://fonts.cat.net/css?family=Merriweather:300,400,700,700italic,300italic');
+@import ('https://fonts.cat.net/css?family=Merriweather:400');
 
 *{margin:0;padding:0}
 
@@ -48,7 +48,6 @@ body {
 ::selection {
   background: #D6EDFF;
 }
-
 
 /* ::-webkit-scrollbar */ {
   display: none;
@@ -104,7 +103,7 @@ footer {
   border-top: 1.3px solid #eee;
   text-align: right;
   font-size: .87rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
 }
 
 blockquote,dl,hr,ol,p,pre,table,ul {
