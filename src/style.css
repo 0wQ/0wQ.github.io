@@ -370,7 +370,7 @@ header,footer,.post,.title,#comment {
        user-select: none;
 }
 
-table,pre,.comment,.aplayer {
+table,pre,#comment,.aplayer {
   -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
           box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
 }
