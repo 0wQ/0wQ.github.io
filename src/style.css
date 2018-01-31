@@ -1,6 +1,6 @@
 /* theme css */
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 *{margin:0;padding:0}
 
@@ -19,7 +19,7 @@ body {
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
-  font-family: 'Lato',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+  font-family: 'Noto Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
   /* font-family: "Lato","Microsoft Jhenghei","Microsoft Yahei","Meiryo",sans-serif; */
   letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
