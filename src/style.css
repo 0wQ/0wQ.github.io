@@ -51,7 +51,7 @@ body {
   background: #d6edff;
 }
 
-/* ::-webkit-scrollbar */ {
+::-webkit-scrollbar {
   display: none;
 }
 
