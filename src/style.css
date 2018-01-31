@@ -369,8 +369,8 @@ header,footer,.post,.title,#comment {
 }
 
 table,pre,.aplayer {
-  -webkit-box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
-          box-shadow: 0 8px 15px rgba(50,50,93,.1) !important;
+  -webkit-box-shadow: 5px 8px 15px rgba(50,50,93,.1) !important;
+          box-shadow: 5px 8px 15px rgba(50,50,93,.1) !important;
 }
 
 /* Headroom */
