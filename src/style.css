@@ -279,9 +279,9 @@ blockquote p {
 }
 
 hr {
-  overflow: visible;
+  /* overflow: visible;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+          box-sizing: content-box; */
   height: 1px;
   border: 1px dashed #eee;
 }
@@ -353,7 +353,6 @@ mark {
 .pagination a,.pagination a:hover {
   color: #333;
 }
-
 
 footer {
   color: #888;
