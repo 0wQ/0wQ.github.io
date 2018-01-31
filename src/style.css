@@ -274,7 +274,7 @@ blockquote p {
 hr {
   height: 1px;
   border: none;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #ddd;
   overflow: visible;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
