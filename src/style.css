@@ -283,8 +283,7 @@ hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 1px;
-  border: 0 none;
-  background-color: #eee;
+  border: 1px dashed #eee;
 }
 
 small {
