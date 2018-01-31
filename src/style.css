@@ -19,7 +19,7 @@ body {
   font-size: 13px;
   line-height: 1.6;
   font-weight: 400;
-  font-family: 'Open Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
   /* font-family: "Open Sans","Microsoft Jhenghei","Microsoft Yahei","Meiryo",sans-serif; */
   letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
@@ -65,9 +65,9 @@ header {
   position: fixed;
   z-index: 20;
   letter-spacing: .3px;
-  background: rgba(255,255,255,.75);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background: rgba(255,255,255,.7);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   -webkit-box-shadow: 0 0 10px rgba(50,50,93,.25);
   box-shadow: 0 0 10px rgba(50,50,93,.25);
 }
