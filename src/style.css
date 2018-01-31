@@ -279,11 +279,11 @@ blockquote p {
 }
 
 hr {
-  /* overflow: visible;
+  overflow: visible;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box; */
+          box-sizing: content-box;
   height: 1px;
-  border: 1px dashed #eee;
+  border-bottom: 1px dashed #eee;
 }
 
 small {
