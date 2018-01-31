@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   /* font-family: 'Open Sans',-apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif; */
-  font-family: "Merriweather",-apple-system,"Microsoft Yahei","Microsoft Jhenghei","Meiryo",sans-serif;
+  font-family: -apple-system,"Merriweather","Microsoft Yahei","Microsoft Jhenghei","Meiryo",sans-serif;
   letter-spacing: 0.01rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
