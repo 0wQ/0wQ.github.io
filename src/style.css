@@ -435,6 +435,6 @@ table,pre,.aplayer {
 }
 
 /* top icon */
-#to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(243,108,61,.3);color:#fff;text-align:center;z-index:10;display:none;border-radius:6px}
+#to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(255,152,0,.4);color:#fff;text-align:center;z-index:10;display:none;border-radius:6px}
 @font-face{font-family:icomoon;src:url('icon-top.woff') format('woff')}
 .icon-top:before{content:'\e900';text-transform:none;font-variant:normal;font-family:icomoon!important;speak:none}
