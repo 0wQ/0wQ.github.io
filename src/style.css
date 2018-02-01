@@ -39,7 +39,7 @@ body {
   font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
 }
 
-/* .aplayer,#comment */ {
+.aplayer,#comment {
   font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif !important;
 }
 
@@ -367,8 +367,8 @@ header,footer,.post,.title,#comment {
 }
 
 table,pre,.aplayer {
-  -webkit-box-shadow: 0 7px 10px rgba(50,50,93,.1);
-          box-shadow: 0 7px 10px rgba(50,50,93,.1);
+  -webkit-box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
+          box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
 }
 
 /* Headroom */
