@@ -72,4 +72,12 @@ function jqend() {
   setTimeout(function() {
     if ($('.highlight').length) getCss('/src/syntax.css?v=0.1')
   }, 0)
+  setTimeout(function() {
+    var mta = document.createElement('script');
+    mta.src = '//pingjs.qq.com/h5/stats.js?v2.0.4';
+    mta.setAttribute('name', 'MTAH5');
+    mta.setAttribute('sid', '500573487');
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(mta, s);
+  }, 0)
 }
