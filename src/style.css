@@ -331,7 +331,7 @@ mark {
 }
 
 #comment {
-  padding: 45px 0 0;
+  padding: 40px 0 0;
 }
 
 .pagination {
@@ -367,8 +367,8 @@ header,footer,.post,.title,#comment {
 }
 
 table,pre,.aplayer {
-  -webkit-box-shadow: 0 7px 10px rgba(50,50,93,.1) !important;
-          box-shadow: 0 7px 10px rgba(50,50,93,.1) !important;
+  -webkit-box-shadow: 0 7px 10px rgba(50,50,93,.1);
+          box-shadow: 0 7px 10px rgba(50,50,93,.1);
 }
 
 /* Headroom */
