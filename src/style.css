@@ -192,9 +192,6 @@ code {
   background-color: #f5f5f5;
   font-size: 86%;
   padding: .2em .3em .1em;
-  -webkit-font-feature-settings: 'liga' 0;
-     -moz-font-feature-settings: 'liga' 0;
-          font-feature-settings: 'liga' 0;
 }
 
 table code {
@@ -202,7 +199,10 @@ table code {
   word-break: break-all;
 }
 
-code,pre {
+pre,code {
+  -webkit-font-feature-settings: 'liga' 0;
+     -moz-font-feature-settings: 'liga' 0;
+          font-feature-settings: 'liga' 0;
   font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
@@ -226,6 +226,7 @@ pre,pre code {
 }
 
 pre code {
+  margin: 0;
   padding: 0;
 }
 
@@ -239,7 +240,7 @@ ol ol,ul ol {
 
 blockquote {
   padding: 0 0 0 8px;
-  border-left: .2em solid #ddd;
+  border-left: .2em solid #eee;
   word-wrap: break-word;
 }
 
