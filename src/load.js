@@ -11,7 +11,7 @@ getScript('/src/headroom.min.js?v=0.9.4', function() {
       }
     }).init()
 })
-getScript('/src/jquery.min.js?v=3.3.0', function() {jqend()})
+getScript('/src/jquery.min.js?v=3.3.0', function() { jqend() })
 
 function getScript(a, b) {
   var c = document.createElement('script');
@@ -51,14 +51,14 @@ function valine(path) {
         verify: true,
         avatar: 'retro',
         pageSize: 5,
-        placeholder: '输入你的评论内容...'
+        placeholder: '输入你的评论内容...',
       })
     })
   })
 }
 
 function jqend() {
-  $.ajaxSetup({cache:true});
+  $.ajaxSetup({ cache : true });
   setTimeout(function() {
     if ($('#comment').length) valine(location.pathname)
   }, 0)
@@ -71,13 +71,5 @@ function jqend() {
   }, 0)
   setTimeout(function() {
     if ($('.highlight').length) getCss('/src/syntax.css?v=0.1')
-  }, 0)
-  setTimeout(function() {
-    var mta = document.createElement('script');
-    mta.src = '//pingjs.qq.com/h5/stats.js?v2.0.4';
-    mta.setAttribute('name', 'MTAH5');
-    mta.setAttribute('sid', '500573487');
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(mta, s);
   }, 0)
 }

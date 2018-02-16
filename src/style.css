@@ -54,7 +54,7 @@ header {
   position: fixed;
   z-index: 20;
   letter-spacing: .2px;
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.85);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   -webkit-box-shadow: 0 3px 6px rgba(50,50,93,.1);
@@ -172,15 +172,15 @@ img {
 }
 
 a {
-  color: rgba(39,174,96,.65);
+  color: #07b57a;
   vertical-align: baseline;
   text-decoration: none;
   transition: color .5s ease;
 }
 
 a:hover {
-  color: rgba(39,174,96,1);
-  transition: color .2s;
+  color: #0b714e;
+  transition: color .1s;
 }
 
 code {
@@ -284,7 +284,7 @@ sup {
   top: -.5em;
 }
 
-@media (min-width:500px) {
+@media (min-width: 500px) {
   table {
     min-width: 75%;
   }
@@ -295,7 +295,7 @@ sup {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   table {
     margin: 0 auto 1.1em;
     width: 100%;
