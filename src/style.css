@@ -180,7 +180,7 @@ a {
 
 a:hover {
   color: #0b714e;
-  transition: color .1s;
+  transition: color .2s;
 }
 
 code {
