@@ -12,11 +12,11 @@ excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主
      data-mode="circulation"
      data-autoplay="false"
      data-mutex="true"
-     data-listmaxheight="500px"
+     data-listmaxheight="350px"
      data-preload="auto"
      data-theme="red">
 </div>
 
 <script>var meting_api = 'https://api.mizore.cn/Meting/api.php?server=:server&type=:type&id=:id'</script>
-<script src="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js" defer></script>

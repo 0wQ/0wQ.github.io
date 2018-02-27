@@ -4,7 +4,7 @@
 html,body {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background: #fff;
 }
 
 body {
@@ -32,10 +32,6 @@ body {
   font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
 }
 
-.aplayer,#comment {
-  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif !important;
-}
-
 ::-moz-selection {
   background: #d6edff;
 }
@@ -54,7 +50,7 @@ header {
   position: fixed;
   z-index: 20;
   letter-spacing: .2px;
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.87);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   -webkit-box-shadow: 0 3px 6px rgba(50,50,93,.1);
@@ -151,7 +147,7 @@ table td,table th {
 
 table thead th {
   width: 40px;
-  background-color: #fafafa;
+  background: #fafafa;
 }
 
 table tr {
@@ -159,7 +155,7 @@ table tr {
 }
 
 table tr:hover {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   transition: all .2s;
 }
 
@@ -187,13 +183,13 @@ code {
   margin: 0 1px;
   border-radius: 3px;
   word-wrap: break-word;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   font-size: 86%;
   padding: .2em .3em .1em;
 }
 
 table code {
-  background-color: #eee;
+  background: #eee;
   word-break: break-all;
 }
 
@@ -218,7 +214,7 @@ pre::-webkit-scrollbar {
 
 pre,pre code {
   font-size: .87rem;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   white-space: pre;
   word-wrap: normal !important;
 }
@@ -348,14 +344,11 @@ footer a,footer a:hover {
 
 header,footer,.post,.title,#comment {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
 table,pre,.aplayer {
-  -webkit-box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
-          box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
+  box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
 }
 
 /* Headroom */
@@ -420,8 +413,3 @@ table,pre,.aplayer {
   -webkit-animation-name: slideUp;
           animation-name: slideUp;
 }
-
-/* top icon */
-#to-top{width:40px;height:40px;line-height:40px;position:fixed;background:rgba(39,174,96,.3);color:#fff;text-align:center;z-index:10;display:none;border-radius:6px}
-@font-face{font-family:icomoon;src:url('icon-top.woff') format('woff')}
-.icon-top:before{content:'\e900';text-transform:none;font-variant:normal;font-family:icomoon!important;speak:none}
