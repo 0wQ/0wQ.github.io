@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: en
 title: Airbnb JS Style Guide
 excerpt: Airbnb JavaScript Style Guide.A mostly reasonable approach to JavaScript.
 ---

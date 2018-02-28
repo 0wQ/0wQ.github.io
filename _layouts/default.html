@@ -1,12 +1,12 @@
 <!Doctype html>
-<html>
+<html lang="{% page.lang %}">
 <head>
 <meta charset="UTF-8">
 <title>
 {%- if page.title == 'Home' -%}
   {{ site.title }}
 {%- else -%}
-  {{ page.title }} | {{ site.title }}
+  {{ page.title }} - {{ site.title }}
 {%- endif -%}
 </title>
 <meta name="renderer" content="webkit">

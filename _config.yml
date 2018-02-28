@@ -1,5 +1,4 @@
 encoding:          utf-8
-language:          zh-CN
 timezone:          Asia/Shanghai
 version:
   css:             0.4.4
@@ -26,3 +25,4 @@ defaults:
       layout:      post
       copy:        true
       comment:     false
+      lang:        zh-CN

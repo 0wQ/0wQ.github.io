@@ -12,7 +12,7 @@ comment: true
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 30s infinite linear;
+  -webkit-animation: hue 50s infinite linear;
 }
 @-webkit-keyframes hue {
   from {
@@ -25,3 +25,4 @@ comment: true
 </style>
 
 <p class="hue">最后提交: {{ site.time | date: "%Y-%m-%d %H:%M:%S" }}</p>
+
