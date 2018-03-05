@@ -6,7 +6,7 @@ copy: false
 
 {%- for post in paginator.posts -%}
 <div class="post">
-  <h3><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date: "%Y-%m-%d" }}</sub></h3>
+  <h3><a href="{{ post.url }}">{{ post.title }}</a><sub> {{ post.date | date_to_string }}</sub></h3>
   <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
   {%- if paginator.total_pages > 1 -%}
     <hr>
