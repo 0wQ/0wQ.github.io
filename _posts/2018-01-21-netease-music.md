@@ -18,5 +18,5 @@ excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主
 </div>
 
 <script>var meting_api = 'https://api2.mizore.cn/Meting/api.php?server=:server&type=:type&id=:id'</script>
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>
