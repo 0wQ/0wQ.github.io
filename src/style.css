@@ -53,7 +53,7 @@ header {
   background: rgba(255,255,255,.85);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 2px 6px rgba(50,50,93,.15);
 }
 
 header .left {
@@ -256,8 +256,7 @@ hr {
   border: none;
   border-bottom: 1px dashed #ddd;
   overflow: visible;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 small {
@@ -347,7 +346,7 @@ header,footer,.post,.title,#comment {
 }
 
 table,pre,.aplayer {
-  box-shadow: 0 7px 8px rgba(50,50,93,.1) !important;
+  box-shadow: 0 7px 8px rgba(50,50,93,.15) !important;
 }
 
 /* Headroom */
