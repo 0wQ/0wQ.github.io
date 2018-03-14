@@ -53,8 +53,7 @@ header {
   background: rgba(255,255,255,.85);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  -webkit-box-shadow: 0 3px 7px rgba(50,50,93,.1);
-          box-shadow: 0 3px 7px rgba(50,50,93,.1);
+  box-shadow: 0 -2px 4px rgba(0,0,0,.1);
 }
 
 header .left {
