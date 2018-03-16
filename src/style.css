@@ -53,7 +53,7 @@ header {
   background: rgba(255,255,255,.85);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  box-shadow: 0 2px 5px rgba(50,50,93,.13);
+  box-shadow: 0 1px 5px rgba(50,50,93,.13);
 }
 
 header .left {
@@ -328,7 +328,7 @@ mark {
 }
 
 footer {
-  color: #888;
+  color: #666;
   padding: 8px 10px 10px 2px;
   border-top: 1px solid #eee;
   text-align: right;
@@ -337,7 +337,7 @@ footer {
 }
 
 footer a,footer a:hover {
-  color: #666;
+  color: #999;
 }
 
 header,footer,.post,.title,#comment {
