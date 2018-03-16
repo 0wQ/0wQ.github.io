@@ -336,8 +336,12 @@ footer {
   line-height: 1.7;
 }
 
-footer a,footer a:hover {
-  color: #999;
+footer a {
+  color: #888;
+}
+
+footer a:hover {
+  color: #666;
 }
 
 header,footer,.post,.title,#comment {
