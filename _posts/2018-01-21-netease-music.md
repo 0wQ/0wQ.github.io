@@ -5,18 +5,17 @@ comment: true
 excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主，使用 APlayer，Meting，MetingJS 搭建。
 ---
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.9.1/dist/APlayer.min.css">
+
 <div class="aplayer"
      data-id="82619039"
      data-server="netease"
      data-type="playlist"
-     data-mode="circulation"
-     data-autoplay="false"
-     data-mutex="true"
-     data-listmaxheight="350px"
-     data-preload="auto"
-     data-theme="red">
+     data-listmaxheight="330px"
+     data-theme="orange">
 </div>
 
 <script>var meting_api = 'https://api2.mizore.cn/Meting/api.php?server=:server&type=:type&id=:id'</script>
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.6.0/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.0.2/dist/Meting.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.9.1/dist/APlayer.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/meting@1.1.1/dist/Meting.min.js"></script>
+
