@@ -1,4 +1,4 @@
-document.addEventListener('touchstart', function() {}, false);
+document.addEventListener('touchstart', function() {}, 0);
 getScript('/src/headroom.min.js?v=0.9.4', function() {
     var elem = document.querySelector('header');
     new Headroom(elem, {
@@ -50,7 +50,7 @@ function valine(path) {
         appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
         verify: true,
         avatar: 'retro',
-        pageSize: 5,
+        pageSize: 6,
         placeholder: '输入你的评论内容...',
       })
     })

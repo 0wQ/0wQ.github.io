@@ -11,7 +11,7 @@ excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主
      data-id="82619039"
      data-server="netease"
      data-type="playlist"
-     data-listmaxheight="330px"
+     data-listmaxheight="500px"
      data-theme="orange">
 </div>
 
