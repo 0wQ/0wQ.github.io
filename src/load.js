@@ -11,7 +11,7 @@ getScript('/src/headroom.min.js?v=0.9.4', function() {
       }
     }).init()
 })
-getScript('/src/jquery.min.js?v=3.3.0', function() { jqend() })
+getScript('/src/jquery.min.js?v=3.3.1', function() { jqend() })
 
 function getScript(a, b) {
   var c = document.createElement('script');
@@ -43,7 +43,7 @@ function getCss(url) {
 
 function valine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta7/dist/Valine.min.js', function() {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta8/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
         appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
