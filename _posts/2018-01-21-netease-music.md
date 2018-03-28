@@ -5,7 +5,7 @@ comment: true
 excerpt: 我的网易云红心音乐。基本都是日文歌曲，以 ACG 为主，使用 APlayer，Meting，MetingJS 搭建。
 ---
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.9.1/dist/APlayer.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
 
 <div class="aplayer"
      data-id="82619039"
