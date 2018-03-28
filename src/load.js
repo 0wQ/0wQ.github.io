@@ -42,7 +42,7 @@ function getCss(url) {
 }
 
 function valine(path) {
-  getScript('/src/av.min.js?v=3.5.0', function() {
+  getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
     getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta7/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
@@ -50,6 +50,7 @@ function valine(path) {
         appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
         verify: true,
         avatar: 'retro',
+        avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
         pageSize: 6,
         placeholder: '输入你的评论内容...',
       })
