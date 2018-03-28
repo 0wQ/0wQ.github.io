@@ -43,7 +43,7 @@ function getCss(url) {
 
 function valine(path) {
   getScript('/src/av.min.js?v=3.5.0', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', function() {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta7/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
         appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
