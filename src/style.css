@@ -350,7 +350,7 @@ header,footer,.post,.title,#comment {
 }
 
 table,pre,.aplayer {
-  box-shadow: 0 3px 6px rgba(50,50,93,.15) !important;
+  box-shadow: 0 2px 6px rgba(50,50,93,.15) !important;
 }
 
 /* Headroom */
