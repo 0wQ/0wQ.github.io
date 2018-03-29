@@ -46,8 +46,8 @@ function valine(path) {
     getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
-        appId: '6KYmYkGjyDQhJTFGfRDRl209-gzGzoHsz',
-        appKey: 'jrVcAx4FX4CdEMJDuJq9YATe',
+        appId: 'NwFaLNagoubAS89LoIJFm7ID-9Nh9j0Va',
+        appKey: 'pALdRPcmECXURlb5NyrwceiV',
         verify: true,
         avatar: 'retro',
         avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
