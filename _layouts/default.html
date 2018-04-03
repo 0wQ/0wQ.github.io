@@ -17,11 +17,16 @@
 <meta http-equiv="Cache-Control" content="public">
 <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<style>
 {%- unless page.copy -%}
 {% raw %}
-<style>body{-webkit-user-select:none;user-select:none}</style>
+body{-webkit-user-select:none;user-select:none}
 {% endraw %}
 {%- endunless -%}
+{%- if page.title == 'Home' -%}
+body{background:url('/src/bg.jpg') top no-repeat;background-size:100%}.content{padding-top:11.5rem}
+{%- endif -%}
+</style>
 </head>
 <body ontouchstart>
 <header>
