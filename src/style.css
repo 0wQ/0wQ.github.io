@@ -339,15 +339,12 @@ mark {
 }
 
 .pagination {
+  color: #757575;
   font-size: 1rem;
 }
 
-.pagination span {
-  color: #757575;
-}
-
 .pagination a,.pagination a:hover {
-  color: #333;
+  color: #ff7073;
 }
 
 footer {
