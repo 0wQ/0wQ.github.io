@@ -4,7 +4,7 @@
 html,body {
   width: 100%;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 body {
@@ -88,21 +88,17 @@ header * {
 .post {
   margin: 0 0 25px;
   padding: 10px;
-  background: rgba(255,255,255,.92);
+  background: #fff;
   border-radius: 5px;
   box-shadow: 0 0 6px rgba(50,50,93,.15);
 }
 
-.post h3 * {
-  color: #ff7073 !important;
-  letter-spacing: .1px;
-}
-.post h3 sub {
-  color: #525252 !important;
+.post h3 {
+  letter-spacing: .2px;
 }
 
-.post p {
-  color: #666 !important;
+.post p,.post h3 sub {
+  color: #666;
 }
 
 blockquote,dl,hr,ol,p,pre,table,ul {
@@ -189,16 +185,10 @@ img {
   border-radius: 3px;
 }
 
-a {
-  color: #07b57a;
+a,a:hover {
+  color: #ff7073;
   vertical-align: baseline;
   text-decoration: none;
-  transition: color .5s ease;
-}
-
-a:hover {
-  color: #0b714e;
-  transition: color .2s;
 }
 
 code {
@@ -356,11 +346,11 @@ footer {
   line-height: 1.8;
 }
 
-footer a {
+/* footer a */ {
   color: #888;
 }
 
-footer a:hover {
+/* footer a:hover */ {
   color: #666;
 }
 
