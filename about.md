@@ -12,7 +12,7 @@ comment: true
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 50s infinite linear;
+  -webkit-animation: hue 100s infinite linear;
 }
 @-webkit-keyframes hue {
   from {

@@ -2,8 +2,8 @@ document.addEventListener('touchstart', function() {}, 0);
 getScript('/src/headroom.min.js?v=0.9.4', function() {
     var elem = document.querySelector('header');
     new Headroom(elem, {
-      tolerance: 35,
-      offset: 100,
+      tolerance: 25,
+      offset: 200,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
@@ -46,13 +46,14 @@ function valine(path) {
     getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
+        lang: 'en',
         appId: 'NwFaLNagoubAS89LoIJFm7ID-9Nh9j0Va',
         appKey: 'pALdRPcmECXURlb5NyrwceiV',
         verify: true,
         avatar: 'retro',
         avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
         pageSize: 6,
-        placeholder: '输入你的评论内容...',
+        placeholder: 'Start this discussion...',
       })
     })
   })
