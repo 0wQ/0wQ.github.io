@@ -1,8 +1,8 @@
 encoding:          UTF-8
 timezone:          Asia/Shanghai
 version:
-  css:             0.5.2
-  js:              0.5.1
+  css:             0.5.3
+  js:              0.5.2
 beian:             鲁ICP备17026272号-3
 url:               "https://blog.mizore.cn"
 pygments:          true

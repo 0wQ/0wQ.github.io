@@ -43,7 +43,7 @@ function getCss(url) {
 
 function valine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js', function() {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
         lang: 'en',
