@@ -250,6 +250,7 @@ ol ol, ul ol {
 }
 
 li {
+  word-break: break-all;
   word-wrap: break-word;
 }
 
