@@ -1,4 +1,10 @@
-document.addEventListener('touchstart', function() {}, 0);
+document.addEventListener('error', function (e) {
+  var elem = e.target;
+  if (elem.tagName.toLowerCase() == 'img') {
+    elem.src = '//wx1.sinaimg.cn/images/default_mw690.gif'
+  }
+}, 1)
+document.addEventListener('touchstart', function() {}, 0)
 getScript('/src/headroom.min.js?v=0.9.4', function() {
     var elem = document.querySelector('header');
     new Headroom(elem, {
