@@ -1,7 +1,7 @@
 /* theme css */
 *{margin:0;padding:0}
 
-html,body {
+html, body {
   width: 100%;
   height: 100%;
   background-color: #f9f9f9;
@@ -29,7 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
-  font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', 'SimHei', 'WenQuanYi Zen Hei Sharp', sans-serif;
 }
 
 ::-moz-selection {
@@ -102,19 +102,19 @@ header * {
   letter-spacing: .2px;
 }
 
-.post p,.post h3 sub {
+.post p, .post h3 sub {
   color: #666;
 }
 
-blockquote,dl,hr,ol,p,pre,table,ul {
+blockquote, dl, hr, ol, p, pre, table, ul {
   margin: .4em 0 1em;
 }
 
-h1,h2,h3,h4,h5,h6,p,header,footer {
+h1, h2, h3, h4, h5, h6, p, header, footer {
   font-weight: 400;
 }
 
-p,ol,ul,dl {
+p, ol, ul, dl {
   font-size: .98rem;
   line-height: 1.6;
   word-wrap: break-word;
@@ -128,7 +128,7 @@ h4{font-size:1.2rem}
 h5{font-size:1rem}
 h6{font-size:.8rem}
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: .2em 0 .2em;
   line-height: 1.6;
   word-wrap: break-word;
@@ -138,16 +138,16 @@ h1,h2,h3,h4,h5,h6 {
   text-rendering: geometricPrecision;
 }
 
-h1,h2 {
+h1, h2 {
   margin: .4em 0 .3em;
   color: #333;
 }
 
-h3,h4 {
+h3, h4 {
   color: #444;
 }
 
-b,strong {
+b, strong {
   color: #555;
 }
 
@@ -159,11 +159,11 @@ table {
   letter-spacing: -0.5px;
 }
 
-table,table tr,table thead {
+table, table tr, table thead {
   max-width: 100%;
 }
 
-table td,table th {
+table td, table th {
   padding: 3px 1.5px;
   border: 1px solid #eee;
 }
@@ -190,7 +190,7 @@ img {
   border-radius: 3px;
 }
 
-a,a:hover {
+a, a:hover {
   color: #ff7073;
   vertical-align: baseline;
   text-decoration: none;
@@ -210,11 +210,11 @@ table code {
   word-break: break-all;
 }
 
-pre,code {
+pre, code {
   -webkit-font-feature-settings: 'liga' 0;
      -moz-font-feature-settings: 'liga' 0;
           font-feature-settings: 'liga' 0;
-  font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
 pre {
@@ -229,7 +229,7 @@ pre::-webkit-scrollbar {
   display: none;
 }
 
-pre,pre code {
+pre, pre code {
   font-size: .87rem;
   background: #f5f5f5;
   white-space: pre;
@@ -241,12 +241,16 @@ pre code {
   padding: 0;
 }
 
-ol,ul {
+ol, ul {
   padding-left: 35px;
 }
 
-ol ol,ul ol {
+ol ol, ul ol {
   list-style-type: lower-roman;
+}
+
+li {
+  word-wrap: break-word;
 }
 
 blockquote {
@@ -281,7 +285,7 @@ small {
   font-size: 80%;
 }
 
-sub,sup {
+sub, sup {
   position: relative;
   vertical-align: baseline;
   font-size: 60%;
@@ -359,12 +363,12 @@ footer {
   color: #666;
 }
 
-header,footer,.post,.title,#comment {
+header, footer, .post, .title, #comment {
   -webkit-user-select: none;
           user-select: none;
 }
 
-table,pre,.aplayer {
+table, pre, .aplayer {
   box-shadow: 0 2px 6px rgba(50,50,93,.15) !important;
 }
 
