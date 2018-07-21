@@ -49,13 +49,14 @@ function getCss(url) {
 
 function valine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.1.9/dist/Valine.min.js', function() {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.2.6/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
         lang: 'en',
         appId: 'NwFaLNagoubAS89LoIJFm7ID-9Nh9j0Va',
         appKey: 'pALdRPcmECXURlb5NyrwceiV',
         verify: true,
+        highlight: true,
         avatar: 'retro',
         avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
         pageSize: 6,
