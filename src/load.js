@@ -5,7 +5,7 @@ document.addEventListener('error', function (e) {
   }
 }, 1)
 document.addEventListener('touchstart', function() {}, 0)
-getScript('/src/headroom.min.js?v=0.9.4', function() {
+getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', function() {
     var elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 25,
@@ -17,7 +17,7 @@ getScript('/src/headroom.min.js?v=0.9.4', function() {
       }
     }).init()
 })
-getScript('/src/jquery.min.js?v=3.3.1', function() { jqend() })
+getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function() { jqend() })
 
 function getScript(a, b) {
   var c = document.createElement('script');
