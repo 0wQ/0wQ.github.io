@@ -17,26 +17,14 @@
 <meta http-equiv="Cache-Control" content="public">
 <link rel="stylesheet" href="/src/style.css?v={{ site.version.css }}">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-<link rel="dns-prefetch" href="//cdn.ruri.pw">
-<style>
 {%- unless page.copy -%}
 {% raw %}
-body{-webkit-user-select:none;user-select:none}
+<style>body{-webkit-user-select:none;user-select:none}</style>
 {% endraw %}
 {%- endunless -%}
-{%- if page.title == 'Home' -%}
-.content{padding-top:2.5rem}
-{%- endif -%}
-</style>
 </head>
 <body ontouchstart>
-<header>
-  <span class="left"><a href="/">{{ site.title }}</a></span>
-  <span class="right"><a href="/about.html">About</a></span>
-</header>
-{%- if page.title == 'Home' -%}
-<div class="banner"></div>
-{%- endif -%}
+<header><a href="/">{{ site.title }}</a></header>
 <div class="content">
 {{ content }}
 {%- if page.comment -%}
@@ -44,8 +32,8 @@ body{-webkit-user-select:none;user-select:none}
 {%- endif -%}
 </div>
 <footer>
-  <div>Powered by <a href="https://jekyllcn.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com" target="_blank">Github Pages</a></div>
-  <div>© 2018 <a href="/">{{ site.title }}</a> · <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">{{ site.beian }}</a></div>
+    <div>Powered by <a href="https://jekyllcn.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com" target="_blank">Github Pages</a></div>
+    <div>© 2018 <a href="/">{{ site.title }}</a> · <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">{{ site.beian }}</a></div>
 </footer>
 <div id="to-top"><span class="icon-top"></span></div>
 <script src="/src/load.js?v={{ site.version.js }}" async></script>
