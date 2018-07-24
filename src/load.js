@@ -35,18 +35,6 @@ function getScript(a, b) {
   d.appendChild(c)
 }
 
-function getCss(url) {
-  try {
-    document.createStyleSheet(url)
-  } catch(e) {
-    var cssLink  = document.createElement('link');
-    cssLink.rel  = 'stylesheet';
-    cssLink.href = url;
-    var head = document.getElementsByTagName('head')[0];
-    head.appendChild(cssLink)
-  }
-}
-
 function valine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
     getScript('//cdn.jsdelivr.net/npm/valine@1.2.6/dist/Valine.min.js', function() {
@@ -69,19 +57,14 @@ function valine(path) {
 function jqend() {
   $.ajaxSetup({ cache: true });
   setTimeout(function() {
-    if ($('#comment').length) valine(location.pathname)
+    $('.highlight').length && getScript('//cdn.jsdelivr.net/npm/hanabi@0.4.0/dist/hanabi.min.js', function() {
+      $('.content pre code').each(function(a, b) { $(b).html(hanabi($(b).html().replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/<\/?span.*?>/g, ''))) })
+    })
   }, 0)
   setTimeout(function() {
-    $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
+    $('#comment').length && valine(location.pathname)
   }, 0)
   setTimeout(function() {
-    if ($('.highlight').length) {
-//       getCss('/src/syntax.css?v=0.1')
-      getScript('//unpkg.com/hanabi@0.4.0/dist/hanabi.js', () => {
-          $('.content pre code').each(function(a, b) {
-            $(b).html(hanabi($(b).html()))
-          })
-      })
-    }
+    $('.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
 }
