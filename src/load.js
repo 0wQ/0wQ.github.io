@@ -9,7 +9,7 @@ getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', funct
     var elem = document.querySelector('header');
     new Headroom(elem, {
       tolerance: 25,
-      offset: 180,
+      offset: 170,
       classes: {
         initial: 'animated',
         pinned: 'slideDown',
@@ -75,6 +75,13 @@ function jqend() {
     $('div.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
   setTimeout(function() {
-    if ($('.highlight').length) getCss('/src/syntax.css?v=0.1')
+    if ($('.highlight').length) {
+//       getCss('/src/syntax.css?v=0.1')
+      getScript('//unpkg.com/hanabi@0.4.0/dist/hanabi.js', () => {
+          $('.content pre code').each(function(a, b) {
+            $(b).html(hanabi($(b).html()))
+          })
+      })
+    }
   }, 0)
 }

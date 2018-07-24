@@ -16,7 +16,6 @@ excerpt_separator: <!--more-->
 markdown:          kramdown
 kramdown:
   input:           GFM
-# highlighter:       rouge
 plugins:
   - jekyll-sitemap
 defaults:
