@@ -2,7 +2,7 @@
 date: 2018-07-21 19:50:00 +0800
 layout: post
 lang: ja
-title: Bangumi
+title: Anime List
 comment: true
 excerpt: わたしが見たアニメと好きなアニメ。
 ---

@@ -66,7 +66,7 @@ header a {
 }
 
 .post-title {
-  color: #303030 !important;
+  color: #333 !important;
   font-size: 1.5rem;
   letter-spacing: .3px;
 }
@@ -190,6 +190,7 @@ pre, code {
   -webkit-font-feature-settings: 'liga' 0;
      -moz-font-feature-settings: 'liga' 0;
           font-feature-settings: 'liga' 0;
+  font-weight: 400;
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
@@ -339,7 +340,11 @@ header, footer, .post, .title, #comment {
 }
 
 table, pre, .aplayer {
-  box-shadow: 0 2px 6px rgba(50,50,93,.15) !important;
+  box-shadow: 0 2px 6px rgba(50, 50, 93, .15) !important;
+}
+
+.aplayer {
+  font-weight: 400;
 }
 
 /* Headroom */
