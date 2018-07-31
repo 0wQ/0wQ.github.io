@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: en
-title: Airbnb JS Style Guide
+title: Airbnb JavaScript Style Guide
 excerpt: Airbnb JavaScript Style Guide.A mostly reasonable approach to JavaScript.
 ---
 

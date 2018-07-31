@@ -343,8 +343,8 @@ table, pre, .aplayer {
   box-shadow: 0 2px 6px rgba(50, 50, 93, .15) !important;
 }
 
-.aplayer {
-  font-weight: 400;
+.aplayer * {
+  font-weight: 400 !important;
 }
 
 /* Headroom */
