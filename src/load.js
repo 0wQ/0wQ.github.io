@@ -4,11 +4,11 @@ document.addEventListener('error', function (e) {
     elem.src = '//wx1.sinaimg.cn/images/default_mw690.gif'
   }
 }, 1)
-document.addEventListener('touchstart', function() {}, 0)
-getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', function() {
+document.addEventListener('touchstart', function () {}, 0)
+getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', function () {
     var elem = document.querySelector('header');
     new Headroom(elem, {
-      tolerance: 25,
+      tolerance: 55,
       offset: 170,
       classes: {
         initial: 'animated',
@@ -17,8 +17,29 @@ getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', funct
       }
     }).init()
 })
-getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function() { jqend() })
-
+getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function () {
+  $.ajaxSetup({ cache: true });
+  setTimeout(function () {
+    $('.highlight').length && getCss('/src/syntax.css')
+  }, 0)
+  setTimeout(function () {
+    $('#comment').length && getValine(location.pathname)
+  }, 0)
+  setTimeout(function () {
+    $('.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
+  }, 0)
+})
+function getCss(url) {
+  try {
+    document.createStyleSheet(url)
+  } catch(e) {
+    var cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = url;
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(cssLink)
+  }
+}
 function getScript(a, b) {
   var c = document.createElement('script');
   c.src = a;
@@ -34,10 +55,9 @@ function getScript(a, b) {
   }
   d.appendChild(c)
 }
-
-function valine(path) {
+function getValine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.2.6/dist/Valine.min.js', function() {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.3.0/dist/Valine.min.js', function() {
       new Valine({
         el: '#comment',
         lang: 'en',
@@ -52,19 +72,4 @@ function valine(path) {
       })
     })
   })
-}
-
-function jqend() {
-  $.ajaxSetup({ cache: true });
-  setTimeout(function() {
-    $('.highlight').length && getScript('//cdn.jsdelivr.net/npm/hanabi@0.4.0/dist/hanabi.min.js', function() {
-      $('.content pre code').each(function(a, b) { $(b).html(hanabi($(b).html().replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/<\/?span.*?>/g, ''))) })
-    })
-  }, 0)
-  setTimeout(function() {
-    $('#comment').length && valine(location.pathname)
-  }, 0)
-  setTimeout(function() {
-    $('.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
-  }, 0)
 }
