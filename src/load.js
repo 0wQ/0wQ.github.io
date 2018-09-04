@@ -45,7 +45,7 @@ function getScript(a, b) {
   c.src = a;
   var d = document.getElementsByTagName('head')[0],
    done = false;
-  c.onload = c.onreadystatechange = function() {
+  c.onload = c.onreadystatechange = function () {
     if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
       done = true;
       b();
@@ -56,8 +56,8 @@ function getScript(a, b) {
   d.appendChild(c)
 }
 function getValine(path) {
-  getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function() {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.3.0/dist/Valine.min.js', function() {
+  getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function () {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.3.0/dist/Valine.min.js', function () {
       new Valine({
         el: '#comment',
         lang: 'en',
