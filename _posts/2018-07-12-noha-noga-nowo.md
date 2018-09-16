@@ -1,7 +1,7 @@
 ---
 layout: post
 comment: true
-title: 「のは」、「のが」、「のを」的区别
+title: のは、のが、のを的区别
 excerpt: の 是动词的形式名词化，就是将动词变成名词的。
 ---
 
