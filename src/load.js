@@ -4,18 +4,18 @@ document.addEventListener('error', function (e) {
     elem.src = '//wx1.sinaimg.cn/images/default_mw690.gif'
   }
 }, 1)
-document.addEventListener('touchstart', function () {}, 0)
+document.addEventListener('touchstart', function () { }, 0)
 getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', function () {
-    var elem = document.querySelector('header');
-    new Headroom(elem, {
-      tolerance: 55,
-      offset: 170,
-      classes: {
-        initial: 'animated',
-        pinned: 'slideDown',
-        unpinned: 'slideUp',
-      }
-    }).init()
+  var elem = document.querySelector('header');
+  new Headroom(elem, {
+    tolerance: 55,
+    offset: 170,
+    classes: {
+      initial: 'animated',
+      pinned: 'slideDown',
+      unpinned: 'slideUp',
+    }
+  }).init()
 })
 getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function () {
   $.ajaxSetup({ cache: true });
@@ -32,7 +32,7 @@ getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function () 
 function getCss(url) {
   try {
     document.createStyleSheet(url)
-  } catch(e) {
+  } catch (e) {
     var cssLink = document.createElement('link');
     cssLink.rel = 'stylesheet';
     cssLink.href = url;
@@ -57,7 +57,7 @@ function getScript(a, b) {
 }
 function getValine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function () {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.3.1/dist/Valine.min.js', function () {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.3.3/dist/Valine.min.js', function () {
       new Valine({
         el: '#comment',
         lang: 'en',
