@@ -150,11 +150,11 @@ table thead th {
 }
 
 table tr {
-  transition: background .8s ease;
+  transition: background .2s ease;
 }
 
 table tr:hover {
-  background: #f5f5f5;
+  background: #f4f4f4;
   transition: background 0;
 }
 
