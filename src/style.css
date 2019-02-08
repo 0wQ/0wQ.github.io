@@ -58,7 +58,6 @@ header a {
 
 .content {
   padding: 5rem 0 1rem;
-  text-align: justify;
 }
 
 .post {
@@ -302,6 +301,10 @@ sup {
     margin: 0 1.1em;
   }
 }
+
+p, .post-excerpt {
+  text-align: justify;
+} 
 
 mark {
   background: transparent;
