@@ -69,6 +69,7 @@ function getValine(path) {
         avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
         pageSize: 6,
         placeholder: 'Start this discussion...',
+        notify: true,
       })
     })
   })
