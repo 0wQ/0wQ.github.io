@@ -174,7 +174,7 @@ excerpt: わたしが見たアニメと好きなアニメ。
 |-|<mark>可塑性记忆</mark>|プラスティック・メモリーズ|-|
 |-|<mark>Angel Beats!</mark>|Angel Beats!|-|
 |-|<mark>夏洛特</mark>|Charlotte|-|
-|-|干物妹！小埋 干物妹!|うまるちゃん|-|
+|-|干物妹！小埋|干物妹!うまるちゃん|-|
 |-|<mark>CLANNAD ～AFTER STORY～</mark>|CLANNAD ～AFTER STORY～|-|
 |-|<mark>CLANNA</mark>|CLANNAD -クラナド-|-|
 |-|<mark>命运石之门</mark>|STEINS;GATE|-|
