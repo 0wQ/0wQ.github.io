@@ -1,5 +1,5 @@
 ---
-date: 9102-02-22 18:00:00 +0800
+date: 9102-05-13 20:00:00 +0800
 layout: post
 lang: zh-CN
 title: Anime List
@@ -13,6 +13,7 @@ excerpt: わたしが見たアニメと好きなアニメ。
 
 |时间|译名|原名|备注|
 |---|---|---|---|
+|-|架向星空之桥|星空へ架かる橋|-|
 |-|玻璃之花与崩坏的世界|ガラスの花と壊す世界|-|
 |-|龙与虎|とらドラ!|-|
 |-|BanG Dream!|BanG Dream!|-|
@@ -64,6 +65,8 @@ excerpt: わたしが見たアニメと好きなアニメ。
 
 |时间|译名|原名|备注|
 |---|---|---|---|
+|190510|带着智能手机闯荡异世界。|異世界はスマートフォンとともに。|-|
+|190401|<mark>我想吃掉你的胰脏</mark>|君の膵臓をたべたい|-|
 |190223|未来日记|未来日記|-|
 |190111|<mark>CLANNAD ～AFTER STORY～</mark>|CLANNAD ～AFTER STORY～|二周目|
 |190110|<mark>CLANNAD|CLANNAD -クラナド-</mark>|二周目|
@@ -197,6 +200,12 @@ excerpt: わたしが見たアニメと好きなアニメ。
 |译名|原名|备注|
 |---|---|---|
 |续・终物语|続・終物語|-|
+|<mark>进击的巨人 第三季 Part.2</mark>|進撃の巨人 Season 3 Part.2|-|
+|贤者之孙|賢者の孫|-|
+|盾之勇者成名录|盾の勇者の成り上がり|-|
+|川柳少女|川柳少女|-|
+|CAROLE & TUESDAY|キャロル＆チューズデイ|-|
+
 
 ### 19年01月
 
@@ -239,7 +248,7 @@ excerpt: わたしが見たアニメと好きなアニメ。
 |杀戮天使|殺戮の天使|-|
 |<mark>Happy Sugar Life</mark>|ハッピーシュガーライフ|-|
 |音楽少女|音乐少女|-|
-|<mark>轻羽飞扬</mark>|はねバド！|运动 青春|
+|<mark>轻羽飞扬</mark>|はねバド！|运动 青春 自闭|
 
 ### 18年04月
 
@@ -399,7 +408,7 @@ excerpt: わたしが見たアニメと好きなアニメ。
 > [https://mikanani.me](https://mikanani.me)  
 > [https://wikipedia.org](https://wikipedia.org)  
 > [https://bangumi.moe](https://bangumi.moe)  
-> [http://dilidili.wang](http://www.dilidili.com)  
+> [http://dilidili.name](http://www.dilidili.name)  
 > [https://share.dmhy.org](https://share.dmhy.org)  
 > [http://jp.leopard-raws.org](http://jp.leopard-raws.org)  
 > [https://search.bakery.moe](https://search.bakery.moe)  
