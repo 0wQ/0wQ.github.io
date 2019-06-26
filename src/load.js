@@ -57,7 +57,7 @@ function getScript(a, b) {
 }
 function getValine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function () {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.3.7/dist/Valine.min.js', function () {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.3.8/dist/Valine.min.js', function () {
       new Valine({
         el: '#comment',
         lang: 'en',
