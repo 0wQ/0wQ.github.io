@@ -1,7 +1,7 @@
 document.addEventListener('error', function (e) {
   var elem = e.target;
   if (elem.tagName.toLowerCase() == 'img') {
-    elem.src = '//wx1.sinaimg.cn/images/default_mw690.gif'
+    elem.src = '//dummyimage.com/400x400/000/fff'
   }
 }, 1)
 document.addEventListener('touchstart', function () { }, 0)
@@ -17,7 +17,7 @@ getScript('//cdn.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js', funct
     }
   }).init()
 })
-getScript('//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js', function () {
+getScript('//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', function () {
   $.ajaxSetup({ cache: true });
   setTimeout(function () {
     $('.highlight').length && getCss('/src/syntax.css')
@@ -57,7 +57,7 @@ function getScript(a, b) {
 }
 function getValine(path) {
   getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function () {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.3.4/dist/Valine.min.js', function () {
+    getScript('//cdn.jsdelivr.net/npm/valine@1.3.7/dist/Valine.min.js', function () {
       new Valine({
         el: '#comment',
         lang: 'en',
