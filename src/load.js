@@ -56,21 +56,19 @@ function getScript(a, b) {
   d.appendChild(c)
 }
 function getValine(path) {
-  getScript('//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js', function () {
-    getScript('//cdn.jsdelivr.net/npm/valine@1.3.8/dist/Valine.min.js', function () {
-      new Valine({
-        el: '#comment',
-        lang: 'en',
-        appId: 'NwFaLNagoubAS89LoIJFm7ID-9Nh9j0Va',
-        appKey: 'pALdRPcmECXURlb5NyrwceiV',
-        verify: true,
-        highlight: true,
-        avatar: 'retro',
-        avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
-        pageSize: 6,
-        placeholder: 'Start this discussion...',
-        notify: true,
-      })
+  getScript('//cdn.jsdelivr.net/npm/valine@1.3.8/dist/Valine.min.js', function () {
+    new Valine({
+      el: '#comment',
+      lang: 'en',
+      appId: 'NwFaLNagoubAS89LoIJFm7ID-9Nh9j0Va',
+      appKey: 'pALdRPcmECXURlb5NyrwceiV',
+      verify: true,
+      highlight: true,
+      avatar: 'retro',
+      avatar_cdn: '//dn-qiniu-avatar.qbox.me/avatar/',
+      pageSize: 6,
+      placeholder: 'Start this discussion...',
+      notify: true,
     })
   })
 }
