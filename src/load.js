@@ -56,7 +56,7 @@ function getScript(a, b) {
   d.appendChild(c)
 }
 function getValine(path) {
-  getScript('//cdn.jsdelivr.net/npm/valine@1.3.8/dist/Valine.min.js', function () {
+  getScript('https://blog-1253475808.file.myqcloud.com/Valine.min.js', function () {
     new Valine({
       el: '#comment',
       lang: 'en',
