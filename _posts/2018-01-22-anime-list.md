@@ -63,11 +63,11 @@ excerpt: わたしが見たアニメと好きなアニメ。
 
 |时间|译名|原名|备注|
 |---|---|---|---|
-|190615|欢迎加入NHK！|N・H・Kにようこそ!|-|
+|190615|<mark>欢迎加入NHK！</mark>|N・H・Kにようこそ!|-|
 |190520|<mark>来自风平浪静的明天</mark>|凪のあすから|-|
 |190510|带着智能手机闯荡异世界。|異世界はスマートフォンとともに。|-|
 |190401|<mark>我想吃掉你的胰脏</mark>|君の膵臓をたべたい|-|
-|190223|未来日记|未来日記|-|
+|190223|<mark>未来日记</mark>|未来日記|-|
 |190111|<mark>CLANNAD ～AFTER STORY～</mark>|CLANNAD ～AFTER STORY～|二周目|
 |190110|<mark>CLANNAD|CLANNAD -クラナド-</mark>|二周目|
 |191001|<mark>吹响吧！上低音号 第二季</mark>|響け！ユーフォニアム2|二周目 青春 励志|
@@ -158,42 +158,55 @@ excerpt: わたしが見たアニメと好きなアニメ。
 |170520|<mark>我的妹妹哪有这么可爱！</mark>|俺の妹がこんなに可愛いわけがない！|-|
 |170510|TRINITY SEVEN 七人魔法使 剧场版|トリニティセブン 7人の魔書使い|-|
 |170401|<mark>路人女主的养成方法</mark>|冴えない彼女の育てかた|-|
-|-|日在校园|School Days|-|
-|-|声之形|映画 聲の形|-|
-|-|<mark>白色相簿2</mark>|WHITE ALBUM2|-|
-|-|<mark>白色相簿</mark>|WHITE ALBUM|-|
-|-|<mark>来自新世界</mark>|新世界より|-|
-|-|<mark>我们仍未知道那天所看见的花的名字。</mark>|あの日見た花の名前を僕達はまだ知らない。|-|
-|-|你的名字。|君の名は。|-|
-|-|<mark>冰菓</mark>|氷菓|-|
-|-|秒速5厘米|秒速5センチメートル|-|
-|-|言叶之庭|言の葉の庭|-|
-|-|Love Live! 第二季|ラブライブ! School idol project 第2期|-|
-|-|Love Live!|ラブライブ! School idol project|-|
-|-|缘之空|ヨスガノソラ|-|
-|-|加速世界 -银翼的觉醒-|アクセル・ワールド -銀翼の覚醒-|-|
-|-|加速世界|アクセル・ワールド|-|
-|-|农林|のうりん|-|
-|-|<mark>可塑性记忆</mark>|プラスティック・メモリーズ|-|
-|-|<mark>Angel Beats!</mark>|Angel Beats!|-|
-|-|<mark>夏洛特</mark>|Charlotte|-|
-|-|干物妹！小埋|干物妹!うまるちゃん|-|
-|-|<mark>CLANNAD ～AFTER STORY～</mark>|CLANNAD ～AFTER STORY～|-|
-|-|<mark>CLANNA</mark>|CLANNAD -クラナド-|-|
-|-|<mark>命运石之门</mark>|STEINS;GATE|-|
-|-|魔法少女小圆|魔法少女まどか☆マギカ|-|
-|-|魔法禁书目录|第二季 とある魔術の禁書目録Ⅱ|-|
-|-|魔法禁书目录|とある魔術の禁書目録|-|
-|-|科学的超电磁炮S|とある科学の超電磁砲S|-|
-|-|某科学的超电磁炮|とある科学の超電磁砲|-|
-|-|龙猫|となりのトトロ|-|
-|-|风之谷|風の谷のナウシカ|-|
-|-|千与千寻|千と千尋の神隠し|-|
-|-|天空之城|天空の城ラピュタ|-|
+|NULL|日在校园|School Days|-|
+|NULL|声之形|映画 聲の形|-|
+|NULL|<mark>白色相簿2</mark>|WHITE ALBUM2|-|
+|NULL|<mark>白色相簿</mark>|WHITE ALBUM|-|
+|NULL|<mark>来自新世界</mark>|新世界より|-|
+|NULL|<mark>我们仍未知道那天所看见的花的名字。</mark>|あの日見た花の名前を僕達はまだ知らない。|-|
+|NULL|你的名字。|君の名は。|-|
+|NULL|<mark>冰菓</mark>|氷菓|-|
+|NULL|秒速5厘米|秒速5センチメートル|-|
+|NULL|言叶之庭|言の葉の庭|-|
+|NULL|Love Live! 第二季|ラブライブ! School idol project 第2期|-|
+|NULL|Love Live!|ラブライブ! School idol project|-|
+|NULL|缘之空|ヨスガノソラ|-|
+|NULL|加速世界 -银翼的觉醒-|アクセル・ワールド -銀翼の覚醒-|-|
+|NULL|加速世界|アクセル・ワールド|-|
+|NULL|农林|のうりん|-|
+|NULL|<mark>可塑性记忆</mark>|プラスティック・メモリーズ|-|
+|NULL|<mark>Angel Beats!</mark>|Angel Beats!|-|
+|NULL|<mark>夏洛特</mark>|Charlotte|-|
+|NULL|干物妹！小埋|干物妹!うまるちゃん|-|
+|NULL|<mark>CLANNAD ～AFTER STORY～</mark>|CLANNAD ～AFTER STORY～|-|
+|NULL|<mark>CLANNA</mark>|CLANNAD -クラナド-|-|
+|NULL|<mark>命运石之门</mark>|STEINS;GATE|-|
+|NULL|魔法少女小圆|魔法少女まどか☆マギカ|-|
+|NULL|魔法禁书目录|第二季 とある魔術の禁書目録Ⅱ|-|
+|NULL|魔法禁书目录|とある魔術の禁書目録|-|
+|NULL|科学的超电磁炮S|とある科学の超電磁砲S|-|
+|NULL|某科学的超电磁炮|とある科学の超電磁砲|-|
+|NULL|龙猫|となりのトトロ|-|
+|NULL|风之谷|風の谷のナウシカ|-|
+|NULL|千与千寻|千と千尋の神隠し|-|
+|NULL|天空之城|天空の城ラピュタ|-|
 
 待补充...
 
 ## 追番计划:
+
+### 19年04月
+
+|译名|原名|备注|
+|---|---|---|
+|重来吧、魔王大人！|魔王様、リトライ！|-|
+|在世界尽头咏唱恋曲的少女YU-NO|この世の果てで恋を唄う少女YU-NO TV|-|
+|<mark>鬼灭之刃</mark>|鬼滅の刃|-|
+|骚动时节的少女们啊|荒ぶる季節の乙女どもよ。|-|
+|普通攻击是全体攻击而且能二次攻击的妈妈你喜欢吗？|通常攻撃が全体攻撃で二回攻撃のお母さんは好きですか？|-|
+|<mark>Dr.STONE</mark>|Dr.STONE|-|
+|<mark>某科学的一方通行</mark>|とある科学の一方通行|-|
+
 
 ### 19年04月
 
@@ -211,7 +224,7 @@ excerpt: わたしが見たアニメと好きなアニメ。
 
 |译名|原名|备注|
 |---|---|---|
-|钢琴之森 第二季|ピアノの森 第2シリーズ|-|
+|<mark>钢琴之森 第二季</mark>|ピアノの森 第2シリーズ|-|
 |天使降临到了我身边|私に天使が舞い降りた！|-|
 |<mark>约定的梦幻岛</mark>|約束のネバーランド|-|
 |<mark>五等分的新娘</mark>|五等分の花嫁|-|
@@ -401,14 +414,13 @@ excerpt: わたしが見たアニメと好きなアニメ。
 ## 相关链接:
 
 > [http://bgm.tv](http://bgm.tv)  
-> [https://ebb.io](https://ebb.io)  
+> [https://nyaa.si](https://nyaa.si)  
 > [https://acg.rip](https://acg.rip)  
-> [https://mov3.co](https://mov3.co)  
-> [https://bgmlist.com](https://bgmlist.com)  
-> [https://mikanani.me](https://mikanani.me)  
-> [https://wikipedia.org](https://wikipedia.org)  
+> [https://dmhy.org](https://dmhy.org)  
 > [https://bangumi.moe](https://bangumi.moe)  
-> [http://dilidili.name](http://www.dilidili.name)  
-> [https://share.dmhy.org](https://share.dmhy.org)  
 > [http://jp.leopard-raws.org](http://jp.leopard-raws.org)  
+> [https://mikaNULLi.me](https://mikaNULLi.me)  
+> [https://bgmlist.com](https://bgmlist.com)  
+> [http://dilidili.name](http://dilidili.name)  
+> [https://mov3.co](https://mov3.co)  
 > [https://search.bakery.moe](https://search.bakery.moe)  
