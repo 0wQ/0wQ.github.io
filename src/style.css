@@ -332,16 +332,16 @@ mark {
 }
 
 footer {
-  color: #666;
+  color: #888;
   background: #fff;
-  padding: 11px 10px 12px 2px;
+  padding: 11px 10px 8px 2px;
   text-align: right;
   font-size: .87rem;
   line-height: 1.8;
 }
 
 footer a {
-  color: #666 !important;
+  color: #888 !important;
 }
 
 table, pre, .aplayer {
