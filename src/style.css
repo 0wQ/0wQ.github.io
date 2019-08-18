@@ -3,7 +3,7 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 
 body {
@@ -45,7 +45,7 @@ header {
   position: fixed;
   z-index: 20;
   background: #fff;
-  box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .15);
 }
 
 header a {
@@ -333,24 +333,19 @@ mark {
 
 footer {
   color: #666;
-  background: #f9f9f9;
+  background: #fff;
   padding: 11px 10px 12px 2px;
   text-align: right;
   font-size: .87rem;
   line-height: 1.8;
 }
 
-header, footer, .post, .title, #comment {
-  -webkit-user-select: none;
-          user-select: none;
+footer a {
+  color: #666 !important;
 }
 
 table, pre, .aplayer {
   box-shadow: 0 2px 6px rgba(50, 50, 93, .15) !important;
-}
-
-.aplayer * {
-  font-weight: 400 !important;
 }
 
 /* Headroom */
