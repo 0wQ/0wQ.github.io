@@ -22,9 +22,9 @@ getScript('//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js', function () 
   setTimeout(function () {
     $('.highlight').length && getCss('/src/syntax.css')
   }, 0)
-  setTimeout(function () {
-    $('#comment').length && getValine(location.pathname)
-  }, 0)
+  // setTimeout(function () {
+  //   $('#comment').length && getValine(location.pathname)
+  // }, 0)
   setTimeout(function () {
     $('.content a').not("[href^='#']").not("[href^='/']").attr('target', '_blank')
   }, 0)
