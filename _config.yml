@@ -4,11 +4,13 @@ version:
   css:             0.6.6
   js:              0.6.6
 beian:             鲁ICP备17026272号-3
+beian_url:         "http://www.beian.miit.gov.cn"
 url:               "https://blog.mizore.cn"
 pygments:          true
 permalink:         pretty
 author:            Mizore
-title:             "Mizore's blog"
+# title:             "Mizore's blog"
+title:             "萱草色"
 permalink:         /:title.html
 paginate:          20
 paginate_path:     /page:num/
