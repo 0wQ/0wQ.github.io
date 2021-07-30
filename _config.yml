@@ -4,7 +4,7 @@ version:
   css:             0.6.6
   js:              0.6.6
 beian:             鲁ICP备17026272号-3
-beian_url:         "http://www.beian.miit.gov.cn"
+beian_url:         "https://beian.miit.gov.cn"
 url:               "https://blog.mizore.cn"
 pygments:          true
 permalink:         pretty
