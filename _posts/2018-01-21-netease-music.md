@@ -3,7 +3,7 @@ date: 8102-01-21 12:00:00 +0800
 layout: post
 title: Netease music
 comment: true
-excerpt: 我的网易云红心音乐。全部都是日文歌曲，以 ACG 为主，使用 APlayer，Meting，MetingJS 搭建。
+excerpt: 我的网易云歌单。使用 APlayer，Meting，MetingJS 搭建。
 ---
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
