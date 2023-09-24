@@ -1,7 +1,7 @@
 ---
 date: 8102-01-21 12:00:00 +0800
 layout: post
-title: Netease music
+title: 网易云歌单
 comment: true
 excerpt: 我的网易云歌单。使用 APlayer，Meting，MetingJS 搭建。
 ---
